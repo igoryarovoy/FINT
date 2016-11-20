@@ -1,0 +1,55 @@
+.c-header {	
+	position: relative;
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+
+	&__top {
+		height: 42px;
+	}
+
+	&__bot {
+		height: 64px;
+		background: $theme-light-fill;
+		color: $text-normal-invert;
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

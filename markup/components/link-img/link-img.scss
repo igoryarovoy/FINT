@@ -1,0 +1,77 @@
+.c-link-img {	
+	display: block;
+	background: $fill-card;
+	text-align: center;
+	font-size: 0;
+	height: 100px;
+	margin: 0 0 30px 0;
+	padding: 10px;
+
+	&:before {
+		content: '';
+		width: 0;
+		height: 100%;
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+	}
+
+	&:before,
+	img {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+	.c-link-img {	
+		@include transition(all, .1s);
+
+		&:hover {
+			box-shadow: $shadow-card;
+		}
+	}
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

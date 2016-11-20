@@ -1,0 +1,242 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header    
+    include ../components/main-slider/main-slider
+    include ../components/img-bunner/img-bunner
+    include ../components/link-img/link-img        
+    include ../components/tabnav-mobile/tabnav-mobile
+    include ../components/card-small/card-small-feed
+    include ../components/card-img/card-img
+    include ../components/footer/footer
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .o-wrapper
+            +header()            
+            +mainSlider('c-main-slider--default', false)
+            +imgBunner()
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                h2.head-2 Проверенные бренды
+                            .u-dtc
+                                .u-fl-r
+                                    +tabnavMobile({
+                                        list: [
+                                            {
+                                                text: 'Строительные материалы',
+                                                active: 'active',
+                                                tabId: 'tab-1-1'
+                                            },
+                                            {
+                                                text: 'Мебель',
+                                                active: '',
+                                                tabId: 'tab-1-2'
+                                            },
+                                            {
+                                                text: 'Сантехника',
+                                                active: '',
+                                                tabId: 'tab-1-3'
+                                            },
+                                            {
+                                                text: 'Кровля',
+                                                active: '',
+                                                tabId: 'tab-1-4'
+                                            },
+                                            {
+                                                text: 'Ландшафт',
+                                                active: '',
+                                                tabId: 'tab-1-5'
+                                            }
+                                        ]
+                                    })
+                    .o-tab-content
+                        .o-tab-content__item.active(role="tabpanel", id="tab-1-1")        
+                            .o-grid                        
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--flat-info Все производители
+                        .o-tab-content__item(role="tabpanel", id="tab-1-2")                        
+                            .o-grid                        
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--flat-info Все производители
+                        .o-tab-content__item(role="tabpanel", id="tab-1-3")                        
+                            .o-grid                        
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--flat-info Все производители
+                        .o-tab-content__item(role="tabpanel", id="tab-1-4")                        
+                            .o-grid                        
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--flat-info Все производители
+                        .o-tab-content__item(role="tabpanel", id="tab-1-5")                        
+                            .o-grid                        
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-1.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-2.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-3.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-4.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-5.png')
+                                .o-grid__xs-6.o-grid__sm-4.o-grid__md-2
+                                    +linkImg('static/img/content/ico-brand-6.png')
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--flat-info Все производители
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                a(href="#").head-2 Инструмент
+                            .u-dtc.u-text-right
+                                a(href="#").c-btn.c-btn--flat-info.c-btn--small Все инструменты
+                    .o-slider-common.slick-slider.js-cardSm-slider
+                        - for (i = 0;i < 10;i ++)
+                            .o-slider-common__item
+                                +cardSmallFeed()
+                    .o-grid
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+            .o-section
+                .o-center
+                    .u-text-center.u-fs-0                        
+                        .o-ad
+                            img(src="static/img/content/img-bun-sm.jpg", alt="")
+                        .o-ad.o-hide-xs
+                            img(src="static/img/content/img-bun-sm.jpg", alt="")
+                        .o-ad.o-hide-sm.o-hide-xs
+                            img(src="static/img/content/img-bun-sm.jpg", alt="")
+                        .o-ad.o-hide-sm.o-hide-xs
+                            img(src="static/img/content/img-bun-sm.jpg", alt="")           
+            +footer()
+        +includeJs()

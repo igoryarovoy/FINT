@@ -1,0 +1,148 @@
+.c-quick-view {
+	margin: 0 0 20px 0;
+	background: #d5d5d5;
+	position: absolute;
+	visibility: hidden;
+	z-index: -1;
+	opacity: 0;
+	height: 0 !important;
+	overflow: hidden;		
+	padding: 20px 11px;
+	font-size: 14px;
+	line-height: 1.4;
+	color: $text-dark;
+	@include transition(opacity, .25s);
+	@include cf;
+
+	&.in {
+		position: relative;
+		visibility: visible;
+		z-index: 1;
+		opacity: 1;
+		height: auto !important;
+		overflow: initial;
+	}
+
+	.corner {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background: inherit;		
+		transform: rotate(-45deg);
+		top: -10px;
+	}
+
+	&__close {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		right: 28px;
+		top: 11px;
+		cursor: pointer;
+		opacity: .8;
+
+		&:after {
+			content: '';			
+			@include bg($i-close);
+			position: absolute;
+			left: 50%;
+			top: 50%;			
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__media {
+		float: left;
+		width: 304px;
+	}
+
+	&__content {
+		padding: 0 0 0 344px;
+	}
+
+	&__h {
+		margin: 0 0 20px 0;
+	}
+
+	&__price {
+		font-size: 20px;
+		color: #008c05;
+
+		span {
+			font-size: 26px;
+			font-weight: $font-bold;
+		}
+	}
+
+	&__sub-h {
+		display: block;
+		color: $text-heading;
+		font-size: 14px;
+		margin: 0 0 30px 0;
+	}
+
+	&__description {
+		font-size: 14px;
+		padding: 0 0 0 34px;
+	}
+
+	&__text {
+		margin: 0 0 10px 0;
+
+		* {
+			color: inherit;
+		}
+	}
+
+}
+
+.panel-group {
+    position: relative;
+}
+
+
+
+
+@media (max-width: $third-point) {
+  .c-quick-view {
+    display: none;
+  }
+}
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

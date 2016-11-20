@@ -1,0 +1,245 @@
+.c-card-adaptive {
+	position: relative;
+	background: $fill-card;
+	margin: 0 0 20px 0;
+	@include transition(shadow, .15s);
+	@include cf;
+
+	&__inner {
+		background: inherit;
+		position: relative;
+		z-index: 1;
+		padding: 9px 9px 15px 9px;
+		@include cf;
+	}
+
+	&__price {
+		margin: 0 0 3px 0;
+	}
+
+	&__h {
+		display: block;
+		font-size: 15px;
+		margin: 0 0 5px 0;
+		color: $text-heading;
+	}
+
+	&__media {
+		position: relative;
+		float: left;
+		width: 110px;
+		margin: 0 0 10px 0;
+	}
+
+	&__img {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 87px;
+		overflow: hidden;
+
+		&:before,
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:before {
+			content: '';
+			width: 0;
+			height: 100%;
+		}
+
+		img {
+			max-height: 100%;
+			max-width: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__content {
+		padding: 0 0 0 120px;		
+	}
+
+	&__sub-h {
+		display: block;
+		color: $text-normal;
+		margin: 0 0 10px 0;
+
+		* {
+			color: inherit;
+		}
+	}
+
+	&__description {
+		color: $text-normal;
+		width: 100%;
+		overflow: hidden;
+		line-height: 1.5;
+
+		* {
+			color: inherit;
+		}
+
+		span {
+			display: block;
+		}
+	}
+
+	&__drop {
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		background: inherit;
+		box-shadow: inherit;
+	}
+
+	&__view {
+		display: block;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-align: center;
+		cursor: pointer;
+		height: 40px;
+		line-height: 40px;
+
+		&:hover {
+			background: #e1e1e1;
+		}
+
+		&:active {
+			background: #afafaf;
+		}
+	}
+}
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+	
+	.c-card-adaptive {
+		
+		&__media {
+			width: 208px;
+    		margin: 0 0 0 0;
+		}
+
+		&__img {
+			width: 100%;
+    		height: 165px;
+    		font-size: 0;
+    		text-align: center;    		
+		}
+
+		&__content {
+			padding: 0 0 0 217px;
+		}
+
+		&__h {
+			// margin: 0 0 13px 0;			
+			overflow: hidden;
+			// font-size: 15px;
+		}
+
+		&__sub-h {
+			margin: 0 0 15px 0;
+		}
+
+		&__description {
+			padding: 0 0 0 217px;
+			width: auto;
+			overflow: initial;
+		}
+
+		&__content {
+			padding: 0 0 0 217px;
+		}
+
+	}
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+	
+	.c-card-adaptive {
+		
+		&__media {
+			float: none;
+			width: auto;	
+		}
+
+		&__description {
+			display: none;
+		}
+
+		&__h {			
+			height: 36px;			
+		}
+
+		&__content {
+			padding: 8px 0 0 0;
+		}
+
+		&__sub-h {
+			margin: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		&:hover,
+		&.is-active {
+			margin: -3px -3px 20px -3px;
+			box-shadow: $shadow-card;			
+
+			.c-card-adaptive__inner {
+				padding: 12px 12px 15px 12px;
+			}
+		}
+
+		&:hover {
+			.c-card-adaptive__drop {
+				display: block;
+			}
+			z-index: 3;
+		}
+
+		&.is-active {
+			.c-card-adaptive__drop {
+				display: none;
+			}
+			z-index: 2;
+		}
+
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

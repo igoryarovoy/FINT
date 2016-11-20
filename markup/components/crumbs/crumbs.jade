@@ -1,0 +1,17 @@
+mixin crumbs(modifeir)
+	.c-crumbs(href="#", class=modifeir)
+		.c-crumbs__item
+			a(href="#").c-crumbs__btn Главная
+		.c-crumbs__item
+			a(href="#").c-crumbs__btn Интерьер
+		.c-crumbs__item
+			span.c-crumbs__btn Мебель
+			.c-bc-drop
+				a(href="#").c-bc-drop__item item 1
+				a(href="#").c-bc-drop__item item 2
+				a(href="#").c-bc-drop__item item 3
+				a(href="#").c-bc-drop__item item 4
+		.c-crumbs__item
+			a(href="#").c-crumbs__btn Отдельные предметы
+		.c-crumbs__item
+			span.c-crumbs__btn.is-active Столы

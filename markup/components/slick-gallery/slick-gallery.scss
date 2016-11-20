@@ -1,0 +1,109 @@
+.c-slick-gallery {
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+
+	.c-nav {
+		
+		&__item {
+			padding: 2px;
+			border: 1px solid transparent;
+
+			&.slick-current {
+				border-color: #787878;
+			}
+		}
+
+		.slick-arrow {
+			border: 0;
+			outline: none;
+			position: absolute;
+			top: 3px;
+			bottom: 3px;
+			width: 20px;
+			z-index: 1;
+			font-size: 0;
+			line-height: 0;
+			color: transparent;
+			background: rgba(255, 255, 255, 0.6);
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.8);
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.slick-prev {
+			left: 0;
+
+			&:after {
+				@include bg($i-nav-prev-sm);
+			}
+		}
+
+		.slick-next {
+			right: 0;
+
+			&:after {
+				@include bg($i-nav-next-sm);
+			}
+		}
+
+		.c-screen {
+			margin: 0 0 8px 0;
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

@@ -1,0 +1,127 @@
+.c-footer {
+	background: $dark-fill;
+	padding: 20px 0;
+	font-size: 14px;
+	color: $text-normal-invert;
+	text-align: center;
+
+	&__copy {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__nav {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 17px 0;
+
+		.c-footer__link {
+			margin-top: 8px;			
+			margin-bottom: 8px;			
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		vertical-align: middle;
+		color: inherit;
+		padding: 10px 0;
+		margin: 0 9px;
+		color: $text-light-invert;	
+
+		&:hover {			
+			color: inherit;			
+		}
+
+		&:active {
+			color: inherit;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+	.c-footer {							
+		&__copy {
+			margin: 0 40px 0 0;
+		}
+		&__nav {			
+			margin: 0 0 0 0;
+			.c-footer__link {
+				margin-top: 0;			
+				margin-bottom: 0;			
+			}
+		}
+		&__link {						
+			margin: 0 20px;
+		}		
+	}
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+	.c-footer {							
+		&__copy {
+			margin: 0 70px 0 0;
+		}		
+		&__link {						
+			margin: 0 30px;
+		}
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+	.c-footer {							
+		&__copy {
+			margin: 0 30px 0 0;
+		}		
+		&__link {						
+			margin: 0 20px;
+		}
+	}
+
+}
+
+@media (min-width: $fifth-point) {
+
+	.c-footer {							
+		&__copy {
+			margin: 0 80px 0 0;
+		}		
+		&__link {						
+			margin: 0 17px;
+		}
+		&__btn {
+			text-align: right;
+
+			.c-btn {
+				margin-left: 60px;
+			}
+		}
+	}
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

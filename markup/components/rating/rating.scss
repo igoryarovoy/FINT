@@ -1,0 +1,103 @@
+.c-rating {
+	font-size: 0;
+
+
+	&__count,
+	&__item {
+		display: inline-block;
+		vertical-align: text-top;
+	}
+
+	&__count {
+		color: $text-light;
+		font-size: 10px;
+		margin: 0 0 0 5px;
+	}
+
+	&__item {		
+		@include bg($i-star);
+		margin: 0 0 0 2px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	&[data-rat="1"] {
+		.is-1 {
+			@include bg($i-star-active);
+		}
+	}
+	&[data-rat="2"] {
+		.is-1,
+		.is-2 {
+			@include bg($i-star-active);
+		}
+	}
+	&[data-rat="3"] {
+		.is-1,
+		.is-2,
+		.is-3 {
+			@include bg($i-star-active);
+		}
+	}
+	&[data-rat="4"] {
+		.is-1,
+		.is-2,
+		.is-3,
+		.is-4 {
+			@include bg($i-star-active);
+		}
+	}
+	&[data-rat="5"] {
+		.is-1,
+		.is-2,
+		.is-3,
+		.is-4,
+		.is-5 {
+			@include bg($i-star-active);
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

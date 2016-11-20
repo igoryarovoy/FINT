@@ -1,0 +1,18 @@
+mixin top-panel(modifeir)
+	include ../crumbs/crumbs
+	.c-top-panel(href="#", class=modifeir)
+		.o-center
+			+crumbs()
+			span.c-label.c-label--close
+				span.c-label__close
+				|Материал: Натуральное дерево
+			span.c-label.c-label--close
+				span.c-label__close
+				|Цвет: Темный дуб
+			span.c-label.c-label--close
+				span.c-label__close
+				|Ширина: 80 см
+			span.c-label.c-label--close
+				span.c-label__close
+				|Длина: 110см / 120см / 140см
+			a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Очистить

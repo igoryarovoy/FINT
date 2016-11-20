@@ -1,0 +1,22 @@
+mixin quickView(ID)
+	include ../slick-gallery/slick-gallery
+	.c-quick-view.js-quick-view(id="quick-view-"+ID, data-parent="#cards-group")
+		span.c-quick-view__close(data-toggle="collapse", data-target="#quick-view-"+ID)
+		.c-quick-view__media
+			+slickGallery()
+		.c-quick-view__content
+			a(href="#").head-1.c-quick-view__h Стол капри плетеный
+			.o-grid
+				.o-grid__xs-4.o-grid__md-3
+					.c-quick-view__price
+						a(href="#").c-price.has-icon <span>1415 </span>грн
+					a(href="#").c-quick-view__sub-h Heidelberg Cement Украина
+					a(href="#").c-btn.c-btn--success.c-btn--raised.c-btn--block В магазин
+				.o-grid__xs-8.o-grid__md-9
+					.c-quick-view__description
+						.c-quick-view__text Производитель: <a href="#">Ковальская, Украина <span class="u-flag"><img src="static/img/general/i-UA.png" alt=""></span></a>
+						.c-quick-view__text
+							div Морозостойкость: F200; удобоукладываемость: П1;
+							div водонепроницаемость: W6.
+							div Используется в строительстве производственных, жилых и других помещений. Механизм трансформации: «еврокнижка». Ниша для белья: есть.
+							div Мягкая основа: пружинный блок «Bonnel», пенополиуретан.

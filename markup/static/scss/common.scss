@@ -1,0 +1,433 @@
+// Common styles of the project
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+
+html, body {
+    
+}
+body {
+	font-family: $main-font;
+	background: $main-fill;
+	font-size: 12px;
+	color: $text-normal;
+	line-height: 1.2;
+}
+
+
+@import '_slick.scss';
+
+@import '_grid.scss';
+
+
+
+
+
+
+.o-wrapper {
+	overflow: hidden;
+}
+.o-section {
+	margin: 35px 0 65px;
+}
+.o-center {
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 11px;
+}
+.o-ad {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0;	
+	margin: 0 15px 20px 15px;
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+.o-hgroup {
+	@include cf;
+	border-bottom: 1px solid #c8c8c8;
+	margin: 0 0 20px 0;
+	padding: 0 0 10px 0;
+}
+.o-tab-content {
+	position: relative;
+
+	&__item {		
+		visibility: visible;
+		@include transition(all, .2s);
+
+		&:not(.active) {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			opacity: 0;
+			z-index: -1;
+			visibility: hidden;			
+		}
+	}
+
+}
+
+
+
+.u-text-left {
+	text-align: left !important;
+}
+.u-text-center {
+	text-align: center !important;
+}
+.u-text-right {
+	text-align: right !important;
+}
+
+.u-text-bold {
+	font-weight: $font-bold !important;
+}
+.u-text-italic {
+	font-style: italic !important;
+}
+
+.u-text-upper {
+	text-transform: uppercase !important;
+}
+
+.u-fl-l {
+	float: left !important;
+}
+.u-fl-r {
+	float: right !important;
+}
+
+.u-dt {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+}
+.u-dtc {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.u-fs-0 {
+	font-size: 0 !important;
+}
+.u-fs-10 {
+	font-size: 10px !important;
+}
+.u-fs-12 {
+	font-size: 12px !important;
+}
+.u-fs-14 {
+	font-size: 14px !important;
+}
+.u-fs-16 {
+	font-size: 16px !important;
+}
+.u-fs-18 {
+	font-size: 18px !important;
+}
+.u-fs-20 {
+	font-size: 20px !important;
+}
+.u-fs-22 {
+	font-size: 22px !important;
+}
+.u-fs-24 {
+	font-size: 24px !important;
+}
+
+.u-m-10 {
+	margin: 10px 0 !important;
+}
+.u-m-15 {
+	margin: 15px 0 !important;
+}
+.u-m-20 {
+	margin: 20px 0 !important;
+}
+.u-m-25 {
+	margin: 25px 0 !important;
+}
+.u-m-30 {
+	margin: 30px 0 !important;
+}
+.u-m-35 {
+	margin: 35px 0 !important;
+}
+.u-m-40 {
+	margin: 40px 0 !important;
+}
+.u-m-45 {
+	margin: 45px 0 !important;
+}
+.u-m-50 {
+	margin: 50px 0 !important;
+}
+
+.u-mt-10 {
+	margin-top: 10px !important;
+}
+.u-mt-15 {
+	margin-top: 15px !important;
+}
+.u-mt-20 {
+	margin-top: 20px !important;
+}
+.u-mt-25 {
+	margin-top: 25px !important;
+}
+.u-mt-30 {
+	margin-top: 30px !important;
+}
+.u-mt-35 {
+	margin-top: 35px !important;
+}
+.u-mt-40 {
+	margin-top: 40px !important;
+}
+.u-mt-45 {
+	margin-top: 45px !important;
+}
+.u-mt-50 {
+	margin-top: 50px !important;
+}
+
+.u-mb-10 {
+	margin-bottom: 10px !important;
+}
+.u-mb-15 {
+	margin-bottom: 15px !important;
+}
+.u-mb-20 {
+	margin-bottom: 20px !important;
+}
+.u-mb-25 {
+	margin-bottom: 25px !important;
+}
+.u-mb-30 {
+	margin-bottom: 30px !important;
+}
+.u-mb-35 {
+	margin-bottom: 35px !important;
+}
+.u-mb-40 {
+	margin-bottom: 40px !important;
+}
+.u-mb-45 {
+	margin-bottom: 45px !important;
+}
+.u-mb-50 {
+	margin-bottom: 50px !important;
+}
+
+
+.u-flag {
+	display: inline-block;
+    vertical-align: middle;
+    margin: -1px 5px 0;
+    font-size: 0;
+}
+
+
+
+
+// ---- slick
+
+.slick-slider {
+	opacity: 0;	
+	@include transition(all, 1s);
+
+	&.slick-initialized {
+		opacity: 1;
+	}
+}
+.slick-slide,
+.slick-slide a {
+	outline: none;
+	border: none;
+}
+
+.o-slider-common {
+	padding: 0 30px;
+	margin: 0 0 20px 0;
+	&__item {
+		padding: 0 5px;
+	}
+
+	.slick-track {
+		padding: 5px 0 10px 0;
+	}
+
+	.slick-arrow {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 30px;
+		font-size: 0;
+		line-height: 0;
+		color: transparent;
+		background: none;
+		outline: none;
+		border: none;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			@include transition(all, .1s);
+			opacity: .8;
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+	.slick-prev {
+		left: 0;
+
+		&:after {
+			left: 0;
+			@include bg($i-nav-prev-dark);
+		}
+	}
+	.slick-next {
+		right: 0;
+
+		&:after {
+			right: 0;
+			@include bg($i-nav-next-dark);
+		}
+	}
+}
+
+// ---- slick end
+
+
+
+
+
+
+
+
+
+
+
+a,
+.c-link {
+	color: $text-light;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		color: $text-normal;
+	}
+
+	&:active {
+		color: $text-dark;	
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6,
+.head-1, .head-2, .head-3, .head-4, .head-5, .head-6 {
+	display: inline-block;
+	color: $text-heading;
+	margin: 0 0 15px 0;	
+	font-weight: $font-regular;
+	font-size: 16px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1, .head-1 {
+	font-size: 24px;
+	font-weight: $font-bold;
+}
+h2, .head-2 {
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+	.o-center {
+		max-width: 622px;		
+	}
+
+}
+
+@media (min-width: $third-point) {
+
+	.o-center {
+		max-width: 862px;		
+	}
+
+	h2, .head-2 {
+		font-size: 20px;
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+	
+	.o-section {
+		margin: 30px 0 50px;
+	}
+	.o-center {
+		max-width: 982px;		
+	}
+
+}
+
+@media (min-width: $fifth-point) {
+	
+	.o-center {
+		max-width: 1302px;		
+	}
+
+}
+
+@media (min-width: $sixth-point) {
+
+	.o-center {
+		max-width: 1462px;		
+	}
+
+}
+
+@media (min-width: $seventh-point) {
+	
+	.o-center {
+		max-width: 1622px;		
+	}
+
+}

@@ -1,0 +1,18 @@
+mixin mainSlider(modifeir, main)
+	.c-main-slider(class=modifeir)
+		.c-main-slider__slider.slick-slider.js-main-slider
+			- if (main)
+				- for (i = 0;i < 12;i ++)
+					.c-main-slider__slider-item
+						a.c-link-ico(href="#")
+							span.c-link-ico__ico
+								img(src="static/img/general/i-const-mat.png", alt="")
+							|Строительные материлы
+			- else
+				- for (i = 0;i < 12;i ++)
+					.c-main-slider__slider-item
+						a.c-link-ico(href="#")
+							span.c-link-ico__ico
+								img(src="static/img/general/i-const-mat-dark.png", alt="")
+							|Сыпучие материалы
+		

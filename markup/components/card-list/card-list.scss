@@ -1,0 +1,188 @@
+.c-card-list {
+	position: relative;
+	margin: 0 0 20px 0;
+	background: $fill-card;
+	@include transition(shadow, .15s);
+	@include cf;
+
+	&__inner {
+		background: inherit;
+		position: relative;
+		z-index: 1;
+		padding: 9px 9px 15px 9px;
+		@include cf;
+	}
+
+	&__price {
+		margin: 0 0 3px 0;
+	}
+
+	&__h {
+		display: block;
+		font-size: 15px;
+		margin: 0 0 8px 0;
+		color: $text-heading;
+	}
+
+	&__media {
+		position: relative;
+		float: left;
+		width: 110px;
+		margin: 0 0 10px 0;
+	}
+
+	&__img {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 87px;
+		overflow: hidden;
+		font-size: 0;
+
+		&:before,
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:before {
+			content: '';
+			width: 0;
+			height: 100%;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+		}
+
+	}
+
+	&__content {
+		padding: 0 0 0 120px;
+	}
+
+	&__sub-h {
+		display: block;		
+		color: $text-normal;
+
+		* {
+			color: inherit;
+		}
+	}
+
+	&__description {
+		text-align: center;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&__description-line {
+		display: block;
+		margin: 2px 0;
+		text-align: left;
+
+		* {
+			color: inherit;
+		}
+	}
+}
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+	
+	.c-card-list {
+
+		&__media {
+			width: 208px;
+		    margin: 0;
+		}
+
+		&__img {
+			width: 100%;
+			height: 165px;
+		}
+
+		&__sub-h {
+			margin: 0 0 15px 0;
+		}
+
+		&__description {
+			padding: 0 0 0 217px;
+			width: auto;
+			overflow: initial;
+		}
+
+		&__content {
+			padding: 0 0 0 217px;
+		}
+
+	}
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+	
+	.c-card-list {
+
+		&__main {
+			width: 468px;
+			float: left;
+			margin: 0;
+		}
+
+		&__content-height {
+			min-height: 114px;
+		}
+
+		&__h {			
+
+		}
+
+		&__description {
+			padding: 0 0 0 488px;
+			margin: 30px 0 0 0;
+			text-align: left;
+		}
+
+		&:hover {
+			margin: -3px -3px 20px -3px;
+			box-shadow: $shadow-card;
+
+			.c-card-list__inner {
+				padding: 12px 12px 15px 12px;
+			}
+		}
+
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

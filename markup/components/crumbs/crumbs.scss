@@ -1,0 +1,110 @@
+.c-crumbs {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+	@include cf;
+
+	&__item {
+		float: left;
+		margin: 0 0 0 3px;
+		position: relative;
+
+		&:first-child {
+			margin: 0;
+		}
+
+		&:hover {
+			.c-crumbs__btn {
+				color: $text-normal;
+			}
+
+			.c-bc-drop {
+				visibility: visible;
+				opacity: 1;
+				z-index: 5;
+			}
+		}
+	}
+
+	&__btn {
+		display: block;
+		color: $text-light;
+
+		&.is-active {
+			color: $text-dark;
+		}
+
+		&:not(.is-active) {
+			&:after {
+				content: '>';
+				display: inline-block;
+				vertical-align: middle;
+				margin: -2px 0 0 4px;
+			}
+		}
+	}
+
+}
+
+.c-bc-drop {
+	position: absolute;
+	width: 210px;
+	left: 0;
+	top: 100%;
+	background: $fill-card;
+	box-shadow: $shadow-card;
+	padding: 10px 15px;
+	z-index: 0;
+	opacity: 0;
+	visibility: hidden;	
+	@include transition(all, .15s);
+
+	&__item {
+		display: block;
+		margin: 5px 0;
+		color: $text-normal;
+
+		&:hover {
+			color: $text-dark;
+		}
+	}
+}
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

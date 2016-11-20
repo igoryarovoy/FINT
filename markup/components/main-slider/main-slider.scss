@@ -1,0 +1,191 @@
+.c-main-slider {	
+	background: $theme-dark-fill;
+	color: $text-normal-invert;			
+	text-align: center;
+
+	.slick-track {
+	    display: inline-block;
+	}
+
+	&__slider {
+		height: 128px;		
+	}
+
+	&__slider-item {
+		padding: 29px 0 0 0;			
+	}
+
+	.slick-arrow {
+		position: absolute;		
+		top: 0;
+		bottom: 0;
+		width: 22px;		
+		font-size: 0;
+		line-height: 0;
+		color: transparent;
+		background: none;
+		border: none;
+		outline: none;
+		padding: 0;
+		z-index: 1;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			@include transition(all, .1s);
+			opacity: .7;
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
+		}
+		
+	}
+	.slick-prev {
+		left: 0;
+
+		&:after {
+			left: 10px;
+			@include bg($i-nav-prev);
+		}
+	}
+	.slick-next {
+		right: 0;
+
+		&:after {
+			right: 10px;
+			@include bg($i-nav-next);
+		}
+	}
+
+	.slick-list {
+		// max-width: 1095px;
+		// margin: 0 auto;
+		padding: 0 10px;
+	}
+
+
+
+	&--default {
+		background: none;
+
+		.c-link-ico {
+			color: $text-normal;
+
+			&:hover {
+				color: $text-dark;
+			}
+		}
+
+		.slick-prev {
+			&:after {
+				@include bg($i-nav-prev-dark);
+			}
+		}
+		.slick-next {
+			&:after {
+				@include bg($i-nav-next-dark);
+			}
+		}
+
+
+		.c-main-slider__slider {
+			height: 106px;
+		}
+
+		.c-main-slider__slider-item {
+			padding: 17px 0 0 0;
+		}
+	}
+
+
+}
+
+
+
+
+.c-link-ico {	
+	display: inline-block;
+	vertical-align: top;
+	color: $text-normal-invert;
+	text-align: center;
+	font-size: 14px;
+	max-width: 110px;		
+
+	&__ico {
+		display: block;
+		font-size: 0;
+		height: 35px;	
+		opacity: .8;	
+		@include transition(all, .1s);
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 0;
+			height: 100%;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+
+
+	&:hover {
+		color: $text-normal-invert;		
+
+		.c-link-ico__ico {
+			opacity: 1;
+		}	
+	}
+}
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

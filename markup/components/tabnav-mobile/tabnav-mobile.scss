@@ -1,0 +1,160 @@
+.c-tabnav-mobile {
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;		
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: $third-point - 1px) {
+	
+	.c-tabnav-mobile {
+		font-size: 12px;		
+		position: relative;
+		z-index: 1;	
+		text-align: right;
+		height: 38px;		
+
+		&__toggler {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 38px;
+			z-index: 2;
+			cursor: pointer;
+		}
+
+		&__list {			
+			position: relative;					
+		}		
+
+		&__btn {
+			display: table-cell;
+			vertical-align: middle;			
+			padding: 5px;	
+			height: 38px;	
+			width: 158px;	
+			line-height: 1.34;
+		}
+
+		&__item {
+			display: block;		
+			height: 38px;
+			overflow: hidden;				
+
+			&.active {
+				.c-tabnav-mobile__btn {
+					color: $text-dark;
+					padding-right: 15px;
+
+					&:after {
+						content: '';
+						position: absolute;
+						right: 0;
+						top: 50%;
+						opacity: 0.7;
+						margin-top: -2.5px;
+						@include bg($i-dropdown);
+					}
+				}
+			}
+		}
+
+		&.open {
+			text-align: left;
+
+			.c-tabnav-mobile__list {
+				padding: 38px 0 0 0;
+				@include style-dropdown();
+			}
+
+			.c-tabnav-mobile__item{
+				&.active {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+				}
+			}
+
+			.c-tabnav-mobile__btn {
+				padding: 5px 10px;
+				&:after {
+					display: none;
+				}
+			}
+		}
+
+
+		&:not(.open) {
+			.c-tabnav-mobile__item {
+				&:not(.active) {
+					display: none;
+				}
+			}
+		}
+		
+	}
+
+}
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+	.c-tabnav-mobile {				
+		&__btn {
+
+		}
+		&__item {
+			display: inline-block;
+			margin: 0 0 0 25px;
+
+			&.active {
+				.c-tabnav-mobile__btn {
+					color: $text-dark;
+				}
+			}
+		}
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

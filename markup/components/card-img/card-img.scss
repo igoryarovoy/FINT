@@ -1,0 +1,103 @@
+.c-card-img {
+	background: $fill-card;	
+	overflow: hidden;
+	text-align: center;
+	line-height: 1.2;
+	margin: 0 0 20px 0;
+	@include border-radius($card-radius);
+	@include transition(all, .15s);
+
+	&__img {
+		display: block;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}		
+	}
+
+	&__content {
+		padding: 10px;
+	}	
+
+	&__h {
+		display: block;
+		color: $text-heading;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__list {
+		display: none;	
+		margin: 13px 0 0 0;	
+	}
+
+	&__link {
+		display: block;
+		color: $text-normal;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+}
+
+
+
+@media (min-width: $mobile-landscape) {
+	
+	.c-card-img {
+
+		&__h {
+			font-size: 17px;
+		}
+
+		&__list {
+			display: block;
+		}
+
+	}
+
+}
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+	
+	.c-card-img {
+		&:hover {
+			box-shadow: $shadow-card;
+		}
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

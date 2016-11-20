@@ -1,0 +1,20 @@
+mixin cardAdaptiveFeed(ID)
+	.c-card-adaptive.js-card-adaptive
+		.c-card-adaptive__inner
+			.c-card-adaptive__media
+				a(href="#").c-card-adaptive__img
+					img(src="static/img/content/img-test.png", alt="")
+			.c-card-adaptive__content
+				a(href="#").c-card-adaptive__h
+					|Стол капри плетеный
+				.c-card-adaptive__price
+					a(href="#").c-price.has-icon от 787 грн
+				.c-card-adaptive__sub-h
+					a(href="#") Heidelberg Cement Украина
+			.c-card-adaptive__description
+				span Производитель: <a href="#">Pradex, Украина</a>
+				span Высота: 50 см;  Длина: 98 см; Ширина: 60 см;
+				span Материал: массив дуба, Стол “Орландо” (темный дуб). Кухонный уголок+стол+табуре...
+		.c-card-adaptive__drop
+			span.c-card-adaptive__view(data-toggle="collapse", data-target="#quick-view-"+ID)
+				|Быстрый просмотр

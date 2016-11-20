@@ -1,0 +1,7 @@
+mixin tabnavMobile(obj)
+	.c-tabnav-mobile
+		span.c-tabnav-mobile__toggler(data-toggle="dropdown")
+		ul.c-tabnav-mobile__list(role="tablist")
+			each i in obj.list
+				li.c-tabnav-mobile__item(class="#{i.active}", role="presentation")
+					a(href="##{i.tabId}", role="tab", data-toggle="tab").c-tabnav-mobile__btn #{i.text}

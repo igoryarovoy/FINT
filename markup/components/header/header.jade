@@ -1,0 +1,10 @@
+mixin header(data)
+	include ../logo/logo
+	include ../top-nav/top-nav
+	header.c-header
+		.c-header__top
+			.o-center
+				+logo('c-logo--header')
+		.c-header__bot
+			.o-center
+				+topNav()

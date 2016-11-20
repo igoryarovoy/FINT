@@ -1,0 +1,10 @@
+mixin slickGallery()
+	.c-slick-gallery
+		.c-screen.slick-slider.js-gallery-screen
+			- for (i = 0;i < 5;i ++)
+				.c-screen__item
+					img(src="static/img/content/img-gallery.jpg", alt="")
+		.c-nav.slick-slider.js-gallery-nav
+			- for (i = 0;i < 5;i ++)
+				.c-nav__item
+					img(src="static/img/content/img-gallery-small.jpg", alt="")

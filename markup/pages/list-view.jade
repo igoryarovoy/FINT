@@ -1,0 +1,43 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header            
+    include ../components/card-list/card-list-feed
+    include ../components/footer/footer
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .o-wrapper
+            +header()                        
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                h1.head-1 Стол темный дуб
+                            .u-dtc.u-text-right.u-fs-16
+                                .u-mt-5 Всего <b>279</b>
+                    .o-grid
+                        .o-grid__md-9
+                            +cardListFeed()
+                            +cardListFeed()
+                            +cardListFeed()
+                            .u-text-center.u-hide-xs
+                                .o-ad
+                                    img(src="static/img/content/img-bun-long.jpg", alt="")
+                            +cardListFeed()
+                            +cardListFeed()
+                        .o-grid__md-3
+                            .u-text-center.u-fs-0
+                                .o-ad
+                                    img(src="static/img/content/img-bun-sm.jpg", alt="")
+                                .o-ad
+                                    img(src="static/img/content/img-bun-sm.jpg", alt="")
+                                .o-ad.u-hide-xs.u-hide-sm
+                                    img(src="static/img/content/img-bun-tall.jpg", alt="")
+            +footer()
+        +includeJs()

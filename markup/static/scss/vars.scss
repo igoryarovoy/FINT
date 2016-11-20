@@ -1,0 +1,66 @@
+// File for scss-vars.
+// For example: main colors, paddings and so on.
+
+
+
+
+// ---- media points
+
+$one-point      : 480px;
+$second-point   : 600px;
+$third-point    : 840px;
+$fourth-point   : 960px;
+$fifth-point    : 1280px;
+$sixth-point    : 1440px;
+$seventh-point  : 1600px;
+
+
+// grid
+$mobile-landscape     : 568px;
+$tablet-grid          : 840px;
+$desktop-grid         : 1280px;
+$desktop-full-grid    : 1600px;
+
+
+
+// ---- fonts
+
+$main-font: 'Roboto', sans-serif;
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 600;
+
+
+
+
+// ---- text
+
+$text-light   : #878787;
+$text-normal  : #565656;
+$text-dark    : #373737;
+
+
+$text-heading : #333333;
+
+$text-success : #008c05;
+
+
+$text-light-invert: #b4b4b4;
+$text-normal-invert: #fff;
+
+
+
+// ---- fills
+
+$main-fill: #fafafa;
+$dark-fill: #3c3c3c;
+
+$theme-light-fill: #6a1b9a;
+$theme-dark-fill: #4f1a6f;
+
+
+// ---- card styles
+
+$fill-card: #fff;
+$shadow-card: 0 1px 5px 0 rgba(0, 0, 0, .3);
+$card-radius: 5px;

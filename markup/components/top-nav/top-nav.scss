@@ -1,0 +1,126 @@
+.c-top-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+
+	&__item {
+		display: table-cell;
+		text-align: center;
+	}
+
+	&__btn {
+		display: block;
+		font-size: 14px;
+		color: $text-normal-invert;
+		height: 64px;
+		padding: 40px 0 0 0;
+		position: relative;
+
+		&:hover {
+			color: $text-normal-invert;			
+		}
+
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 10px;
+		}
+
+		&--construction {
+			&:before {
+				@include bg($i-nav-construction);
+			}
+		}
+		&--interior {
+			&:before {
+				@include bg($i-nav-interior);
+			}
+		}
+		&--landscape {
+			&:before {
+				@include bg($i-nav-landscape);
+			}
+		}
+		&--repairs {
+			&:before {
+				@include bg($i-nav-repairs);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+	.c-top-nav {		
+		display: table;
+		width: auto;
+		table-layout: initial;
+		margin-left: -5px;
+
+		&__item {
+			display: table-cell;
+			text-align: left;
+			padding: 0 45px 0 0;
+		}
+
+		&__btn {								
+			line-height: 64px;		
+			padding: 0 5px 0 40px;
+			@include transition(all, .2s);
+			font-size: 17px;
+
+			&:before {
+				top: 50%;
+				transform: translateY(-50%);
+				left: 5px;
+			}
+
+			&:hover {
+				background: $theme-dark-fill;
+			}
+		}
+	}
+
+}
+
+@media (min-width: $third-point) {	
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

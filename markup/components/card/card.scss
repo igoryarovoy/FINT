@@ -1,0 +1,140 @@
+.c-card {	
+	background: $fill-card;
+	@include cf;	
+	position: relative;
+	@include transition(shadow, .1s);
+
+	&__inner {
+		background: inherit;
+		position: relative;
+		z-index: 1;
+		padding: 9px 9px 15px 9px;		
+	}
+
+	&__media {
+		position: relative;
+	}
+
+	&__content {
+		padding: 8px 0 0 0;
+		min-height: 113px;
+	}
+
+	&__img {
+		display: block;
+		position: relative;
+		font-size: 0;
+		height: 180px;
+		overflow: hidden;
+		text-align: center;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 0;
+			height: 100%;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;			
+			height: auto;
+		}
+	}
+
+
+	&__h {
+		display: block;
+		font-size: 15px;
+		margin: 0 0 13px 0;
+		height: 36px;
+		overflow: hidden;
+		color: $text-heading;
+	}
+
+	&__price {
+		margin: 0 0 3px 0;
+	}
+
+	&__rating {
+		display: block;
+		margin: 0 0 4px 0;
+		opacity: .8;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__sub-h {
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: $text-normal;
+
+		* {
+			color: inherit;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+	.c-card {	
+
+		&:hover {		
+			z-index: 2;		
+			margin: -3px -3px 0 -3px;	
+			box-shadow: $shadow-card;
+
+			.c-card__inner {
+				padding: 12px 12px 15px 12px;
+			}
+		}
+
+	}
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}
