@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
     include ../components/card-adaptive/card-adaptive-feed
     include ../components/quick-view/quick-view
     include ../components/footer/footer
+    include ../components/pagination/pagination
     include ../components/includeJs/includeJs
 
     head
@@ -99,5 +100,6 @@ html(class="no-js", lang="ru")
                         .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
                             +cardAdaptiveFeed(24)
                             +quickView(24)
+                +pagination()
             +footer()
         +includeJs()

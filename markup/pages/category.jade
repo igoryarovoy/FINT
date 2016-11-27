@@ -203,11 +203,7 @@ html(class="no-js", lang="ru")
             .o-section
                 .o-center
                     .o-hgroup
-                        .u-dt
-                            .u-dtc
-                                a(href="#").head-2 Инструмент
-                            .u-dtc.u-text-right
-                                a(href="#").c-btn.c-btn--flat-info.c-btn--small Все инструменты
+                        a(href="#").head-2 Инструмент
                     .o-slider-common.slick-slider.js-cardSm-slider
                         - for (i = 0;i < 10;i ++)
                             .o-slider-common__item
@@ -229,6 +225,8 @@ html(class="no-js", lang="ru")
                             +cardImg()
                         .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
                             +cardImg()
+                    .u-text-center
+                        a(href="#").c-btn.c-btn--flat-info Все инструменты
             .o-section
                 .o-center
                     .u-text-center.u-fs-0                        
