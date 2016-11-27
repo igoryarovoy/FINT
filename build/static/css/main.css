@@ -5180,16 +5180,6 @@ h2, .head-2 {
   }
 }
 
-.c-top-panel {
-  margin: 12px 0;
-}
-
-@media (min-width: 960px) {
-  .c-top-panel {
-    margin: 17px 0 22px;
-  }
-}
-
 .c-top-nav {
   margin: 0;
   padding: 0;
@@ -5289,6 +5279,16 @@ h2, .head-2 {
   }
   .c-top-nav__btn:hover {
     background: #4f1a6f;
+  }
+}
+
+.c-top-panel {
+  margin: 12px 0;
+}
+
+@media (min-width: 960px) {
+  .c-top-panel {
+    margin: 17px 0 22px;
   }
 }
 
