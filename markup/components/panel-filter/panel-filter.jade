@@ -1,0 +1,221 @@
+mixin panelFilter(modifeir)
+	include ../view-nav/view-nav
+	include ../dropdown/dropdown
+	.c-panel-filter.js-panel-filter(class=modifeir)
+		.c-panel-filter__nav.c-panel-filter__nav--first
+			.u-fl-r
+				+dropdown()
+				+viewNav('u-hide-xs', 'is-active', '')
+				span.c-panel-filter__c.u-hide-sm.u-hide-md
+					|Всего <b>279</b>
+			span(data-toggle='collapse', data-target='#panel-filter').c-panel-filter__toggle.u-fl-l (15)
+		.c-panel-filter__nav.c-panel-filter__nav--second.js-collapse-filter(id='panel-filter')
+			.c-panel-filter__info
+				.u-fl-l
+					span(data-toggle='collapse', data-target='#panel-filter').c-panel-filter__back
+				.u-fl-r
+					a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Очистить все
+				.c-panel-filter__info-count
+					span.c-panel-filter__c Всего <b>279</b>
+			span.c-label.c-label--close
+				span.c-label__close
+				|Цена 757-1758
+			span.c-label.c-label--close
+				span.c-label__close
+				|Вид: столы деревянные
+			span.c-label.c-label--close
+				span.c-label__close
+				|Страна: Украина
+		.c-panel-filter__wrap
+			.c-panel-filter__mb-toggles
+				span.c-panel-filter__mb-toggle.collapsed(data-toggle='collapse', data-target='#f-collapse-1', data-parent='#group-filters') Цена
+				span.c-panel-filter__mb-toggle.collapsed(data-toggle='collapse', data-target='#f-collapse-2', data-parent='#group-filters') Вид
+				span.c-panel-filter__mb-toggle.collapsed(data-toggle='collapse', data-target='#f-collapse-3', data-parent='#group-filters') Производитель
+				span.c-panel-filter__mb-toggle.collapsed(data-toggle='collapse', data-target='#f-collapse-4', data-parent='#group-filters') Страна
+				span.c-panel-filter__mb-toggle.collapsed(data-toggle='collapse', data-target='#f-collapse-5', data-parent='#group-filters') Цвет
+				span.c-panel-filter__mb-toggle.collapsed(data-toggle='collapse', data-target='#f-collapse-6', data-parent='#group-filters') Узор
+			.c-panel-filter__filters.panel-group(id='group-filters')
+				.c-filter-box.panel
+					span.c-filter-box__btn.collapsed(data-toggle='collapse', data-target='#f-collapse-1', data-parent='#group-filters')
+						span.c-filter-box__close
+						|Цена
+						span.c-filter-box__i(data-text='Человек или предприятие, создающие товары или услуги') i
+					.c-filter-box__collapse(id='f-collapse-1')
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") до 100 грн
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") 100 - 500 грн
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") 500 - 1000 грн
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") 1000 - 1500
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") 1500 и выше	
+						a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Очистить
+				.c-filter-box.panel
+					span.c-filter-box__btn.collapsed(data-toggle='collapse', data-target='#f-collapse-2', data-parent='#group-filters')
+						span.c-filter-box__close
+						|Вид
+					.c-filter-box__collapse(id='f-collapse-2')
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Бетоны Р1
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Бетоны Р2
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Бетоны Р3
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Бетоны Р4
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Спецбетоны высокопрочные
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Бетон мелкозернистый
+				.c-filter-box.panel
+					span.c-filter-box__btn.collapsed(data-toggle='collapse', data-target='#f-collapse-3', data-parent='#group-filters')
+						span.c-filter-box__close
+						|Производитель
+					.c-filter-box__collapse(id='f-collapse-3')
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") Makita (15)
+							.o-line-f__inner
+								span.c-filter-box__tg-sm.collapsed(data-toggle='collapse', data-target='#f-inner-collapse-1') Выбрать линейку
+								.c-filter-box__collapse-sm(id='f-inner-collapse-1')
+									.o-line-f
+										label.c-label-f
+											input(type="checkbox")
+											span.c-label-f__checkbox
+											a(href="#") Линейка 1
+									.o-line-f
+										label.c-label-f
+											input(type="checkbox")
+											span.c-label-f__checkbox
+											a(href="#") Линейка 2
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") Black & Decker (15)
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") AEG (7)
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") Bosh (10)
+							.o-line-f__inner
+								span.c-filter-box__tg-sm(data-toggle='collapse', data-target='#f-inner-collapse-2') Выбрать линейку
+								.c-filter-box__collapse-sm.in(id='f-inner-collapse-2')
+									.o-line-f
+										label.c-label-f
+											input(type="checkbox")
+											span.c-label-f__checkbox
+											a(href="#") PSS
+									.o-line-f
+										label.c-label-f
+											input(type="checkbox")
+											span.c-label-f__checkbox
+											a(href="#") PCK
+									.o-line-f
+										label.c-label-f
+											input(type="checkbox")
+											span.c-label-f__checkbox
+											a(href="#") PSM
+									.o-line-f
+										label.c-label-f
+											input(type="checkbox")
+											span.c-label-f__checkbox
+											a(href="#") POS
+						.o-line-f
+							label.c-label-f
+								input(type="checkbox")
+								span.c-label-f__checkbox
+								a(href="#") Зенит (7) <span class='u-flag'><img src='static/img/general/i-UA.png' alt=''></span>
+						a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Очистить
+				.c-filter-box.panel
+					span.c-filter-box__btn.collapsed(data-toggle='collapse', data-target='#f-collapse-4', data-parent='#group-filters')
+						span.c-filter-box__close
+						|Страна
+					.c-filter-box__collapse(id='f-collapse-4')
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Украина <span class='u-flag'><img src='static/img/general/i-UA.png' alt=''></span>
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Польша
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Турция
+						.o-line-f
+							.c-label-f.c-label-f--link
+								a(href="#") Германия
+				.c-filter-box.panel
+					span.c-filter-box__btn.collapsed(data-toggle='collapse', data-target='#f-collapse-5', data-parent='#group-filters')
+						span.c-filter-box__close
+						|Цвет
+					.c-filter-box__collapse(id='f-collapse-5')
+						.c-scroll-wrapper.c-scroll-wrapper--filter.js-scroll-wrapper
+							.c-group-label
+								- for (i = 0;i < 4;i ++)
+									label.c-label-box.c-label-box--color(style='background-color:#c94949')
+										input(type="checkbox")
+										span.c-label-box__checkbox
+									label.c-label-box.c-label-box--color(style='background-color:#605656')
+										input(type="checkbox")
+										span.c-label-box__checkbox
+									label.c-label-box.c-label-box--color(style='background-color:#527e53')
+										input(type="checkbox")
+										span.c-label-box__checkbox
+						a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Очистить
+				.c-filter-box.panel
+					span.c-filter-box__btn.collapsed(data-toggle='collapse', data-target='#f-collapse-6', data-parent='#group-filters')
+						span.c-filter-box__close
+						|Узор
+					.c-filter-box__collapse(id='f-collapse-6')
+						.c-scroll-wrapper.c-scroll-wrapper--filter.js-scroll-wrapper
+							.c-group-label
+								- for (i = 0;i < 3;i ++)
+									label.c-label-box.c-label-box--img
+										.c-label-box__img
+											img(src="static/img/general/img-filter.png", alt="")
+										input(type="checkbox")
+										span.c-label-box__checkbox
+									label.c-label-box.c-label-box--img
+										.c-label-box__img
+											img(src="static/img/general/img-filter.png", alt="")
+										input(type="checkbox")
+										span.c-label-box__checkbox
+									label.c-label-box.c-label-box--img
+										.c-label-box__img
+											img(src="static/img/general/img-filter.png", alt="")
+										input(type="checkbox")
+										span.c-label-box__checkbox
+						a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Очистить
+				a(href="#").c-btn.c-btn--flat-info.c-btn--lbl.u-hide-xs Очистить все
+
+

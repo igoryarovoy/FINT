@@ -1,0 +1,83 @@
+.c-view-nav {
+	font-size: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 0 10px;
+	
+	&__btn {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 0 0 5px;
+		@include transition(all, .15s);
+		width: 30px;
+		height: 30px;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&--list {
+			&:after {
+				@include bg($i-view-list);
+			}
+		}
+
+		&--card {
+			&:after {
+				@include bg($i-view-card);
+			}
+		}
+
+		&:hover,
+		&.is-active {
+			background: #ededed;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

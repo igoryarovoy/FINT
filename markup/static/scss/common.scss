@@ -21,6 +21,8 @@ body {
 
 @import '_slick.scss';
 
+@import '_jquery.mCustomScrollbar.scss';
+
 @import '_grid.scss';
 
 
@@ -55,7 +57,7 @@ body {
 .o-hgroup {
 	@include cf;
 	border-bottom: 1px solid #c8c8c8;
-	margin: 0 0 20px 0;
+	margin: 0 0 15px 0;
 	padding: 0 0 10px 0;
 }
 .o-tab-content {
@@ -146,6 +148,9 @@ body {
 	font-size: 24px !important;
 }
 
+.u-m-5 {
+	margin: 5px 0 !important;
+}
 .u-m-10 {
 	margin: 10px 0 !important;
 }
@@ -174,6 +179,9 @@ body {
 	margin: 50px 0 !important;
 }
 
+.u-mt-5 {
+	margin-top: 5px !important;
+}
 .u-mt-10 {
 	margin-top: 10px !important;
 }
@@ -202,6 +210,9 @@ body {
 	margin-top: 50px !important;
 }
 
+.u-mb-5 {
+	margin-bottom: 5px !important;
+}
 .u-mb-10 {
 	margin-bottom: 10px !important;
 }
@@ -363,6 +374,21 @@ h2, .head-2 {
 }
 
 
+.c-scroll-wrapper {
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+		background: #a5a5a5;
+		width: 11px;
+		@include border-radius(0);
+	}
+	.mCSB_scrollTools .mCSB_draggerRail {
+		background: #d3d3d3;
+	}
+	margin: 0 0 10px 0;
+	
+	&--filter {
+		max-height: 190px;
+	}
+}
 
 
 

@@ -2,7 +2,8 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../components/head/head
-    include ../components/header/header    
+    include ../components/header/header   
+    include ../components/top-panel/top-panel 
     include ../components/main-slider/main-slider
     include ../components/img-bunner/img-bunner
     include ../components/link-img/link-img        
@@ -17,7 +18,8 @@ html(class="no-js", lang="ru")
     body
         |%=symbols=%
         .o-wrapper
-            +header()            
+            +header()   
+            +top-panel('u-hide-xs')         
             +mainSlider('c-main-slider--default', false)
             +imgBunner()
             .o-section

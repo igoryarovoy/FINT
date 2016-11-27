@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     
 	$('.js-main-slider').slick({				
 		speed: 300,
@@ -141,11 +142,30 @@ $(document).ready(function(){
 
 
 	$('.js-quick-view').on('shown.bs.collapse', function () {
-		$('.js-card-adaptive [aria-expanded="true"]').parents('.js-card-adaptive').addClass('is-active');		
+		parentCollapseActive('.js-card-adaptive');	
 	});
 	$('.js-quick-view').on('hidden.bs.collapse', function () {		
-		$('.js-card-adaptive [aria-expanded="false"]').parents('.js-card-adaptive').removeClass('is-active');
+		parentCollapseRemoveActive('.js-card-adaptive')
+	});
+
+	$('.js-collapse-filter').on('shown.bs.collapse', function () {	
+		parentCollapseActive('.js-panel-filter');
+	});
+	$('.js-collapse-filter').on('hidden.bs.collapse', function () {	
+		parentCollapseRemoveActive('.js-panel-filter')	
 	});
 		
 
+});
+
+
+function parentCollapseActive(selector) {
+	$(selector+' [aria-expanded="true"]').parents(selector).addClass('is-active');
+}
+function parentCollapseRemoveActive(selector) {
+	$(selector+' [aria-expanded="false"]').parents(selector).removeClass('is-active');
+}
+
+$(window).on("load",function(){
+    $(".js-scroll-wrapper").mCustomScrollbar();
 });

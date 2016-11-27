@@ -1,0 +1,362 @@
+.c-panel-filter {
+	margin: 0 0 25px 0;
+	position: relative;
+	z-index: 10;
+
+	&__c {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 16px;
+		margin: 0 0 0 10px;
+	}
+
+	&__nav {
+		@include cf;
+		border-bottom: 1px solid #c9c9c9;
+		padding: 0 0 15px 0;
+		margin: 0 0 15px 0;
+
+		&--second {
+			display: none;
+			height: auto!important;
+
+			&.in {
+				display: block;
+			}
+		}
+	}
+
+	&__wrap {
+		display: none;
+		background: #fff;
+	}
+
+
+	&.is-active {
+		.c-panel-filter__nav--first {
+			display: none;
+		}
+
+		.c-panel-filter__wrap {
+			display: block;
+		}
+	}
+
+	&__toggle {
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+		padding: 5px 0 5px 20px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include bg($i-filter);
+			transform: translateY(-50%);
+		}
+	}
+
+	&__back {
+		display: inline-block;
+		vertical-align: middle;
+
+		&:after {
+			content: '';
+			display: block;
+			@include bg($i-f-back);
+		}
+	}
+
+	&__info {
+		@include cf;
+		margin: 0 0 10px 0;
+
+		&-count {
+			text-align: center;
+			margin: 0 120px 0 30px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+
+
+	&__wrap {
+		@include cf;
+	}
+
+	&__mb-toggles {
+		float: left;
+		width: 120px;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__mb-toggle {
+		display: block;
+		cursor: pointer;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+		background: #fff;
+
+		&:not(.collapsed) {
+			background: #ebebeb;
+		}
+	}
+
+	&__filters {
+		padding: 0 0 0 120px;
+	}
+
+}
+
+.c-filter-box {
+
+	&__btn {
+		display: none;
+		cursor: pointer;
+	}
+
+	&__collapse {
+		display: none;
+		height: auto!important;
+		background: #fff;
+		padding: 5px 15px;
+
+		&.in {
+			display: block;
+		}
+	}
+
+	&__tg-sm {
+		display: inline-block;
+		cursor: pointer;
+		color: $text-light;
+		position: relative;
+		padding: 0 13px 0 0;
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 5px;
+			border: 5px solid transparent;
+			border-top: 5px solid;
+		}
+
+		&:not(.collapsed) {
+			margin: 0 0 8px 0;
+
+			&:after {
+				border: 5px solid transparent;
+				border-bottom: 5px solid;
+				top: 0;
+			}
+		}
+	}
+
+	&__collapse-sm {
+		display: none;
+		padding: 0 0 0 7px;
+
+		&.in {
+			display: block;
+		}
+	}
+}
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+	
+	.c-panel-filter {
+		&__nav {
+			border: 0;
+			float: right;
+			position: relative;
+			z-index: 1;
+			margin: 0;
+			padding: 0;
+
+			&--first {
+				display: block!important;
+			}
+			&--second {
+				display: none!important;
+			}
+		}
+
+		&__toggle {
+			display: none;
+		}
+
+		&.is-active .c-panel-filter__wrap,
+		&__wrap {
+			display: block;
+		}
+
+		&__wrap {
+			background: none;
+		}
+
+		&__mb-toggles {
+			display: none;
+		}
+
+		&__filters {
+			padding: 3px 0 0 0;
+		}
+	}
+
+
+	.c-filter-box {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		z-index: 10;
+		margin: 0 5px 0 0;
+
+		&__btn {
+			display: block;
+			padding: 5px 30px 5px 0;
+
+			&:after {
+				content: '';
+				position: absolute;
+				right: 15px;
+				top: 10px;
+				border: 5px solid transparent;
+    			border-top: 5px solid;
+			}
+
+			&:not(.collapsed) {
+				&:after {
+					border: 5px solid transparent;
+    				border-bottom: 5px solid;
+    				top: 5px;
+				}
+			}
+
+			&:hover {
+				.c-filter-box__close {
+					display: block;
+				}
+			}
+		}
+
+		&__close {
+			display: none;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			width: 12px;
+			height: 12px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				@include bg($i-lbl-close);
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		&__collapse {
+			position: absolute;
+			left: 0;
+			top: 100%;
+			margin: 5px 0 0 0;
+			width: 247px;
+			box-shadow: $shadow-card;
+			@include border-radius(3px);
+			padding: 10px 15px;
+			z-index: 2;
+		}
+
+		&__i {
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			width: 12px;
+			height: 12px;
+			background: #dcdcdc;
+			margin: -2px 0 0 6px;
+			text-align: center;
+			line-height: 13px;
+			font-size: 10px;
+
+			&:before {
+				display: none;
+				content: attr(data-text);
+				position: absolute;
+				width: 160px;
+				@include style-dropdown();
+				bottom: 100%;
+				left: -20px;
+				margin: 0 0 7px 0;
+				padding: 7px;
+				font-size: 10px;
+				text-align: left;
+				line-height: 1.4;
+			}
+
+			&:hover {
+				background: #ebebeb;
+				&:before {
+					display: block;
+				}
+			}
+		}
+
+		&__backdrop {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			// background: #ccc;
+			z-index: 1;
+		}
+
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

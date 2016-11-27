@@ -3,7 +3,8 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/header/header
-    include ../components/top-panel/top-panel            
+    include ../components/top-panel/top-panel 
+    include ../components/panel-filter/panel-filter           
     include ../components/card-adaptive/card-adaptive-feed
     include ../components/quick-view/quick-view
     include ../components/footer/footer
@@ -15,15 +16,16 @@ html(class="no-js", lang="ru")
         |%=symbols=%
         .o-wrapper
             +header() 
-            +top-panel('u-hide-xs')                       
+            +top-panel('u-hide-xs')                     
             .o-section
                 .o-center
                     .o-hgroup
                         .u-dt
                             .u-dtc
                                 h1.head-1 Стол темный дуб
-                            .u-dtc.u-text-right.u-fs-16
+                            .u-dtc.u-text-right.u-fs-16.u-hide-xs
                                 .u-mt-5 Всего <b>279</b>
+                    +panelFilter()
                     .o-grid.panel-group.js-panel-group(id="cards-group")                        
                         .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
                             +cardAdaptiveFeed(1)

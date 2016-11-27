@@ -1,0 +1,112 @@
+.c-dropdown {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 10;
+
+	&__btn {
+		display: block;
+		cursor: pointer;
+		padding: 5px 15px 5px 20px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include bg($i-sort);
+			transform: translateY(-50%);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 10px;
+			border: 5px solid transparent;
+    		border-top: 5px solid;
+		}
+	}	
+
+	&__list {
+		display: none;
+		position: absolute;
+		width: 210px;
+		@include style-dropdown();
+		padding: 5px 15px;
+		top: 100%;
+		right: 0;
+		margin: 10px 0 0 0;
+	}
+
+	&__item {
+		display: block;
+		padding: 5px 0;		
+	}
+
+	&.open {
+		.c-dropdown__btn {
+			&:after {
+				border: 5px solid transparent;
+				border-bottom: 5px solid;
+				top: 5px;
+			}
+		}
+		.c-dropdown__list {
+			display: block;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+	.c-dropdown {
+
+		&__btn {
+			padding: 5px 15px 5px 0;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}
