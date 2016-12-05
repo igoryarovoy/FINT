@@ -57,10 +57,6 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 			var posLeftCard = $(this).position().left,
 				widthCardHalf = $(this).outerWidth()/2,
 				posCor = posLeftCard + widthCardHalf - 10;
-
-			console.log(posLeftCard);
-			console.log(widthCardHalf);
-			console.log(posCor);
 			
 			$this.find('.'+$self.panelCor).css('left', posCor);
 		});

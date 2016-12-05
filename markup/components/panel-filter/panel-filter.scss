@@ -62,6 +62,7 @@
 	&__back {
 		display: inline-block;
 		vertical-align: middle;
+		cursor: pointer;
 
 		&:after {
 			content: '';
@@ -73,14 +74,6 @@
 	&__info {
 		@include cf;
 		margin: 0 0 10px 0;
-
-		&-count {
-			text-align: center;
-			margin: 0 120px 0 30px;
-			overflow: hidden;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-		}
 	}
 
 
@@ -113,6 +106,10 @@
 		padding: 0 0 0 120px;
 	}
 
+	&__bot-count {
+		display: none;
+	}
+
 }
 
 .c-filter-box {
@@ -124,13 +121,16 @@
 
 	&__collapse {
 		display: none;
-		height: auto!important;
-		background: #fff;
-		padding: 5px 15px;
+		height: auto!important;		
 
 		&.in {
 			display: block;
 		}
+	}
+
+	&__collapse-in {
+		background: #fff;
+		padding: 5px 15px;
 	}
 
 	&__tg-sm {
@@ -168,6 +168,10 @@
 			display: block;
 		}
 	}
+
+	&__clear {
+		margin: 10px 0 0 0;
+	}
 }
 
 
@@ -185,6 +189,57 @@
 @media (min-width: $second-point) {
 
 }
+
+
+@media (max-width: $third-point - 1px) {
+	.c-panel-filter {
+
+		&.is-active {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 100%;
+			z-index: 100;
+			background: $main-fill;
+			padding: 15px 10px 40px;
+			overflow-x: hidden;
+			overflow-y: auto;
+
+			.c-panel-filter__bot-count {
+				display: block;
+			}
+		}
+
+		.c-scroll-wrapper--filter {
+			max-height: 360px;
+		}
+
+		&__bot-count {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background: $main-fill;
+
+			.c-panel-filter__c {
+				margin: 0;
+			}
+		}
+
+	}
+
+	.c-filter-box {
+		&__clear {
+			text-align: right;
+			margin: 20px 0 0 0;
+		}
+	}
+}
+
 
 @media (min-width: $third-point) {
 	
@@ -232,12 +287,13 @@
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
-		z-index: 10;
 		margin: 0 5px 0 0;
 
 		&__btn {
 			display: block;
 			padding: 5px 30px 5px 0;
+			position: relative;
+			z-index: 5;
 
 			&:after {
 				content: '';
@@ -271,6 +327,7 @@
 			right: 0;
 			width: 12px;
 			height: 12px;
+			opacity: .8;
 
 			&:after {
 				content: '';
@@ -287,11 +344,15 @@
 			left: 0;
 			top: 100%;
 			margin: 5px 0 0 0;
-			width: 247px;
+			width: 235px;			
+			z-index: 2;
+		}
+		&__collapse-in {
 			box-shadow: $shadow-card;
 			@include border-radius(3px);
 			padding: 10px 15px;
-			z-index: 2;
+			position: relative;
+			z-index: 5;
 		}
 
 		&__i {
@@ -335,7 +396,6 @@
 			right: 0;
 			top: 0;
 			bottom: 0;
-			// background: #ccc;
 			z-index: 1;
 		}
 
