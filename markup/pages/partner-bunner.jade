@@ -1,0 +1,131 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/side-nav/side-nav
+    include ../components/top-panel/top-panel   
+    include ../components/bot-panel/bot-panel   
+    include ../components/footer/footer
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body.has-panel
+        |%=symbols=%
+        .c-modal(id='modal-form')
+            .c-modal__dialog
+                .c-modal__content
+                    span.c-modal__close(data-dismiss="modal")
+                    .head-2.c-modal__head Зарегистрировать свой магазин в Idilia.com.ua
+                    .c-form-g
+                        .c-form-label <span>*</span>Название магазина
+                        input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label <span>*</span>Контактное лицо
+                        input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label <span>*</span>Телефоны
+                        input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label <span>*</span>Ваш e-mail
+                        input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label Другие контакты
+                        .o-grid
+                            .o-grid__xs-4
+                                select.c-form-control
+                                    option skype
+                                    option ICQ
+                                    option AIM
+                            .o-grid__xs-8
+                                input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label Дополнительные вопросы:
+                        textarea.c-form-control(rows='3')
+                    button(type='submit').c-btn.c-btn--success.c-btn--raised Зарегестрировать
+        .o-wrapper
+            +header()   
+            +top-panel('u-hide-xs')
+            .o-section
+                .o-center
+                    .o-grid
+                        .o-grid__xs-lnd-4.o-grid__md-2
+                            +sideNav()
+                        .o-grid__xs-lnd-8.o-grid__md-10
+                            .o-section
+                                .o-hgroup
+                                    h1.head-1 Баннерная реклама на страницах Idilia.com.ua
+                                .head-3 Пример размещения:
+                                .o-grid.u-mb-20
+                                    .o-grid__xs-lnd-7
+                                        img(src="static/img/content/banners_1.jpg", alt="").c-img-resp.u-mb-10
+                                    .o-grid__xs-lnd-5
+                                        img(src="static/img/content/banners_2.jpg", alt="").c-img-resp.u-mb-10
+                                table.c-table-content
+                                    tr
+                                        th Размер
+                                        th Позиция
+                                        th.u-text-center Стоимость размещения, грн/1000 показов (CPM)
+                                    tr
+                                        td 250х725
+                                        td главная страница
+                                        td.u-text-center 85
+                                    tr
+                                        td 250х725
+                                        td главная страница
+                                        td.u-text-center 85
+                                    tr
+                                        td 250х725
+                                        td главная страница
+                                        td.u-text-center 85
+                                    tr
+                                        td 250х725
+                                        td главная страница
+                                        td.u-text-center 85
+                                .head-3 Наценки за использование RichMedia форматов
+                                table.c-table-content
+                                    tr
+                                        th Формат
+                                        th размещение
+                                        th.u-text-center Цена за 1000 показов, грн
+                                    tr
+                                        td ScreenGlide
+                                        td динамика
+                                        td.u-text-center 50% к стоимости баннера
+                                    tr
+                                        td ScreenGlide
+                                        td динамика
+                                        td.u-text-center 50% к стоимости баннера
+                                    tr
+                                        td ScreenGlide
+                                        td динамика
+                                        td.u-text-center 50% к стоимости баннера
+                                    tr
+                                        td ScreenGlide
+                                        td динамика
+                                        td.u-text-center 50% к стоимости баннера
+                                .head-3 Наценки за использование RichMedia форматов
+                                ol
+                                    li Полный набор материалов должен включать:
+                                        ul
+                                            li Комплект баннеров в соответствии с техническими требованиями, изложенными в настоящем дополнении;
+                                            li Рабочие URL-адреса целевых страниц.
+                                    li Правила наименования материалов:
+                                        ul
+                                            li Рекомендуется называть материалы следующим образом (латиницей):«Продукт/клиент_версия_формат баннера», например: produkt_1_468x60.fla;
+                                            li В названии должны использоваться маленькие буквы, нижнее подчеркивание и числа. Не рекомендуется использовать пробел.
+                                    li Адреса URL должны быть указаны в таблице. Одна колонка – название баннера, вторая – соответствующий ему URL-адрес (если для всей кампании используется один целевой адрес, то использовать таблицу нет необходимости).
+                                .head-3 Наценки за использование RichMedia форматов
+                                ol
+                                    li <b>Баннер обычный 60 у.е.</b>
+                                        ul
+                                            li дополнительный баннер с небольшими изменениями текста или цвета 20 у.е.
+                                            li дополнительный баннер с незначительными изменениями компоновки, цвета и текста 30 у.е.
+                                    li <b>Масштабируемый баннер на странице с описанием модели 60 у.е.</b>
+                                p
+                                    |* Цены указаны минимальные (при условии размещения баннеров на сайте Idilia.com.ua)
+
+        +footer()
+        +botPanel()
+        +includeJs()

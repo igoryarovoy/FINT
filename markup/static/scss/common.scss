@@ -17,7 +17,9 @@ body {
 	color: $text-normal;
 	line-height: 1.2;
 }
-
+.modal-open {
+	overflow: hidden;
+}
 
 @import '_slick.scss';
 
@@ -33,8 +35,28 @@ body {
 .o-wrapper {
 	overflow: hidden;
 }
+.has-panel {
+	.o-wrapper {
+		&:after {
+			content: '';
+			display: block;
+			height: 56px;
+		}
+	}
+}
 .o-section {
 	margin: 35px 0 65px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+
+	.o-section {
+		&:last-child {
+			margin-bottom: 0;
+		}		
+	}
 }
 .o-center {
 	max-width: 1600px;
@@ -251,7 +273,6 @@ body {
 
 
 
-
 // ---- slick
 
 .slick-slider {
@@ -373,6 +394,21 @@ h2, .head-2 {
 	font-size: 18px;
 }
 
+ol ul,
+ul ul,
+ul ol,
+ol ol {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.c-img-resp {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+
 
 .c-scroll-wrapper {
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
@@ -392,12 +428,136 @@ h2, .head-2 {
 
 
 
-.pagination {
-	
+
+.c-table-info {
+	border-collapse: collapse;
+
+	a {
+		color: $theme-light-fill;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	tr {
+
+	}
+
+	td {
+		vertical-align: top;
+		font-size: 18px;
+		line-height: 1.5;
+		padding: 5px 20px 5px 0;
+
+		&:first-child {
+			color: $text-light;
+		}
+	}
 }
 
 
+.c-table-content {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 0 15px;
 
+	tr {
+		@include transition(all, .2s);
+
+		&:not(.c-table-content__srow):hover {
+			background: #d7d7d7;
+		}
+	}
+
+	th,
+	td {
+		text-align: left;
+		padding: 5px 10px;
+	}
+
+	th {
+		height: 45px;
+		color: $text-normal-invert;
+		background: $theme-light-fill; 
+	}
+
+	td {
+		height: 30px;
+		border-bottom: 1px solid $text-light;
+	}
+
+	&__srow {
+		background: rgba(187, 74, 255, 0.2);
+	}
+}
+
+
+.c-modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	overflow-x: hidden;
+    overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	font-size: 0;
+	text-align: center;
+	background: rgba(0, 0, 0, .3);
+	padding: 10px!important;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+		width: 0;
+	}
+
+	&__dialog {
+		display: inline-block;
+		vertical-align: middle;
+		width: 400px;
+		max-width: 100%;
+		font-size: 14px;
+		text-align: left;
+	}
+
+	&__content {
+		background: $fill-card;
+		box-shadow: $shadow-card;
+		@include border-radius($card-radius);
+		padding: 20px 10px 10px 10px;
+		position: relative;
+	}
+
+	&__close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			@include bg($i-lbl-close);
+		}
+	}
+
+	&__head {
+		display: block;
+		text-align: center;
+	}
+}
 
 
 
@@ -417,6 +577,27 @@ h2, .head-2 {
 }
 
 @media (min-width: $third-point) {
+
+	html,
+	body {
+		height: 100%;
+	}
+
+	.o-wrapper {
+		min-height: 100%;
+		&:after {
+			content: '';
+			display: block;
+			height: 130px;
+		}
+	}
+	.has-panel {
+		.o-wrapper {
+			&:after {
+				height: calc(130px + 56px);
+			}
+		}
+	}
 
 	.o-center {
 		max-width: 862px;		

@@ -39,6 +39,12 @@
 	}
 }
 
+.has-panel {
+	.c-footer {
+		transform: translateY(-56px);
+	}
+} 
+
 
 
 
@@ -81,7 +87,15 @@
 		&__link {						
 			margin: 0 30px;
 		}
+
+		transform: translateY(-100%);
 	}
+
+	.has-panel {
+		.c-footer {
+			transform: translateY(calc(-100% - 56px));
+		}
+	} 
 
 }
 

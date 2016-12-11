@@ -1,0 +1,99 @@
+.c-sm-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	padding: 0 0 0 70px;
+	@include cf;
+	font-size: 12px;
+
+	&__item {
+		float: left;
+		margin: 0 0 0 17px;
+
+		&:first-child {
+			margin: 0;
+		}
+	}
+
+	&__btn {
+		display: block;
+		position: relative;
+		height: 42px;
+		line-height: 42px;
+		text-transform: uppercase;
+		color: #686868;
+
+		&:hover,
+		&.is-active {
+			color: #6a1b9a;
+		}
+
+		&.is-active {
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 3px;
+				background: #4caf50;
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+
+}
+
+@media (min-width: $third-point) {	
+
+	.c-sm-nav {
+		padding: 0 0 0 97px;
+		font-size: 14px;
+
+		&__item {
+			margin: 0 0 0 15px;
+		}
+
+		&__btn {
+			padding: 0 10px;
+		}
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

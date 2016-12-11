@@ -15,7 +15,10 @@
 .o-grid__xs-9, .o-grid__sm-9, .o-grid__md-9, .o-grid__lg-9,
 .o-grid__xs-10, .o-grid__sm-10, .o-grid__md-10, .o-grid__lg-10,
 .o-grid__xs-11, .o-grid__sm-11, .o-grid__md-11, .o-grid__lg-11,
-.o-grid__xs-12, .o-grid__sm-12, .o-grid__md-12 .o-grid__lg-12 {
+.o-grid__xs-12, .o-grid__sm-12, .o-grid__md-12 .o-grid__lg-12,
+.o-grid__xs-lnd-1, .o-grid__xs-lnd-2, .o-grid__xs-lnd-3, .o-grid__xs-lnd-4,
+.o-grid__xs-lnd-5, .o-grid__xs-lnd-6, .o-grid__xs-lnd-7, .o-grid__xs-lnd-8,
+.o-grid__xs-lnd-9, .o-grid__xs-lnd-10, .o-grid__xs-lnd-11, .o-grid__xs-lnd-12 {
   // position: relative;
   display: inline-block;
   vertical-align: top;

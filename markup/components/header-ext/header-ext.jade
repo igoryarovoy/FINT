@@ -1,0 +1,12 @@
+mixin headerExt(data)
+	include ../logo/logo
+	include ../sm-nav/sm-nav
+	include ../main-nav/main-nav
+	header.c-header-ext
+		.c-header-ext__top
+			.o-center
+				+logo('c-logo--header')
+				+smNav()
+		.c-header-ext__bot
+			.o-center
+				+mainNav()
