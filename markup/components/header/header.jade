@@ -1,10 +1,17 @@
-mixin header(data)
+mixin header(partnership)
 	include ../logo/logo
 	include ../top-nav/top-nav
 	header.c-header
-		.c-header__top
-			.o-center
-				+logo('c-logo--header')
-		.c-header__bot
-			.o-center
-				+topNav()
+		.c-header__wrap
+			.c-header__top
+				.o-center
+					+logo('c-logo--header')
+			.c-header__bot
+				.o-center
+					if (!partnership)
+						+topNav()
+					else
+						.c-header__panel-btn
+							.u-fl-l
+								|FINT БИЗНЕС
+							button(data-toggle="modal", data-target="#modal-form").c-btn.c-btn--raised.c-btn--success Зарегестрировать

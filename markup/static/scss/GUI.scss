@@ -343,36 +343,59 @@
 }
 
 .c-form-g {
-	margin: 0 0 15px 0;
+	margin: 0 0 25px 0;
+	position: relative;
+
+	&--has-error {
+		.c-form-error {
+			display: block;
+		}
+	}
 }
 .c-form-label {
 	display: block;
-	margin: 0 0 5px 0;
+	margin: 0 0 8px 0;
+	color: $text-normal-invert;
 
 	span {
 		color: red;
+		margin: 0 3px 0 0;
 	}
 }
 .c-form-control {
 	display: block;
 	width: 100%;
-	height: 30px;
+	height: 60px;
 	padding: 0 10px;
-	@include border-radius(2px);
-	border: 1px solid #c8c8c8;
+	@include border-radius(5px);
 	outline: none;
-	font-size: 14px;
+	font-size: 16px;
 	font-family: inherit;
 	background: #fff;
+	border: 0;
 
 	&:focus {
-		border-color: #9c9c9c;
+		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .5) inset;
 	}
 }
 textarea.c-form-control {
 	height: auto;
 	padding: 10px;
 	resize: none;
+}
+.c-form-btn {
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px;
+}
+.c-form-error {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	font-size: 12px;
+	color: red;
+	margin: 3px 0 0 0;
 }
 
 @media (min-width: $third-point) {

@@ -8,24 +8,33 @@
 	&__item {
 		display: block;
 		font-size: 16px;
-		margin: 5px 0 0 0;
-
-		&:first-child {
-			margin: 0;
-		}
 	}
 
 	&__btn {
 		display: block;
-		background: #e1e1e1;
-		color: $text-dark;
-		padding: 7px 15px;
+		position: relative;
+		color: $text-light;
+		padding: 10px 15px;
 		@include transition(all, .2s);
-		@include border-radius(3px);
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 2px;
+			top: 0;
+			bottom: 0;
+			background: #ccc;
+		}
+
+		&.is-active {
+			&:before {
+				background: $theme-light-fill;
+			}
+		}
 
 		&:hover,
 		&.is-active {
-			background: #afafaf;
 			color: $text-dark;
 		}
 	}

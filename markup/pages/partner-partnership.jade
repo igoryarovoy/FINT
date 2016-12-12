@@ -1,0 +1,177 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/side-nav/side-nav
+    include ../components/footer/footer
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .c-modal(id='modal-form')
+            .c-modal__dialog
+                .c-modal__content
+                    span.c-modal__close(data-dismiss="modal")
+                    |<!-- Первый шаг -->
+                    .head-2.c-modal__head Отправьте заявку на подключение магазина к Fint.ua
+                    .c-form-g.c-form-g--has-error
+                        .c-form-label <span>*</span>Сайт магазина
+                        input(type="text").c-form-control
+                        .c-form-error Текст ошибки
+                    .c-form-g
+                        .c-form-label <span>*</span>Email
+                        input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label <span>*</span>Телефон
+                        input(type="text").c-form-control
+                    button(type='submit').c-btn.c-btn--success.c-btn--raised.c-form-btn Отправить заявку
+                    |<!-- Второй шаг -->
+                    .head-2.c-modal__head Пожалуйста, заполните еще пару строк
+                    .c-form-g
+                        .c-form-label Название магазина
+                        input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label Контактное лицо
+                        input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label Ссылка на файл с фидом товаров 
+                        input(type="text").c-form-control
+                    .c-form-g
+                        .c-form-label Ваши вопросы
+                        textarea.c-form-control(rows='4')
+                    button(type='submit').c-btn.c-btn--success.c-btn--raised.c-form-btn Отправить
+                    |<!-- Третий шаг -->
+                    .head-2.c-modal__head.u-text-center
+                        |Спасибо!
+                        div Наш менеджер свяжется с Вами
+                        div в течении 1 рабочего дня
+        .o-wrapper
+            +header(true)
+            .o-section
+                .o-center
+                    .o-grid
+                        .o-grid__xs-lnd-4.o-grid__md-2
+                            +sideNav()
+                        .o-grid__xs-lnd-8.o-grid__md-10
+                            .o-section
+                                .o-hgroup
+                                    h1.head-1 Партнерство
+                                .c-cont-collapse                                    
+                                    h2.head-2.c-cont-collapse__toggler.collapsed(data-toggle='collapse', data-target='#collapse-bunner') Баннерная реклама
+                                    .c-cont-collapse__collapse(id='collapse-bunner')
+                                        .head-3 Пример размещения:
+                                        .o-grid.u-mb-20
+                                            .o-grid__xs-lnd-7
+                                                img(src="static/img/content/banners_1.jpg", alt="").c-img-resp.u-mb-10
+                                            .o-grid__xs-lnd-5
+                                                img(src="static/img/content/banners_2.jpg", alt="").c-img-resp.u-mb-10
+                                        table.c-table-content
+                                            tr
+                                                th Размер
+                                                th Позиция
+                                                th.u-text-center Стоимость размещения, грн/1000 показов (CPM)
+                                            tr
+                                                td 250х725
+                                                td главная страница
+                                                td.u-text-center 85
+                                            tr
+                                                td 250х725
+                                                td главная страница
+                                                td.u-text-center 85
+                                            tr
+                                                td 250х725
+                                                td главная страница
+                                                td.u-text-center 85
+                                            tr
+                                                td 250х725
+                                                td главная страница
+                                                td.u-text-center 85
+                                        .head-3 Наценки за использование RichMedia форматов
+                                        table.c-table-content
+                                            tr
+                                                th Формат
+                                                th размещение
+                                                th.u-text-center Цена за 1000 показов, грн
+                                            tr
+                                                td ScreenGlide
+                                                td динамика
+                                                td.u-text-center 50% к стоимости баннера
+                                            tr
+                                                td ScreenGlide
+                                                td динамика
+                                                td.u-text-center 50% к стоимости баннера
+                                            tr
+                                                td ScreenGlide
+                                                td динамика
+                                                td.u-text-center 50% к стоимости баннера
+                                            tr
+                                                td ScreenGlide
+                                                td динамика
+                                                td.u-text-center 50% к стоимости баннера
+                                        .head-3 Наценки за использование RichMedia форматов
+                                        ol
+                                            li Полный набор материалов должен включать:
+                                                ul
+                                                    li Комплект баннеров в соответствии с техническими требованиями, изложенными в настоящем дополнении;
+                                                    li Рабочие URL-адреса целевых страниц.
+                                            li Правила наименования материалов:
+                                                ul
+                                                    li Рекомендуется называть материалы следующим образом (латиницей):«Продукт/клиент_версия_формат баннера», например: produkt_1_468x60.fla;
+                                                    li В названии должны использоваться маленькие буквы, нижнее подчеркивание и числа. Не рекомендуется использовать пробел.
+                                            li Адреса URL должны быть указаны в таблице. Одна колонка – название баннера, вторая – соответствующий ему URL-адрес (если для всей кампании используется один целевой адрес, то использовать таблицу нет необходимости).
+                                        .head-3 Наценки за использование RichMedia форматов
+                                        ol
+                                            li Баннер обычный 60 у.е.
+                                                ul
+                                                    li дополнительный баннер с небольшими изменениями текста или цвета 20 у.е.
+                                                    li дополнительный баннер с незначительными изменениями компоновки, цвета и текста 30 у.е.
+                                            li Масштабируемый баннер на странице с описанием модели 60 у.е.
+                                        p
+                                            |* Цены указаны минимальные (при условии размещения баннеров на сайте Idilia.com.ua)
+                                .c-cont-collapse                                    
+                                    h2.head-2.c-cont-collapse__toggler.collapsed(data-toggle='collapse', data-target='#collapse-price') Размещение прайс-листов
+                                    .c-cont-collapse__collapse(id='collapse-price')
+                                        p
+                                            |Увеличивайте объем продаж и привлекайте новых потенциальных клиентов с помощью каталога Idilia.com.ua
+                                        .head-3 Стоимость размещения прайс-листов
+                                        table.c-table-content
+                                            tr
+                                                th Тарифы
+                                                th Цена за клик
+                                            tr.c-table-content__srow
+                                                td(colspan='2') Базовые тарифы за переходы
+                                            tr
+                                                td Переход с прайс-строки на Ваш сайт (для интернет-магазинов)
+                                                td 0.8 грн
+                                            tr
+                                                td Переход с прайс-строки на Ваш сайт (для интернет-магазинов)
+                                                td 0.8 грн
+                                            tr.c-table-content__srow
+                                                td(colspan='2') Дополнительные тарифы
+                                            tr
+                                                td
+                                                    div Топ 3
+                                                    |Разместите свою цену на первых 3 позициях прайса Ваше ценовое предложение будет выводиться как на страницах категорий, так и на странице товара!
+                                                td Базовая стоимость перехода + 0,2 грн
+                                            tr
+                                                td
+                                                    div
+                                                        b Топ 3
+                                                    |Разместите свою цену на первых 3 позициях прайса Ваше ценовое предложение будет выводиться как на страницах категорий, так и на странице товара!
+                                                td Базовая стоимость перехода + 0,2 грн
+                                        p
+                                            |Технические требования к оформлению прайс-листов
+                                        p
+                                            |Минимальная предоплата для публикации прайса 200.00 грн Минимальная сумма, которая списывается с Вашего баланса за 30 дней размещения прайс-листа 50 грн Магазины, впервые размещающие цены в нашем каталоге, получают тестовый период на сумму 200 грн
+                                        .head-3 Что входит в стоимость размещения информации:
+                                        ol
+                                            li Размещайте неограниченное количество товарных позиций.
+                                            li Обновление прайс-листа происходит по мере необходимости, не чаще одного раза в день. Впервые размещенные прайс-листы публикуются в течении 2-х суток. В выходные дни прайс-листы не обновляются.
+                                            li Отслеживание результатов. Вы можете узнать, какие категории товаров приносят больше всего переходов , приводящих потенциальных клиентов на Ваш сайт.
+                                            li Персональная страница-визитка с контактными данными и описанием вашего магазина
+
+        +footer()
+        +includeJs()

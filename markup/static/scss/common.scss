@@ -35,15 +35,7 @@ body {
 .o-wrapper {
 	overflow: hidden;
 }
-.has-panel {
-	.o-wrapper {
-		&:after {
-			content: '';
-			display: block;
-			height: 56px;
-		}
-	}
-}
+
 .o-section {
 	margin: 35px 0 65px;
 
@@ -140,6 +132,10 @@ body {
 .u-dtc {
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.u-d-block {
+	display: block !important;
 }
 
 .u-fs-0 {
@@ -432,14 +428,6 @@ ol ol {
 .c-table-info {
 	border-collapse: collapse;
 
-	a {
-		color: $theme-light-fill;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
 	tr {
 
 	}
@@ -465,30 +453,29 @@ ol ol {
 	tr {
 		@include transition(all, .2s);
 
-		&:not(.c-table-content__srow):hover {
-			background: #d7d7d7;
-		}
+		// &:not(.c-table-content__srow):hover {
+		// 	background: #d7d7d7;
+		// }
 	}
 
 	th,
 	td {
 		text-align: left;
-		padding: 5px 10px;
+		padding: 5px 15px;
+		border-top: 1px solid #c8c8c8;
 	}
 
 	th {
-		height: 45px;
-		color: $text-normal-invert;
-		background: $theme-light-fill; 
+		height: 47px;
+		background: #ededed; 
 	}
 
 	td {
-		height: 30px;
-		border-bottom: 1px solid $text-light;
+		height: 40px;
 	}
 
 	&__srow {
-		background: rgba(187, 74, 255, 0.2);
+		background: #f1f1f1;
 	}
 }
 
@@ -507,7 +494,7 @@ ol ol {
 	outline: 0;
 	font-size: 0;
 	text-align: center;
-	background: rgba(0, 0, 0, .3);
+	background: rgba(42, 44, 46, 0.97);
 	padding: 10px!important;
 
 	&:before {
@@ -521,17 +508,14 @@ ol ol {
 	&__dialog {
 		display: inline-block;
 		vertical-align: middle;
-		width: 400px;
+		width: 550px;
 		max-width: 100%;
 		font-size: 14px;
 		text-align: left;
 	}
 
 	&__content {
-		background: $fill-card;
-		box-shadow: $shadow-card;
-		@include border-radius($card-radius);
-		padding: 20px 10px 10px 10px;
+		padding: 30px 10px 10px 10px;
 		position: relative;
 	}
 
@@ -546,16 +530,58 @@ ol ol {
 		&:after {
 			content: '';
 			position: absolute;
+			width: 16px;
+			height: 16px;
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
-			@include bg($i-lbl-close);
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2044%2044%22%3E%3Cstyle%20type=%22text/css%22%3Ecircle,%20ellipse,%20line,%20path,%20polygon,%20polyline,%20rect,%20text%20%7B%20fill:%20%23fff%20!important;%20%7D%3C/style%3E%3Cpath%20fill=%22%23fff%22%20d=%22M39.196%2043.3L1.154%205.256l3.89-3.89%2038.04%2038.043z%22/%3E%3Cpath%20fill=%22%23fff%22%20d=%22M.54%2039.413L38.58%201.37l3.89%203.89L4.428%2043.302z%22/%3E%3C/svg%3E%0A");
+    		background-repeat: no-repeat;
+    		opacity: .7;
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
 		}
 	}
 
 	&__head {
 		display: block;
-		text-align: center;
+		color: $text-normal-invert;
+	}
+}
+
+.c-cont-collapse {
+	&__toggler {
+		display: block;
+		margin: 0 0 15px 0;
+		cursor: pointer;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			@include bg($i-collapse-cont);
+			margin: 0 0 0 5px;
+			transform: rotate(-180deg);
+		}
+
+		&.collapsed {
+			&:after {
+				transform: rotate(0);
+			}
+		}
+	}
+
+	&__collapse {
+		display: none;
+		margin: 0 0 20px 0;
+
+		&.in {
+			display: block;
+		}
 	}
 }
 
@@ -589,13 +615,6 @@ ol ol {
 			content: '';
 			display: block;
 			height: 130px;
-		}
-	}
-	.has-panel {
-		.o-wrapper {
-			&:after {
-				height: calc(130px + 56px);
-			}
 		}
 	}
 

@@ -39,11 +39,6 @@
 	}
 }
 
-.has-panel {
-	.c-footer {
-		transform: translateY(-56px);
-	}
-} 
 
 
 
@@ -91,11 +86,6 @@
 		transform: translateY(-100%);
 	}
 
-	.has-panel {
-		.c-footer {
-			transform: translateY(calc(-100% - 56px));
-		}
-	} 
 
 }
 

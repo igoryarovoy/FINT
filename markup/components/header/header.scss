@@ -1,6 +1,16 @@
 .c-header {	
 	position: relative;
 	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+	height: 106px;
+	z-index: 10;
+
+	&__wrap {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		background: #fff;
+	}
 
 	&__top {
 		height: 42px;
@@ -10,6 +20,18 @@
 		height: 64px;
 		background: $theme-light-fill;
 		color: $text-normal-invert;
+	}
+
+	&__panel-btn {
+		height: 64px;
+		line-height: 64px;
+		@include cf;
+		font-size: 20px;
+
+		.c-btn {
+			float: right;
+			margin: 14px 0 0 0;
+		}
 	}
 }
 
