@@ -356,6 +356,7 @@
 	display: block;
 	margin: 0 0 8px 0;
 	color: $text-normal-invert;
+	font-size: 16px;
 
 	span {
 		color: red;
@@ -393,7 +394,7 @@ textarea.c-form-control {
 	position: absolute;
 	left: 0;
 	top: 100%;
-	font-size: 12px;
+	font-size: 14px;
 	color: red;
 	margin: 3px 0 0 0;
 }

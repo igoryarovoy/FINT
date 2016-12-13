@@ -1,5 +1,5 @@
 doctype html
-html(class="no-js", lang="ru")
+html(class="no-js o-service", lang="ru")
 
     include ../components/head/head
     include ../components/header/header
@@ -12,9 +12,10 @@ html(class="no-js", lang="ru")
     body
         |%=symbols=%
         .c-modal(id='modal-form')
+            span.c-modal__close(data-dismiss="modal")
+            .c-modal__backdrop
             .c-modal__dialog
                 .c-modal__content
-                    span.c-modal__close(data-dismiss="modal")
                     |<!-- Первый шаг -->
                     .head-2.c-modal__head Отправьте заявку на подключение магазина к Fint.ua
                     .c-form-g.c-form-g--has-error
@@ -45,7 +46,7 @@ html(class="no-js", lang="ru")
                     button(type='submit').c-btn.c-btn--success.c-btn--raised.c-form-btn Отправить
                     |<!-- Третий шаг -->
                     .head-2.c-modal__head.u-text-center
-                        |Спасибо!
+                        .u-fs-24 Спасибо!
                         div Наш менеджер свяжется с Вами
                         div в течении 1 рабочего дня
         .o-wrapper
@@ -158,8 +159,7 @@ html(class="no-js", lang="ru")
                                                 td Базовая стоимость перехода + 0,2 грн
                                             tr
                                                 td
-                                                    div
-                                                        b Топ 3
+                                                    div Топ 3
                                                     |Разместите свою цену на первых 3 позициях прайса Ваше ценовое предложение будет выводиться как на страницах категорий, так и на странице товара!
                                                 td Базовая стоимость перехода + 0,2 грн
                                         p

@@ -24,7 +24,12 @@
 			width: 2px;
 			top: 0;
 			bottom: 0;
-			background: #ccc;
+		}
+
+		&:hover {
+			&:before {
+				background: #ccc;
+			}
 		}
 
 		&.is-active {
