@@ -839,15 +839,12 @@ textarea.c-form-control {
   box-sizing: border-box;
 }
 
-html {
-  font-size: 12px;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   background: #fafafa;
   color: #565656;
   line-height: 1.2;
+  font-size: 12px;
 }
 
 .modal-open {
@@ -2604,7 +2601,7 @@ yx-axis
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
-  font-size: 1rem;
+  font-size: 12px;
 }
 
 .o-grid__xs-12 {
@@ -2860,6 +2857,11 @@ yx-axis
 }
 
 .o-service {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.o-service .o-grid > * {
   font-size: 14px;
 }
 
@@ -3632,6 +3634,67 @@ ol ol {
   }
 }
 
+.c-card-img {
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  border-radius: 5px;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+.c-card-img__img {
+  display: block;
+}
+
+.c-card-img__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.c-card-img__content {
+  padding: 10px;
+}
+
+.c-card-img__h {
+  display: block;
+  color: #333333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.c-card-img__list {
+  display: none;
+  margin: 13px 0 0 0;
+}
+
+.c-card-img__link {
+  display: block;
+  color: #565656;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 568px) {
+  .c-card-img__h {
+    font-size: 17px;
+  }
+  .c-card-img__list {
+    display: block;
+  }
+}
+
+@media (min-width: 840px) {
+  .c-card-img:hover {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
 .c-card-adaptive {
   position: relative;
   background: #fff;
@@ -3846,164 +3909,6 @@ ol ol {
   }
 }
 
-.c-card-img {
-  background: #fff;
-  overflow: hidden;
-  text-align: center;
-  line-height: 1.2;
-  margin: 0 0 20px 0;
-  border-radius: 5px;
-  -webkit-transition: all 0.15s;
-  transition: all 0.15s;
-}
-
-.c-card-img__img {
-  display: block;
-}
-
-.c-card-img__img img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.c-card-img__content {
-  padding: 10px;
-}
-
-.c-card-img__h {
-  display: block;
-  color: #333333;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.c-card-img__list {
-  display: none;
-  margin: 13px 0 0 0;
-}
-
-.c-card-img__link {
-  display: block;
-  color: #565656;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-@media (min-width: 568px) {
-  .c-card-img__h {
-    font-size: 17px;
-  }
-  .c-card-img__list {
-    display: block;
-  }
-}
-
-@media (min-width: 840px) {
-  .c-card-img:hover {
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
-  }
-}
-
-.c-card-small {
-  background: #fff;
-  padding: 5px 9px 9px 9px;
-}
-
-.c-card-small:before, .c-card-small:after {
-  display: table;
-  content: "";
-}
-
-.c-card-small:after {
-  clear: both;
-}
-
-.lt-ie8 .c-card-small {
-  zoom: 1;
-}
-
-.c-card-small__h {
-  display: block;
-  margin: 0 0 5px 0;
-  font-size: 15px;
-  color: #333333;
-}
-
-.c-card-small__img {
-  display: none;
-  float: left;
-  width: 94px;
-  height: 75px;
-  overflow: hidden;
-  font-size: 0;
-}
-
-.c-card-small__img:before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  width: 0;
-  height: 100%;
-}
-
-.c-card-small__img img {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-}
-
-.c-card-small__price {
-  margin: 0 0 5px 0;
-}
-
-.c-card-small__price .c-price {
-  font-size: 14px;
-  padding: 0 5px;
-}
-
-.c-card-small__sub-h {
-  color: #565656;
-}
-
-.c-card-small__sub-h * {
-  color: inherit;
-}
-
-@media (min-width: 568px) {
-  .c-card-small__h {
-    margin: 0 0 7px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .c-card-small__img {
-    display: block;
-  }
-  .c-card-small__content {
-    padding: 0 0 0 102px;
-  }
-  .c-card-small__sub-h {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .c-card-small__price .c-price {
-    padding: 0 13px;
-  }
-}
-
-@media (min-width: 840px) {
-  .c-card-small:hover {
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
-  }
-}
-
 .c-card-list {
   position: relative;
   margin: 0 0 20px 0;
@@ -4162,6 +4067,103 @@ ol ol {
   }
   .c-card-list:hover .c-card-list__inner {
     padding: 12px 12px 15px 12px;
+  }
+}
+
+.c-card-small {
+  background: #fff;
+  padding: 5px 9px 9px 9px;
+}
+
+.c-card-small:before, .c-card-small:after {
+  display: table;
+  content: "";
+}
+
+.c-card-small:after {
+  clear: both;
+}
+
+.lt-ie8 .c-card-small {
+  zoom: 1;
+}
+
+.c-card-small__h {
+  display: block;
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  color: #333333;
+}
+
+.c-card-small__img {
+  display: none;
+  float: left;
+  width: 94px;
+  height: 75px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.c-card-small__img:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.c-card-small__img img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.c-card-small__price {
+  margin: 0 0 5px 0;
+}
+
+.c-card-small__price .c-price {
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+.c-card-small__sub-h {
+  color: #565656;
+}
+
+.c-card-small__sub-h * {
+  color: inherit;
+}
+
+@media (min-width: 568px) {
+  .c-card-small__h {
+    margin: 0 0 7px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .c-card-small__img {
+    display: block;
+  }
+  .c-card-small__content {
+    padding: 0 0 0 102px;
+  }
+  .c-card-small__sub-h {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .c-card-small__price .c-price {
+    padding: 0 13px;
+  }
+}
+
+@media (min-width: 840px) {
+  .c-card-small:hover {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -4414,6 +4416,21 @@ ol ol {
   }
 }
 
+.c-header-ext {
+  position: relative;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.c-header-ext__top {
+  height: 42px;
+}
+
+.c-header-ext__bot {
+  height: 64px;
+  background: #6a1b9a;
+  color: #fff;
+}
+
 .c-header {
   position: relative;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
@@ -4461,21 +4478,6 @@ ol ol {
 .c-header__panel-btn .c-btn {
   float: right;
   margin: 14px 0 0 0;
-}
-
-.c-header-ext {
-  position: relative;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
-}
-
-.c-header-ext__top {
-  height: 42px;
-}
-
-.c-header-ext__bot {
-  height: 64px;
-  background: #6a1b9a;
-  color: #fff;
 }
 
 .c-img-bunner__img {

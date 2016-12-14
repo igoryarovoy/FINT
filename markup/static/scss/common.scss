@@ -8,13 +8,14 @@
 
 
 html {
-    font-size: 12px;
+    
 }
 body {
 	font-family: $main-font;
 	background: $main-fill;
 	color: $text-normal;
 	line-height: 1.2;
+	font-size: 12px;
 }
 .modal-open {
 	overflow: hidden;
@@ -36,6 +37,11 @@ body {
 }
 .o-service {
 	font-size: 14px;
+	line-height: 1.3;
+
+	.o-grid > * {
+		font-size: 14px;
+	}
 }
 
 .o-section {
