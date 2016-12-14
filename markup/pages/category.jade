@@ -3,9 +3,9 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/header/header
-    include ../components/top-panel/top-panel 
+    include ../components/top-panel/top-panel
+    include ../components/bunner-headline/bunner-headline 
     include ../components/main-slider/main-slider
-    include ../components/img-bunner/img-bunner
     include ../components/link-img/link-img        
     include ../components/tabnav-mobile/tabnav-mobile
     include ../components/card-small/card-small-feed
@@ -19,12 +19,12 @@ html(class="no-js", lang="ru")
         |%=symbols=%
         .o-wrapper
             +header()   
-            +top-panel('u-hide-xs')         
+            +top-panel('u-hide-xs u-mb-0')         
             +mainSlider('c-main-slider--default', false)
-            +imgBunner()
+            .o-center
+                +bunnerHeadline()
             .o-section
                 .o-center
-                    h1.head-1 Заголовок H1
                     .o-hgroup
                         .u-dt
                             .u-dtc

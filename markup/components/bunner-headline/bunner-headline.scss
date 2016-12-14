@@ -1,0 +1,68 @@
+.c-bunner-headline {
+	font-size: 30px;
+	font-weight: normal;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+	padding: 35px 20px;
+	margin: 0 0 30px 0;
+	background-image: url('%=static=%general/bg-bun-headline.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	line-height: 1.1;
+
+	* {
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+	.c-bunner-headline {
+		font-size: 60px;
+		padding: 35px 20px;
+		margin: 0 0 30px 0;
+	}			
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}
