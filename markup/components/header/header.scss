@@ -1,6 +1,5 @@
 .c-header {	
 	position: relative;
-	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
 	height: 106px;
 	z-index: 10;
 
@@ -10,6 +9,7 @@
 		right: 0;
 		top: 0;
 		background: #fff;
+		box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
 	}
 
 	&__top {
