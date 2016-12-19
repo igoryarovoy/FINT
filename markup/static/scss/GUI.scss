@@ -346,8 +346,8 @@
 	margin: 0 0 25px 0;
 	position: relative;
 
-	&--has-error {
-		.c-form-error {
+	&.has-error {
+		.help-block {
 			display: block;
 		}
 	}
@@ -389,14 +389,16 @@ textarea.c-form-control {
 	line-height: 60px;
 	padding: 0 20px;
 }
-.c-form-error {
+.help-block {
 	display: none;
 	position: absolute;
 	left: 0;
 	top: 100%;
 	font-size: 14px;
-	color: red;
 	margin: 3px 0 0 0;
+}
+.help-block-error {
+	color: red;
 }
 
 @media (min-width: $third-point) {
