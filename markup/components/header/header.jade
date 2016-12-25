@@ -1,16 +1,22 @@
-mixin header(partnership)
+mixin header(data)
 	include ../logo/logo
 	include ../top-nav/top-nav
+	include ../sm-nav/sm-nav
+	include ../main-nav/main-nav
 	header.c-header
 		.c-header__wrap
 			.c-header__top
 				.o-center
 					+logo('c-logo--header')
+					if (data.useSmNav)
+						+smNav()
 			.c-header__bot
 				.o-center
-					if (!partnership)
+					if (data.useMainNav)
+						+mainNav()
+					if (data.useTopNav)
 						+topNav()
-					else
+					if (data.usePanelPartner)
 						.c-header__panel-btn
 							.u-fl-l
 								|FINT БИЗНЕС

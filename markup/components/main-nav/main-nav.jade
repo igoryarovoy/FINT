@@ -1,3 +1,117 @@
 mixin mainNav()
-	.c-main-nav
-		|main nav
+	span.c-button-nav(data-toggle='collapse', data-target='#mobile-main-nav') Добавки в бетон, пластификаторы, пигменты
+	.c-main-nav(id='mobile-main-nav')
+		span.c-main-nav__close(data-toggle='collapse', data-target='#mobile-main-nav')
+		.c-main-nav__backdrop(data-toggle='collapse', data-target='#mobile-main-nav')
+		.c-main-nav__dialog
+			nav.c-main-navigation
+				a(href="#").c-main-navigation__btn.is-active Стройка
+				span.c-main-navigation__btn.is-active.collapsed(data-toggle='collapse', data-target='#desktop-main-nav') Стройка
+				a(href="#").c-main-navigation__btn Ремонт
+				a(href="#").c-main-navigation__btn Интерьер
+				a(href="#").c-main-navigation__btn Ландшафт
+			.c-main-nav__dialog-desktop(id='desktop-main-nav')
+				ul.c-list-nav
+					li.c-list-nav__item
+						a(href="#").c-list-nav__btn.is-active Стройматериалы
+						.c-list-nav__sub(style='display:block;')
+							.o-grid
+								.o-grid__sm-4
+									a(href="#").c-list-nav__btn.is-active Бетон, железобетонные изделия иконструкции
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+									a(href="#").c-list-nav__btn Строительная химия
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+									a(href="#").c-list-nav__btn Стеновые и кладочные материалы
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+								.o-grid__sm-4
+									a(href="#").c-list-nav__btn Строительные смеси
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+									a(href="#").c-list-nav__btn Гидроизоляция
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+									a(href="#").c-list-nav__btn Теплозвукоизоляция
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+								.o-grid__sm-4
+									a(href="#").c-list-nav__btn Сыпучие материалы
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+					li.c-list-nav__item
+						a(href="#").c-list-nav__btn Инженерные системы
+						.c-list-nav__sub
+							.o-grid
+								.o-grid__sm-4
+									a(href="#").c-list-nav__btn Бетон, железобетонные изделия иконструкции
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+					li.c-list-nav__item
+						a(href="#").c-list-nav__btn Фасады и заборы
+						.c-list-nav__sub
+							.o-grid
+								.o-grid__sm-4
+									a(href="#").c-list-nav__btn Бетон, железобетонные изделия иконструкции
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+					li.c-list-nav__item
+						a(href="#").c-list-nav__btn Спецтехника
+						.c-list-nav__sub
+							.o-grid
+								.o-grid__sm-4
+									a(href="#").c-list-nav__btn Бетон, железобетонные изделия иконструкции
+									ul.c-list-nav__sub-list
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Бетоны
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link Растворы
+										li.c-list-nav__sub-item
+											a(href="#").c-list-nav__sub-link.is-active Добавки в бетон, пластификаторы, пигменты
+
