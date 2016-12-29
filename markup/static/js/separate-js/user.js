@@ -155,9 +155,6 @@ $(document).ready(function(){
 		parentCollapseRemoveActive('.js-panel-filter')	
 	});
 
-
-	$('.js-trigger-click').menuJS();	
-
 });
 
 

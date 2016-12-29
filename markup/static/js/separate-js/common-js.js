@@ -81,3 +81,60 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 	});
 
 }(jQuery);
+
+
+// MAIN MENU
++function ($) {
+
+	function MenuJS() {
+		this.btnMenu = '.js-menu',
+        this.btnClosed = 'closed',
+        this.menuOpen = 'in',
+        this.pauseShow = .5,
+        this.backDrop = '.js-menu-backdrop';
+
+        this.dataTarget = $(this.btnMenu).attr('data-target-menu'),
+        this.helpBlock = this.dataTarget;
+	};
+
+	MenuJS.prototype.hov = function() {	
+		var $self = this;	
+		
+		$($self.btnMenu).removeClass($self.btnClosed);
+        $($self.helpBlock).addClass($self.menuOpen);
+        $($self.backDrop).show();
+	};
+
+	MenuJS.prototype.unHov = function() {		
+		var $self = this;		
+		
+		$($self.btnMenu).addClass($self.btnClosed);
+        $($self.helpBlock).removeClass($self.menuOpen);
+        $($self.backDrop).hide();
+	};
+
+	MenuJS.prototype.init = function() {	
+		var $self = this,
+			timeHovOut;			
+		
+		$($self.btnMenu).hover(function() {
+            timeHovOut = setTimeout(function() {
+                $self.hov();
+            }, $self.pauseShow * 1000);
+        }, function() {
+            clearTimeout(timeHovOut);
+        });
+
+        $($self.helpBlock).hover(function() {
+            // hov();
+        }, function() {
+            $self.unHov();
+        });
+	};	
+
+	menuJS = new MenuJS();
+
+	menuJS.init();			
+
+
+}(jQuery);
