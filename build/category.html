@@ -40,9 +40,9 @@
                     <div class="c-header__bot">
                         <div class="o-center"><span data-toggle="collapse" data-target="#mobile-main-nav" class="c-button-nav">Добавки в бетон, пластификаторы, пигменты</span>
                             <div id="mobile-main-nav" class="c-main-nav"><span data-toggle="collapse" data-target="#mobile-main-nav" class="c-main-nav__close"></span>
-                                <div data-toggle="collapse" data-target="#mobile-main-nav" class="c-main-nav__backdrop"></div>
+                                <div data-toggle="collapse" data-target="#mobile-main-nav" class="c-main-nav__backdrop js-menu-backdrop"></div>
                                 <div class="c-main-nav__dialog">
-                                    <nav class="c-main-navigation"><a href="#" class="c-main-navigation__btn is-active">Стройка</a><span data-toggle="collapse" data-target="#desktop-main-nav" class="c-main-navigation__btn is-active collapsed">Стройка</span><a href="#" class="c-main-navigation__btn">Ремонт</a>
+                                    <nav class="c-main-navigation"><a href="#" class="c-main-navigation__btn is-active">Стройка</a><span data-target-menu="#desktop-main-nav" class="c-main-navigation__btn is-active closed js-trigger-click">Стройка</span><a href="#" class="c-main-navigation__btn">Ремонт</a>
                                         <a
                                         href="#" class="c-main-navigation__btn">Интерьер</a><a href="#" class="c-main-navigation__btn">Ландшафт</a>
                                     </nav>
@@ -50,14 +50,16 @@
                                         <ul class="c-list-nav">
                                             <li class="c-list-nav__item"><a href="#" class="c-list-nav__btn is-active">Стройматериалы</a>
                                                 <div class="c-list-nav__sub">
-                                                    <div class="o-grid">
-                                                        <div class="o-grid__sm-4"><a href="#" class="c-list-nav__btn is-active">Бетон, железобетонные изделия иконструкции</a>
+                                                    <div class="c-list-nav-grid">
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn is-active">Бетон, железобетонные изделия иконструкции</a>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                </li>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-btn c-btn--flat-info c-btn--lbl">ЕЩЕ (4)</a>
                                                                 </li>
                                                             </ul><a href="#" class="c-list-nav__btn">Строительная химия</a>
                                                             <ul class="c-list-nav__sub-list">
@@ -65,7 +67,9 @@
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                </li>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-btn c-btn--flat-info c-btn--lbl">ЕЩЕ (4)</a>
                                                                 </li>
                                                             </ul><a href="#" class="c-list-nav__btn">Стеновые и кладочные материалы</a>
                                                             <ul class="c-list-nav__sub-list">
@@ -73,17 +77,17 @@
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div class="o-grid__sm-4"><a href="#" class="c-list-nav__btn">Строительные смеси</a>
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Строительные смеси</a>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
                                                             </ul><a href="#" class="c-list-nav__btn">Гидроизоляция</a>
                                                             <ul class="c-list-nav__sub-list">
@@ -91,7 +95,7 @@
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
                                                             </ul><a href="#" class="c-list-nav__btn">Теплозвукоизоляция</a>
                                                             <ul class="c-list-nav__sub-list">
@@ -99,17 +103,17 @@
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div class="o-grid__sm-4"><a href="#" class="c-list-nav__btn">Сыпучие материалы</a>
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Сыпучие материалы</a>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -118,14 +122,14 @@
                                             </li>
                                             <li class="c-list-nav__item"><a href="#" class="c-list-nav__btn">Инженерные системы</a>
                                                 <div class="c-list-nav__sub">
-                                                    <div class="o-grid">
-                                                        <div class="o-grid__sm-4"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
+                                                    <div class="c-list-nav-grid">
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -134,14 +138,14 @@
                                             </li>
                                             <li class="c-list-nav__item"><a href="#" class="c-list-nav__btn">Фасады и заборы</a>
                                                 <div class="c-list-nav__sub">
-                                                    <div class="o-grid">
-                                                        <div class="o-grid__sm-4"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
+                                                    <div class="c-list-nav-grid">
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -150,14 +154,14 @@
                                             </li>
                                             <li class="c-list-nav__item"><a href="#" class="c-list-nav__btn">Спецтехника</a>
                                                 <div class="c-list-nav__sub">
-                                                    <div class="o-grid">
-                                                        <div class="o-grid__sm-4"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
+                                                    <div class="c-list-nav-grid">
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
                                                                 </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link is-active">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -165,6 +169,8 @@
                                                 </div>
                                             </li>
                                         </ul>
+                                        <div class="c-main-nav__links"><a href="#" class="u-fl-l">Магазины</a><a href="#" class="u-fl-r">Производители</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -901,6 +907,7 @@
         <script src="static/js/separate-js/jquery-3.1.1.min.js"></script>
         <script src="static/js/separate-js/common-js.js"></script>
         <script src="static/js/separate-js/slick.min.js"></script>
+        <script src="static/js/separate-js/menuJS.js"></script>
         <script src="static/js/separate-js/jquery.mCustomScrollbar.js"></script>
         <script src="static/js/separate-js/user.js"></script>
     </body>

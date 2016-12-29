@@ -154,7 +154,9 @@ $(document).ready(function(){
 	$('.js-collapse-filter').on('hidden.bs.collapse', function () {	
 		parentCollapseRemoveActive('.js-panel-filter')	
 	});
-		
+
+
+	$('.js-trigger-click').menuJS();	
 
 });
 

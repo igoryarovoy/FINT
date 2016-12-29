@@ -78,6 +78,13 @@
 			}
 		}
 
+		&__links {
+			border-top: 1px solid #dfdfdf;
+			@include cf;
+			padding: 10px 0;
+			font-size: 14px;
+		}
+
 		&.in {
 			display: block;
 		}
@@ -102,7 +109,7 @@
 			height: 42px;
 			position: relative;
 
-			&[data-toggle] {
+			&[data-target-menu] {
 				display: none;
 			}
 
@@ -136,9 +143,7 @@
 			padding: 0 0 0 30px;
 
 			.c-list-nav__btn {
-				&.is-active {
-					font-weight: $font-regular;
-				}
+				font-weight: $font-regular;
 			}
 		}
 
@@ -159,6 +164,7 @@
 
 			&.is-active {
 				color: #6a1b9a;
+				font-weight: bold;
 			}
 		}
 
@@ -167,10 +173,9 @@
 			font-size: 15px;
 			color: $text-heading;
 			margin: 0 0 20px 0;
+			font-weight: $font-bold;
 
 			&.is-active {
-				font-weight: $font-bold;
-
 				& + .c-list-nav__sub,
 				& + .c-list-nav__sub-list {
 					display: block;
@@ -199,15 +204,62 @@
 
 @media (min-width: $third-point) {	
 
+	.c-list-nav-grid {
+		@include cf;
+		font-size: 0;
+		white-space: nowrap;
+		margin-left: -10px;
+		margin-right: -10px;
+
+		&__cell {
+			display: inline-block;
+			vertical-align: top;
+			white-space: normal;
+			padding: 0 10px;
+			width: 194px;
+		}
+	}
+
 	.c-main-nav {
+
+		&__dialog {
+			position: relative;
+			z-index: 50;
+		}
 
 		&__dialog-desktop {
 			display: none;
 			position: relative;
+			width: 186px;
+			margin-top: -64px;
+			padding-top: 64px;
 
 			&.in {
 				display: block;
+				z-index: 5;
 			}
+		}
+
+		&__backdrop {
+			display: none;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+			background: #000;
+			opacity: .3;
+		}
+
+		&__links {
+			border-top: 1px solid #dfdfdf;
+			position: absolute;
+			bottom: 0;
+			left: 14px;
+			right: 14px;
+			@include cf;
+			padding: 10px 0;
 		}
 	}
 
@@ -224,19 +276,21 @@
 			padding: 0 15px;
 			position: relative;
 			cursor: pointer;
+			font-size: 14px;
 
 			&.is-active {
 				font-size: 17px;
 				padding: 0 10px 0 40px;
 				width: 186px;
 
-				&:not(.collapsed) {
+				&:not(.closed) {
 					background: #fcfcfc;
 					color: $text-dark;
 					box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.3);
+					padding: 0 10px 0 14px;
 
 					&:before {
-						@include bg($i-close-sm);
+						display: none;
 					}
 
 					&:hover {
@@ -244,7 +298,7 @@
 					}
 				}
 
-				&:not([data-toggle]) {
+				&:not([data-target-menu]) {
 					display: none;
 				}
 
@@ -270,36 +324,25 @@
 		padding: 0;
 		list-style: none;
 		background: #fcfcfc;
-		width: 186px;
-		box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.3);
-		min-height: 420px;
+		box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.3);
+		min-height: 500px;
 
 		&__sub {
 			display: none;
 			position: absolute;
-			top: 0;
+			top: 64px;
 			left: 186px;
-			right: 0;
 			padding: 10px 40px;
 			overflow: hidden;
 			background: #fcfcfc;
-			box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.3);
-			min-height: 420px;
+			box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
+			min-height: 500px;
 
 			.c-list-nav__btn {
 				padding: 0;
 				margin: 0 0 10px 0;
 			}
 
-			&:before {
-				content: '';
-				position: absolute;
-				left: -1px;
-				top: 0;
-				bottom: 0;
-				box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
-				width: 1px;
-			}
 		}
 
 		&__sub-list {
@@ -315,10 +358,17 @@
 		&__sub-link {
 			display: block;
 			color: #575757;
+
+			&.is-active {
+				color: #6a1b9a;
+				font-weight: bold;
+			}
 		}
 
 		&__item {
 			&:hover {
+				background: #e1e1e1;
+
 				.c-list-nav__sub {
 					display: block;
 				}
