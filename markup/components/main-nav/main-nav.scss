@@ -42,12 +42,15 @@
 		box-shadow: 0 0 3px 2px rgba(0, 0, 0, .15);
 
 		&__backdrop {
+			display: block!important;
 			position: fixed;
 			left: 0;
 			right: 0;
 			top: 0;
 			bottom: 0;
 			z-index: 1;
+			background: #000;
+			opacity: .3;
 		}
 
 		&__dialog {
@@ -282,6 +285,7 @@
 				font-size: 17px;
 				padding: 0 10px 0 40px;
 				width: 186px;
+				color: #fff;
 
 				&:not(.closed) {
 					background: #fcfcfc;
