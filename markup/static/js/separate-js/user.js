@@ -155,7 +155,43 @@ $(document).ready(function(){
 		parentCollapseRemoveActive('.js-panel-filter')	
 	});
 
+	$('#mobile-main-nav').on('shown.bs.collapse', function () {
+		$('html, body').addClass('opened-menu-mobile');
+	});
+	$('#mobile-main-nav').on('hidden.bs.collapse', function () {
+		$('html, body').removeClass('opened-menu-mobile');
+	});
+
+	$('.js-tg').on('click', function() {
+		var $this = $(this).attr('data-level');
+		$('[data-level=' + $this + ']').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
+
+	$("#menu").menuAim({
+		activate: activateSubmenu,
+        deactivate: deactivateSubmenu
+	});
+
 });
+
+function activateSubmenu(row) {
+    var $row = $(row),
+        submenuId = $row.data("submenuId"),
+        $submenu = $("#" + submenuId);
+
+    // Show the submenu
+    $submenu.addClass('is-active');
+    $row.find("> .c-list-nav__btn").addClass("is-active");
+}
+function deactivateSubmenu(row) {
+    var $row = $(row),
+        submenuId = $row.data("submenuId"),
+        $submenu = $("#" + submenuId);
+    // Hide the submenu and remove the row's highlighted look
+    $submenu.removeClass('is-active');
+    $row.find("> .c-list-nav__btn").removeClass("is-active");
+}
 
 
 function parentCollapseActive(selector) {

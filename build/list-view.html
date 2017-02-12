@@ -42,16 +42,18 @@
                             <div id="mobile-main-nav" class="c-main-nav"><span data-toggle="collapse" data-target="#mobile-main-nav" class="c-main-nav__close"></span>
                                 <div data-toggle="collapse" data-target="#mobile-main-nav" class="c-main-nav__backdrop js-menu-backdrop"></div>
                                 <div class="c-main-nav__dialog">
-                                    <nav class="c-main-navigation"><a href="#" class="c-main-navigation__btn is-active">Стройка</a><span data-target-menu="#desktop-main-nav" class="c-main-navigation__btn is-active closed js-menu">Стройка</span><a href="#" class="c-main-navigation__btn">Ремонт</a>
-                                        <a
-                                        href="#" class="c-main-navigation__btn">Интерьер</a><a href="#" class="c-main-navigation__btn">Ландшафт</a>
-                                    </nav>
+                                    <div class="c-main-navigation-scroll">
+                                        <nav class="c-main-navigation"><a href="#" class="c-main-navigation__btn is-active">Стройка</a><span data-target-menu="#desktop-main-nav" class="c-main-navigation__btn is-active closed js-menu">Стройка</span><a href="#" class="c-main-navigation__btn">Ремонт</a>
+                                            <a
+                                            href="#" class="c-main-navigation__btn">Интерьер</a><a href="#" class="c-main-navigation__btn">Ландшафт</a>
+                                        </nav>
+                                    </div>
                                     <div id="desktop-main-nav" class="c-main-nav__dialog-desktop">
-                                        <ul class="c-list-nav">
-                                            <li class="c-list-nav__item"><a href="#" class="c-list-nav__btn is-active">Стройматериалы</a>
-                                                <div class="c-list-nav__sub">
+                                        <ul id="menu" class="c-list-nav">
+                                            <li data-submenu-id="submenu-1" class="c-list-nav__item"><a href="#" class="c-list-nav__btn c-list-nav__btn--link is-active">Стройматериалы</a><span data-level="first" class="c-list-nav__btn c-list-nav__btn--toggler js-tg is-active">Стройматериалы</span>
+                                                <div id="submenu-1" class="c-list-nav__sub is-active">
                                                     <div class="c-list-nav-grid">
-                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn is-active">Бетон, железобетонные изделия иконструкции</a>
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Бетон, железобетонные изделия иконструкции</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg is-active">Бетон, железобетонные изделия иконструкции</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -61,7 +63,7 @@
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">ЕЩЕ (4)</a>
                                                                 </li>
-                                                            </ul><a href="#" class="c-list-nav__btn">Строительная химия</a>
+                                                            </ul><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Строительная химия</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Строительная химия</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -71,7 +73,7 @@
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">ЕЩЕ (4)</a>
                                                                 </li>
-                                                            </ul><a href="#" class="c-list-nav__btn">Стеновые и кладочные материалы</a>
+                                                            </ul><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Стеновые и кладочные материалы</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Стеновые и кладочные материалы</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -81,7 +83,7 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Строительные смеси</a>
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Строительные смеси</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Строительные смеси</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -89,7 +91,7 @@
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
-                                                            </ul><a href="#" class="c-list-nav__btn">Гидроизоляция</a>
+                                                            </ul><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Гидроизоляция</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Гидроизоляция</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -97,17 +99,7 @@
                                                                 </li>
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
                                                                 </li>
-                                                            </ul><a href="#" class="c-list-nav__btn">Теплозвукоизоляция</a>
-                                                            <ul class="c-list-nav__sub-list">
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
-                                                                </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
-                                                                </li>
-                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Сыпучие материалы</a>
+                                                            </ul><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Теплозвукоизоляция</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Теплозвукоизоляция</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -117,13 +109,7 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="c-list-nav__item"><a href="#" class="c-list-nav__btn">Инженерные системы</a>
-                                                <div class="c-list-nav__sub">
-                                                    <div class="c-list-nav-grid">
-                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Сыпучие материалы</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Сыпучие материалы</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -136,10 +122,10 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="c-list-nav__item"><a href="#" class="c-list-nav__btn">Фасады и заборы</a>
-                                                <div class="c-list-nav__sub">
+                                            <li data-submenu-id="submenu-2" class="c-list-nav__item"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Инженерные системы</a><span data-level="first" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Инженерные системы</span>
+                                                <div id="submenu-2" class="c-list-nav__sub">
                                                     <div class="c-list-nav-grid">
-                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Бетон, железобетонные изделия иконструкции</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Бетон, железобетонные изделия иконструкции</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -152,10 +138,26 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="c-list-nav__item"><a href="#" class="c-list-nav__btn">Спецтехника</a>
-                                                <div class="c-list-nav__sub">
+                                            <li data-submenu-id="submenu-3" class="c-list-nav__item"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Фасады и заборы</a><span data-level="first" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Фасады и заборы</span>
+                                                <div id="submenu-3" class="c-list-nav__sub">
                                                     <div class="c-list-nav-grid">
-                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn">Бетон, железобетонные изделия иконструкции</a>
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Бетон, железобетонные изделия иконструкции</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Бетон, железобетонные изделия иконструкции</span>
+                                                            <ul class="c-list-nav__sub-list">
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
+                                                                </li>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Растворы</a>
+                                                                </li>
+                                                                <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Добавки в бетон, пластификаторы, пигменты</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-submenu-id="submenu-4" class="c-list-nav__item"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Спецтехника</a><span data-level="first" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Спецтехника</span>
+                                                <div id="submenu-4" class="c-list-nav__sub">
+                                                    <div class="c-list-nav-grid">
+                                                        <div class="c-list-nav-grid__cell"><a href="#" class="c-list-nav__btn c-list-nav__btn--link">Бетон, железобетонные изделия иконструкции</a><span data-level="second" class="c-list-nav__btn c-list-nav__btn--toggler js-tg">Бетон, железобетонные изделия иконструкции</span>
                                                             <ul class="c-list-nav__sub-list">
                                                                 <li class="c-list-nav__sub-item"><a href="#" class="c-list-nav__sub-link">Бетоны</a>
                                                                 </li>
@@ -692,6 +694,7 @@
         <script src="static/js/separate-js/slick.min.js"></script>
         <script src="static/js/separate-js/menuJS.js"></script>
         <script src="static/js/separate-js/jquery.mCustomScrollbar.js"></script>
+        <script src="static/js/separate-js/jquery.menu-aim.js"></script>
         <script src="static/js/separate-js/user.js"></script>
     </body>
 

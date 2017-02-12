@@ -9,6 +9,24 @@
 
 
 @media (max-width: $third-point - 1px) {	
+	.opened-menu-mobile {
+		overflow: hidden;
+		height: 100%;
+
+		.c-header__wrap {
+			&:before {
+				content: '';
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: 2;
+				background: #000;
+				opacity: .3;
+			}
+		}
+	}
 	.c-button-nav {
 		display: block;
 		height: 64px;
@@ -37,9 +55,11 @@
 		left: 0;
 		top: 42px;
 		bottom: 0;
+		right: 0;
 		overflow-y: auto;
-		-webkit-overflow-scrolling: touch;
+		// -webkit-overflow-scrolling: touch;
 		box-shadow: 0 0 3px 2px rgba(0, 0, 0, .15);
+		z-index: 15;
 
 		&__backdrop {
 			display: block!important;
@@ -48,38 +68,22 @@
 			right: 0;
 			top: 0;
 			bottom: 0;
-			z-index: 1;
-			background: #000;
-			opacity: .3;
+			z-index: 2;
+			// background: #000;
+			// opacity: .3;
+			cursor: pointer;
 		}
 
 		&__dialog {
-			padding: 30px 14px 14px 14px;
-			width: 374px;
+			padding: 10px;
+			width: 250px;
 			max-width: 100%;
 			background: #fcfcfc;
 			position: relative;
-			z-index: 2;
+			z-index: 3;
 			min-height: 100%;
 		}
 
-		&__close {
-			position: absolute;
-			right: 0;
-			top: 0;
-			width: 30px;
-			height: 30px;			
-			z-index: 5;
-
-			&:after {
-				content: '';
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				@include bg($i-close-sm);
-			}
-		}
 
 		&__links {
 			border-top: 1px solid #dfdfdf;
@@ -92,14 +96,16 @@
 			display: block;
 		}
 	}
-
+	
+	.c-main-navigation-scroll {
+		overflow-y: auto;
+	}
 	.c-main-navigation {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 		display: table;
 		width: 100%;
-		table-layout: fixed;
 		text-align: center;
 		border-bottom: 1px solid #c8c8c8;
 		margin: 0 0 20px 0;
@@ -111,6 +117,7 @@
 			font-size: 14px;
 			height: 42px;
 			position: relative;
+			padding: 0 5px;
 
 			&[data-target-menu] {
 				display: none;
@@ -177,6 +184,14 @@
 			color: $text-heading;
 			margin: 0 0 20px 0;
 			font-weight: $font-bold;
+			cursor: pointer;
+
+			&--link {
+				display: none;
+			}
+			// &--toggler {
+			// 	display: block;
+			// }
 
 			&.is-active {
 				& + .c-list-nav__sub,
@@ -347,6 +362,10 @@
 				margin: 0 0 10px 0;
 			}
 
+			&.is-active {
+				display: block;
+			}
+
 		}
 
 		&__sub-list {
@@ -361,7 +380,11 @@
 		}
 		&__sub-link {
 			display: block;
-			color: #575757;
+			color: $text-normal;
+
+			&:hover {
+				color: $text-dark;
+			}
 
 			&.is-active {
 				color: #6a1b9a;
@@ -371,11 +394,11 @@
 
 		&__item {
 			&:hover {
-				background: #e1e1e1;
+				// background: #e1e1e1;
 
-				.c-list-nav__sub {
-					display: block;
-				}
+				// .c-list-nav__sub {
+				// 	display: block;
+				// }
 			}
 		}
 
@@ -386,12 +409,20 @@
 			padding: 10px 14px;
 			position: relative;
 
+			&--toggler {
+				display: none;
+			}
+
 			&:hover {
 				color: $text-heading;
 
-				& + .c-list-nav__sub {
-					display: block;
-				}
+				// & + .c-list-nav__sub {
+				// 	display: block;
+				// }
+			}
+
+			&.is-active {
+				background: #e1e1e1;
 			}
 		}
 	}
