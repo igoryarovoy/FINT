@@ -285,7 +285,7 @@ body {
 
 .slick-slider {
 	opacity: 0;	
-	@include transition(all, 1s);
+	@include transition(all, .1s);
 
 	&.slick-initialized {
 		opacity: 1;

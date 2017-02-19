@@ -99,6 +99,7 @@
 	
 	.c-main-navigation-scroll {
 		overflow-y: auto;
+		position: relative;
 	}
 	.c-main-navigation {
 		margin: 0;
@@ -421,7 +422,7 @@
 				// }
 			}
 
-			&.is-active {
+			&.is-hover {
 				background: #e1e1e1;
 			}
 		}

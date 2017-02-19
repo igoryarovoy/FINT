@@ -4,7 +4,7 @@ mixin mainNav()
 		span.c-main-nav__close(data-toggle='collapse', data-target='#mobile-main-nav')
 		.c-main-nav__backdrop.js-menu-backdrop(data-toggle='collapse', data-target='#mobile-main-nav')
 		.c-main-nav__dialog
-			.c-main-navigation-scroll
+			.c-main-navigation-scroll.js-main-navigation-scroll
 				nav.c-main-navigation
 					a(href="#").c-main-navigation__btn.is-active Стройка
 					span.c-main-navigation__btn.is-active.closed.js-menu(data-target-menu='#desktop-main-nav') Стройка
@@ -14,13 +14,13 @@ mixin mainNav()
 			.c-main-nav__dialog-desktop(id='desktop-main-nav')
 				ul.c-list-nav(id="menu")
 					li.c-list-nav__item(data-submenu-id="submenu-1")
-						a(href="#").c-list-nav__btn.c-list-nav__btn--link.is-active Стройматериалы
-						span(data-level="first").c-list-nav__btn.c-list-nav__btn--toggler.js-tg.is-active Стройматериалы
+						a(href="#").c-list-nav__btn.c-list-nav__btn--link.is-hover Стройматериалы
+						span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg.is-active Стройматериалы
 						.c-list-nav__sub.is-active(id="submenu-1")
 							.c-list-nav-grid
 								.c-list-nav-grid__cell
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Бетон, железобетонные изделия иконструкции
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg.is-active Бетон, железобетонные изделия иконструкции
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg.is-active Бетон, железобетонные изделия иконструкции
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -31,7 +31,7 @@ mixin mainNav()
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link ЕЩЕ (4)
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Строительная химия
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Строительная химия
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Строительная химия
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -42,7 +42,7 @@ mixin mainNav()
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link ЕЩЕ (4)
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Стеновые и кладочные материалы
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Стеновые и кладочные материалы
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Стеновые и кладочные материалы
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -52,7 +52,7 @@ mixin mainNav()
 											a(href="#").c-list-nav__sub-link Добавки в бетон, пластификаторы, пигменты
 								.c-list-nav-grid__cell
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Строительные смеси
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Строительные смеси
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Строительные смеси
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -61,7 +61,7 @@ mixin mainNav()
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Добавки в бетон, пластификаторы, пигменты
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Гидроизоляция
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Гидроизоляция
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Гидроизоляция
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -70,7 +70,7 @@ mixin mainNav()
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Добавки в бетон, пластификаторы, пигменты
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Теплозвукоизоляция
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Теплозвукоизоляция
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Теплозвукоизоляция
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -80,7 +80,7 @@ mixin mainNav()
 											a(href="#").c-list-nav__sub-link Добавки в бетон, пластификаторы, пигменты
 								.c-list-nav-grid__cell
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Сыпучие материалы
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Сыпучие материалы
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Сыпучие материалы
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -90,12 +90,12 @@ mixin mainNav()
 											a(href="#").c-list-nav__sub-link Добавки в бетон, пластификаторы, пигменты
 					li.c-list-nav__item(data-submenu-id="submenu-2")
 						a(href="#").c-list-nav__btn.c-list-nav__btn--link Инженерные системы
-						span(data-level="first").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Инженерные системы
+						span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Инженерные системы
 						.c-list-nav__sub(id="submenu-2")
 							.c-list-nav-grid
 								.c-list-nav-grid__cell
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Бетон, железобетонные изделия иконструкции
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Бетон, железобетонные изделия иконструкции
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Бетон, железобетонные изделия иконструкции
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -105,12 +105,12 @@ mixin mainNav()
 											a(href="#").c-list-nav__sub-link Добавки в бетон, пластификаторы, пигменты
 					li.c-list-nav__item(data-submenu-id="submenu-3")
 						a(href="#").c-list-nav__btn.c-list-nav__btn--link Фасады и заборы
-						span(data-level="first").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Фасады и заборы
+						span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Фасады и заборы
 						.c-list-nav__sub(id="submenu-3")
 							.c-list-nav-grid
 								.c-list-nav-grid__cell
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Бетон, железобетонные изделия иконструкции
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Бетон, железобетонные изделия иконструкции
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Бетон, железобетонные изделия иконструкции
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны
@@ -120,12 +120,12 @@ mixin mainNav()
 											a(href="#").c-list-nav__sub-link Добавки в бетон, пластификаторы, пигменты
 					li.c-list-nav__item(data-submenu-id="submenu-4")
 						a(href="#").c-list-nav__btn.c-list-nav__btn--link Спецтехника
-						span(data-level="first").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Спецтехника
+						span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Спецтехника
 						.c-list-nav__sub(id="submenu-4")
 							.c-list-nav-grid
 								.c-list-nav-grid__cell
 									a(href="#").c-list-nav__btn.c-list-nav__btn--link Бетон, железобетонные изделия иконструкции
-									span(data-level="second").c-list-nav__btn.c-list-nav__btn--toggler.js-tg Бетон, железобетонные изделия иконструкции
+									span.c-list-nav__btn.c-list-nav__btn--toggler.js-tg Бетон, железобетонные изделия иконструкции
 									ul.c-list-nav__sub-list
 										li.c-list-nav__sub-item
 											a(href="#").c-list-nav__sub-link Бетоны

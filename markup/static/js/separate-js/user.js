@@ -162,16 +162,28 @@ $(document).ready(function(){
 		$('html, body').removeClass('opened-menu-mobile');
 	});
 
-	$('.js-tg').on('click', function() {
-		var $this = $(this).attr('data-level');
-		$('[data-level=' + $this + ']').removeClass('is-active');
-		$(this).addClass('is-active');
+	$('.js-tg').on('click', function(e) {
+		var $this = $(this);
+		$this.toggleClass('is-active');
+		$('#mobile-main-nav').scrollTop($this.position().top - 15);
 	});
 
 	$("#menu").menuAim({
 		activate: activateSubmenu,
         deactivate: deactivateSubmenu
 	});
+
+	$('.js-main-navigation-scroll a').on('click', function() {
+		var parent = $(this).parents('.js-main-navigation-scroll');
+		var parentWidth = parent.outerWidth();
+		var posLeft = $(this).position().left;
+		var width = $(this).outerWidth();
+
+		if ( posLeft+width < parentWidth ) {
+			parent.scrollLeft(posLeft);
+		}
+	});
+
 
 });
 
@@ -182,7 +194,7 @@ function activateSubmenu(row) {
 
     // Show the submenu
     $submenu.addClass('is-active');
-    $row.find("> .c-list-nav__btn").addClass("is-active");
+    $row.find("> .c-list-nav__btn").addClass("is-hover");
 }
 function deactivateSubmenu(row) {
     var $row = $(row),
@@ -190,7 +202,7 @@ function deactivateSubmenu(row) {
         $submenu = $("#" + submenuId);
     // Hide the submenu and remove the row's highlighted look
     $submenu.removeClass('is-active');
-    $row.find("> .c-list-nav__btn").removeClass("is-active");
+    $row.find("> .c-list-nav__btn").removeClass("is-hover");
 }
 
 

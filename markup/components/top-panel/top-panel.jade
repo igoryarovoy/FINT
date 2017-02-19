@@ -4,15 +4,15 @@ mixin top-panel(modifeir)
 		.o-center
 			+crumbs()
 			span.c-label.c-label--close
-				span.c-label__close
+				span.c-label__close(data-url="https://www.google.com.ua" onclick="location.href=$(this).attr('data-url')")
 				|Материал: Натуральное дерево
 			span.c-label.c-label--close
-				span.c-label__close
+				span.c-label__close(data-url="https://www.google.com.ua" onclick="location.href=$(this).attr('data-url')")
 				|Цвет: Темный дуб
 			span.c-label.c-label--close
-				span.c-label__close
+				span.c-label__close(data-url="https://www.google.com.ua" onclick="location.href=$(this).attr('data-url')")
 				|Ширина: 80 см
 			span.c-label.c-label--close
-				span.c-label__close
+				span.c-label__close(data-url="https://www.google.com.ua" onclick="location.href=$(this).attr('data-url')")
 				|Длина: 110см / 120см / 140см
-			a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Очистить
+			span(data-url="https://www.google.com.ua" onclick="location.href=$(this).attr('data-url')").c-btn.c-btn--flat-info.c-btn--lbl Очистить

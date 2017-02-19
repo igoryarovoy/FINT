@@ -265,6 +265,39 @@
 	}
 }
 
+
+.c-link-f {
+	display: block;
+	color: $text-normal;
+	position: relative;
+	padding-right: 20px;
+
+	&__close {
+		position: absolute;
+		right: 0;
+		top: -1px;
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			@include bg($i-lbl-close);
+		}
+	}
+}
+span.c-link-f {
+	&__close {
+		display: block;
+	}
+}
+
+
+
 .c-group-label {
 	font-size: 0;
 	margin: 0 -15px 0 0;
