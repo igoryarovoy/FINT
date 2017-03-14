@@ -193,8 +193,14 @@ $(document).ready(function(){
 		}
 	});
 
-
+	createLink('.js-link-span');
 });
+
+function createLink(selector) {
+	$(selector).replaceWith(function(){
+		return'<a href="'+$(this).data('link')+'">'+$(this).text()+'</a>';
+	});
+}
 
 function activateSubmenu(row) {
     var $row = $(row),

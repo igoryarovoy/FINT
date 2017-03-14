@@ -1,0 +1,20 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/top-panel/top-panel 
+    include ../components/panel-filter/panel-filter           
+    include ../components/card-adaptive/card-adaptive-feed
+    include ../components/quick-view/quick-view
+    include ../components/footer/footer
+    include ../components/pagination/pagination
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .o-wrapper
+            span.js-link-span(data-link="https://www.google.com.ua/") Ссылка из спана
+        +includeJs()
