@@ -92,9 +92,8 @@
 	&__mb-toggle {
 		display: block;
 		cursor: pointer;
-		height: 40px;
-		line-height: 40px;
-		padding: 0 10px;
+		line-height: 1.2;
+		padding: 13px 10px;
 		background: #fff;
 
 		&:not(.collapsed) {
@@ -346,7 +345,7 @@
 			top: 100%;
 			margin: 5px 0 0 0;
 			width: 235px;			
-			z-index: 2;
+			z-index: 6;
 		}
 		&__collapse-in {
 			box-shadow: $shadow-card;
