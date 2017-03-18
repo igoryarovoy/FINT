@@ -1,0 +1,109 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/top-panel/top-panel
+    include ../components/sub-panel/sub-panel
+    include ../components/slider-bunner/slider-bunner
+    include ../components/panel-filter/panel-filter           
+    include ../components/card-adaptive/card-adaptive-feed
+    include ../components/quick-view/quick-view
+    include ../components/footer/footer
+    include ../components/pagination/pagination
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .o-wrapper
+            +header(header.manufacture)
+            +top-panel('u-hide-xs')
+            +sub-panel()
+            +slider-bunner()
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                h1.head-1 Стол темный дуб
+                            .u-dtc.u-text-right.u-fs-16.u-hide-xs
+                                .u-mt-5 Всего <b>279</b>
+                    +panelFilter()
+                    .o-grid.panel-group.js-panel-group(id="cards-group")                        
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(1)
+                            +quickView(1)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(2)
+                            +quickView(2)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(3)
+                            +quickView(3)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(4)
+                            +quickView(4)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(5)
+                            +quickView(5)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(6)
+                            +quickView(6)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(7)
+                            +quickView(7)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(8)
+                            +quickView(8)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(9)
+                            +quickView(9)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(10)
+                            +quickView(10)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(11)
+                            +quickView(11)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(12)
+                            +quickView(12)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(13)
+                            +quickView(13)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(14)
+                            +quickView(14)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(15)
+                            +quickView(15)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(16)
+                            +quickView(16)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(17)
+                            +quickView(17)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(18)
+                            +quickView(18)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(19)
+                            +quickView(19)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(20)
+                            +quickView(20)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(21)
+                            +quickView(21)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(22)
+                            +quickView(22)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(23)
+                            +quickView(23)
+                        .o-grid__sm-3.o-grid__md-2.panel.js-card-quick-view
+                            +cardAdaptiveFeed(24)
+                            +quickView(24)
+                +pagination()
+        +footer()
+        +includeJs()

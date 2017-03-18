@@ -1,0 +1,89 @@
+.c-slider-bunner {
+	height: 327px;
+
+	&__item {
+		height: 327px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.slick-dots {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-size: 0;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			width: 10px;
+			height: 10px;
+			cursor: pointer;
+			background: #c2c2c2;
+			margin: 0 5px;
+
+			* {
+				display: none;
+			}
+
+			&.slick-active {
+				background: #ffffff;
+			}
+		}
+	}
+
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

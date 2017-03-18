@@ -1,0 +1,79 @@
+mixin sub-panel(modifeir)
+	.c-sub-panel(class=modifeir)
+		.o-center
+			.c-sub-panel__wrap-menu
+				button.c-sub-panel__btn-menu Каталог
+				.c-sub-panel__menu
+					.c-sub-panel__menu-content
+						span.c-sub-panel__menu-item.js-tg Стройматериалы
+						ul.c-sub-panel__menu-sub
+							li
+								a(href="#") Стройматериалы
+							li
+								a(href="#").is-active Стройматериалы
+							li
+								a(href="#") Стройматериалы
+						span.c-sub-panel__menu-item.js-tg Инженерные системы
+						ul.c-sub-panel__menu-sub
+							li
+								a(href="#") Инженерные системы
+							li
+								a(href="#") Инженерные системы
+							li
+								a(href="#") Инженерные системы
+						span.c-sub-panel__menu-item.js-tg Фасады и заборы
+						ul.c-sub-panel__menu-sub
+							li
+								a(href="#") Фасады и заборы
+							li
+								a(href="#") Фасады и заборы
+							li
+								a(href="#") Фасады и заборы
+						span.c-sub-panel__menu-item.js-tg Спецтехника
+						ul.c-sub-panel__menu-sub
+							li
+								a(href="#") Спецтехника
+							li
+								a(href="#") Спецтехника
+							li
+								a(href="#") Спецтехника
+						span.c-sub-panel__menu-item.js-tg Инструмент
+						ul.c-sub-panel__menu-sub
+							li
+								a(href="#") Инструмент
+							li
+								a(href="#") Инструмент
+							li
+								a(href="#") Инструмент
+						span.c-sub-panel__menu-item.js-tg Кровля
+						ul.c-sub-panel__menu-sub
+							li
+								a(href="#") Кровля
+							li
+								a(href="#") Кровля
+							li
+								a(href="#") Кровля
+						span.c-sub-panel__menu-item.js-tg Лес
+						ul.c-sub-panel__menu-sub
+							li
+								a(href="#") Лес
+							li
+								a(href="#") Лес
+							li
+								a(href="#") Лес
+						span.c-sub-panel__menu-item.js-tg Металлопрокат
+						ul.c-sub-panel__menu-sub
+							li
+								a(href="#") Металлопрокат
+							li
+								a(href="#") Металлопрокат
+							li
+								a(href="#") Металлопрокат
+			a(href="#").c-sub-panel__logo
+				img(src="static/img/content/logo-roz.png", alt="")
+			.c-sub-panel__wrap-search
+				span.c-sub-panel__toggler-search
+				.c-sub-panel__search
+					button.c-sub-panel__btn-search(type='submit')
+					input(type="text" placeholder="Искать в этом магазине")
+			.c-sub-panel__backdrop

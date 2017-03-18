@@ -1,0 +1,345 @@
+.c-sub-panel {
+	background: #fff;
+	@include cf;
+
+	.o-center {
+		padding: 0;
+	}
+
+	&__btn-menu {
+		position: relative;
+		margin: 0;
+		background: none;
+		border: 0;
+		outline: none;
+		font-size: 14px;
+		color: $text-dark;
+		padding: 0 0 0 43px;
+		height: 50px;
+		line-height: 50px;
+		margin: 0 20px 0 0;
+		background: #fff;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 11px;
+			top: 50%;
+			margin-top: -6px;
+			@include bg($i-burg-dark);
+		}
+	}
+
+	&__logo {
+		float: left;
+		height: 50px;
+		font-size: 0;
+
+		&:before,
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:before {
+			content: '';
+			width: 0;
+			height: 100%;
+		}
+		img {
+			max-width: 95%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__wrap-search {
+		float: right;
+		position: relative;
+	}
+
+	&__toggler-search {
+		display: none;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: none;
+		background: none;
+		position: relative;
+		height: 64px;
+		width: 50px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			@include bg($i-search-lg);
+			left: 50%;
+			top: 50%;
+			margin: -9px 0 0 -9px;
+		}
+	}
+
+	&__search {
+		background: #fff;
+
+		input {
+			display: block;
+			width: 100%;
+			height: 24px;
+			padding: 0 25px 0 0;
+			font-size: 12px;
+			outline: none;
+			border: 0;
+			border-bottom: 1px solid #c8c8c8;
+			border-radius: 0; 
+		}
+	}
+	&__btn-search {
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		background: none;
+		outline: none;
+		border: 0;
+
+		&:after {
+			content: '';
+			position: absolute;
+			@include bg($i-search);
+			left: 50%;
+			top: 50%;
+			margin: -7px 0 0 -7px;
+		}
+	}
+
+	&__wrap-menu {
+		float: left;
+		position: relative;
+		z-index: 50;
+
+		&:hover {
+			.c-sub-panel__menu {
+				display: block;
+			}
+		}
+	}
+
+	&__menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		background: #fff;
+		width: 186px;
+	}
+
+	&__menu-item {
+		display: block;
+		font-size: 13px;
+		padding: 12px 11px;
+		cursor: pointer;
+
+		&.is-active {
+			font-weight: bold;
+		}
+
+		&:hover,
+		&.is-active {
+			color: $text-dark;
+		}
+
+		&.is-active + .c-sub-panel__menu-sub {
+			display: block;
+		}
+	}
+
+	&__menu-sub {
+		display: none;
+		margin: 0;
+		padding: 0 0 0 22px;
+		list-style: none;
+
+		a {
+			display: block;
+			padding: 3px 0;
+
+			&.is-active {
+				font-weight: bold;
+				color: $text-dark;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: $third-point - 1px) {
+	
+	.c-sub-panel {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 42px;
+		z-index: 100;
+		height: 64px;
+
+		&__btn-menu {
+			height: 64px;
+			line-height: 64px;
+			padding-right: 10px;
+			margin: 0 10px 0 0;
+		}
+
+		&__logo {
+			height: 64px;
+			max-width: 120px;
+		}
+
+		&__wrap-search {
+			cursor: pointer;
+			z-index: 101;
+
+			&:hover {
+				.c-sub-panel__search {
+					display: block;
+				}
+
+				& ~ .c-sub-panel__backdrop {
+					display: block;
+				}
+			}
+		}
+
+		&__search {
+			display: none;
+			position: fixed;
+			top: 42px;
+			left: 0;
+			right: 0;
+			padding: 11px;
+
+			input {
+				height: 42px;
+				font-size: 14px;
+				border: 1px solid #c8c8c8;
+				padding: 0 40px 0 10px;
+			}
+		}
+		&__btn-search {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			right: 12px;
+			top: 12px;
+		}
+
+		&__toggler-search {
+			display: block;
+		}
+
+		&__btn-search {
+			
+		}
+		
+		&__wrap-menu {
+			z-index: 101;
+
+			&:hover ~ .c-sub-panel__backdrop {
+				display: block;
+			}
+		}
+
+		&__menu {
+			width: 250px;
+			top: 0;
+			height: calc(100vh - 42px);
+			box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .5);
+			-webkit-overflow-scrolling: touch;
+			overflow-y: auto;
+		}
+
+		&__backdrop {
+			display: none;
+			position: fixed;
+			z-index: 100;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, .5);
+			cursor: pointer;
+		}
+	}
+
+}
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+	
+	.c-sub-panel {
+		padding: 0 11px 0 0;
+
+		&__wrap-search {
+			margin: 12px 0 0 0;
+			width: 190px;
+		}
+
+		&__wrap-menu {
+			&:hover {
+				.c-sub-panel__menu {
+					box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .5);
+				}
+			}
+		}
+
+		&__menu {
+			margin-top: -50px;
+			padding-top: 50px;
+		}
+
+		&__menu-content {
+			height: 327px;
+			overflow-y: auto;
+		}
+
+		&__btn-menu {
+			width: 186px;
+			text-align: left;
+			z-index: 2;
+		}
+
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

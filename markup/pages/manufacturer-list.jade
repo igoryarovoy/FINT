@@ -1,0 +1,51 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header        
+    include ../components/top-panel/top-panel
+    include ../components/sub-panel/sub-panel
+    include ../components/slider-bunner/slider-bunner
+    include ../components/panel-filter/panel-filter    
+    include ../components/card-list/card-list-feed
+    include ../components/footer/footer
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .o-wrapper
+            +header(header.defaults)
+            +top-panel('u-hide-xs')
+            +sub-panel()
+            +slider-bunner()
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                h1.head-1 Стол темный дуб
+                            .u-dtc.u-text-right.u-fs-16.u-hide-xs
+                                .u-mt-5 Всего <b>279</b>
+                    +panelFilter()
+                    .o-grid
+                        .o-grid__md-9
+                            +cardListFeed()
+                            +cardListFeed()
+                            +cardListFeed()
+                            .u-text-center.u-hide-xs
+                                .o-ad
+                                    img(src="static/img/content/img-bun-long.jpg", alt="")
+                            +cardListFeed()
+                            +cardListFeed()
+                        .o-grid__md-3
+                            .u-text-center.u-fs-0
+                                .o-ad
+                                    img(src="static/img/content/img-bun-sm.jpg", alt="")
+                                .o-ad
+                                    img(src="static/img/content/img-bun-sm.jpg", alt="")
+                                .o-ad.u-hide-xs.u-hide-sm
+                                    img(src="static/img/content/img-bun-tall.jpg", alt="")
+        +footer()
+        +includeJs()

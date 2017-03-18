@@ -8,5 +8,10 @@ header: {
     },
     partner: {
     	usePanelPartner: true
+    },
+    manufacture: {
+        useSmNav: true,
+        useMainNav: true,
+        hideBot: true
     }
 }

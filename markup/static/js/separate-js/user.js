@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+	if ( $('.js-bunner-slider').length ) {
+    	$('.js-bunner-slider').slick({				
+			speed: 300,
+			slidesToShow: 1,
+			slidesToScroll: 1,		
+	  		draggable: false,
+	  		dots: true,
+	  		arrows: false,
+	  		lazyLoad: 'ondemand',
+	  		autoplay: true,
+  			autoplaySpeed: 5000,
+		});
+    }
+
     if ( $('.js-main-slider').length ) {
     	$('.js-main-slider').slick({				
 			speed: 300,

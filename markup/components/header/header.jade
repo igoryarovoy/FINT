@@ -10,7 +10,7 @@ mixin header(data)
 					+logo('c-logo--header')
 					if (data.useSmNav)
 						+smNav()
-			.c-header__bot
+			.c-header__bot(class=data.hideBot ? 'u-hide-xs' : '')
 				.o-center
 					if (data.useMainNav)
 						+mainNav()
