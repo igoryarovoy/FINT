@@ -434,6 +434,94 @@ textarea.c-form-control {
 	color: red;
 }
 
+.c-sort-panel {
+	background: #ededed;
+	border-top: 1px solid #c8c8c8;
+	border-bottom: 1px solid #c8c8c8;
+	margin: 20px 0;
+	font-size: 12px;
+
+	.o-center {
+		padding: 0;
+	}
+
+	&__row {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+	}
+	
+	&__cell {
+		display: table-cell;
+		vertical-align: middle;
+		height: 40px;
+		padding: 0 11px;
+	}
+
+	&__btn {
+		cursor: pointer;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			border: 5px solid transparent;
+    		border-top: 5px solid $text-normal;
+    		margin: 3px 0 0 5px;
+		}
+
+		&.is-active {
+			&:after {
+				border: 5px solid transparent;
+    			border-bottom: 5px solid $text-normal;
+    			margin-top: -3px;
+			}
+		}
+	}
+
+}
+
+.c-srch {
+	position: relative;
+	width: 178px;
+	max-width: 100%;
+	border-bottom: 1px solid #c8c8c8;
+
+	&__field,
+	&__btn {
+		background: none;
+		border: none;
+		outline: none;
+	}
+
+	&__field {
+		display: block;
+		width: 100%;
+		padding: 0 30px 0 0;
+		height: 24px;
+		font-size: 12px;
+	}
+
+	&__btn {
+		position: absolute;
+		height: 24px;
+		width: 24px;
+		margin: 0;
+		padding: 0;
+		right: 0;
+		bottom: 0;
+
+		&:after {
+			content: '';
+			position: absolute;
+			@include bg($i-search);
+			top: 50%;
+			left: 50%;
+			margin: -7px 0 0 -7px;
+		}
+	}
+}
+
 @media (min-width: $third-point) {
 
 	.c-label-f {
@@ -454,6 +542,10 @@ textarea.c-form-control {
 			width: 75px;
 			height: 75px;
 		}
+	}
+
+	.c-sort-panel {
+		font-size: 14px;
 	}
 
 }

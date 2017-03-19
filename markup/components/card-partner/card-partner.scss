@@ -1,0 +1,209 @@
+.c-card-partner {	
+	background: $fill-card;
+	position: relative;
+	margin: 0 0 20px 0;
+	font-size: 12px;
+	line-height: 1.5;
+
+	&:hover {
+		box-shadow: $shadow-card;
+	}
+
+	&__rev {
+		font-size: 10px;
+
+		span {
+			font-size: 14px;
+		}
+	}
+
+	&__logo {
+		display: block;
+		font-size: 0;
+
+		img {
+			display: inline-block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__name {
+		display: block;
+		font-size: 18px;
+		color: $text-normal;
+		line-height: 1;
+
+		&:hover {
+			color: $text-dark;
+		}
+	}
+
+	&__label {
+		font-size: 10px;
+		text-transform: uppercase;
+		display: inline-block;
+	}
+
+	&__link-count {
+		display: block;
+		text-transform: uppercase;
+		font-size: 16px;
+		color: #9c47d6;
+		&:hover {
+			color: #7d1cbf;
+		}
+	}
+
+	&__rat {
+		font-size: 20px;
+		white-space: nowrap;
+		line-height: 1;
+
+		&-val {
+			line-height: 1;
+		}
+
+		&-val,
+		.c-rating {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.c-rating {
+			margin: 0 0 -5px 0;
+		}
+	}
+
+	&__link {
+		color: $text-normal;
+		text-transform: uppercase;
+		font-size: 10px;
+
+		&:hover {
+			color: #9c47d6;
+		}
+	}
+
+
+	&--list {
+		padding: 15px 10px;
+
+		.c-card-partner__logo {
+			display: inline-block;
+			margin: 0 0 25px 0;
+			vertical-align: top;
+		}
+
+		.c-card-partner__rat {
+			margin: 0 0 5px 0;
+		}
+
+		.c-card-partner__label {
+			margin: 10px 5px 0 5px;
+		}
+
+		.c-card-partner__row {
+			display: table;
+			width: 100%;
+		}
+
+		.c-card-partner__cell {
+			display: table-cell;
+			vertical-align: top;
+			width: 1px;
+			padding: 0 5px;
+		}
+	}
+
+	&--card {
+		padding: 10px;
+		
+		.c-card-partner__logo {
+			text-align: center;
+			height: 74px;
+			border-bottom: 1px solid #c8c8c8;
+			margin: 0 0 10px 0;
+
+			&:before,
+			img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			&:before {
+				content: '';
+				width: 0;
+				height: 100%;
+			}
+		}
+
+		.c-card-partner__label {
+			display: block;
+			text-align: right;
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+	
+	.c-card-partner {
+
+		&__name {
+			font-size: 20px;
+		}
+		
+		&--list {
+			.c-card-partner__cell {
+				width: auto;
+			}
+
+			.c-card-partner__logo {
+				margin: 0 70px 20px 0;
+			}
+
+			.c-card-partner__name {
+				display: inline-block;
+			}
+		}
+
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

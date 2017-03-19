@@ -2,7 +2,6 @@
 	position: relative;
 	background: $fill-card;
 	margin: 0 0 20px 0;
-	@include transition(shadow, .15s);
 	@include cf;
 
 	&__inner {

@@ -1,0 +1,25 @@
+mixin card-partner-card(modifeir)
+	include ../rating/rating
+	.c-card-partner.c-card-partner--card(class=modifeir)
+		a(href="#").c-card-partner__logo
+			img(src="static/img/content/logo-roz-sm.png", alt="")
+		a(href="#").c-card-partner__label Сайт
+		a(href="#").c-card-partner__name.u-mb-20 Rozetka.ua
+		.u-clearfix.u-mb-20
+			.u-fl-l
+				.c-card-partner__rat
+					span.c-card-partner__rat-val 3.9
+					+rating(3)
+			.u-fl-r
+				.c-card-partner__rev.u-mt-3 <span>150</span> отзывов
+		.u-mb-30 Cегодня: с 8:00 до 22:00
+		.o-grid
+			.o-grid__xs-4.u-text-left
+				a(href="#").c-card-partner__link Доставка
+			.o-grid__xs-4.u-text-center
+				a(href="#").c-card-partner__link Оплата
+			.o-grid__xs-4.u-text-right
+				a(href="#").c-card-partner__link Товары
+
+		
+		

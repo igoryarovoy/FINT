@@ -146,6 +146,10 @@ body {
 	display: block !important;
 }
 
+.u-clearfix {
+	@include cf;
+}
+
 .u-fs-0 {
 	font-size: 0 !important;
 }
@@ -206,6 +210,13 @@ body {
 	margin: 50px 0 !important;
 }
 
+
+.u-mt-invert-7 {
+	margin-top: -7px !important;
+}
+.u-mt-3 {
+	margin-top: 3px !important;
+}
 .u-mt-5 {
 	margin-top: 5px !important;
 }

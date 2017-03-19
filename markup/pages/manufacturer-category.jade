@@ -1,0 +1,59 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/top-panel/top-panel
+    include ../components/link-img/link-img        
+    include ../components/tabnav-mobile/tabnav-mobile
+    include ../components/card-img/card-img
+    include ../components/sub-panel/sub-panel
+    include ../components/slider-bunner/slider-bunner
+    include ../components/footer/footer
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .o-wrapper
+            +header(header.manufacture)
+            +top-panel('u-hide-xs')   
+            +sub-panel()
+            +slider-bunner()      
+            .o-section
+                .o-center
+                    .o-hgroup
+                        h1.head-1 Заголовок
+                    .o-grid
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                        .o-grid__xs-6.o-grid__sm-4.o-grid__md-3
+                            +cardImg()
+                    .u-text-center
+                        a(href="#").c-btn.c-btn--flat-info Все инструменты
+            .o-section
+                .o-center
+                    .u-text-center.u-fs-0                        
+                        .o-ad
+                            img(src="static/img/content/img-bun-sm.jpg", alt="")
+                        .o-ad.o-hide-xs
+                            img(src="static/img/content/img-bun-sm.jpg", alt="")
+                        .o-ad.o-hide-sm.o-hide-xs
+                            img(src="static/img/content/img-bun-sm.jpg", alt="")
+                        .o-ad.o-hide-sm.o-hide-xs
+                            img(src="static/img/content/img-bun-sm.jpg", alt="")           
+        +footer()
+        +includeJs()

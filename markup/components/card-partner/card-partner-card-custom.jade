@@ -1,0 +1,20 @@
+mixin card-partner-card-custom(modifeir)
+	include ../rating/rating
+	.c-card-partner.c-card-partner--card(class=modifeir)
+		a(href="#").c-card-partner__logo
+			img(src="static/img/content/logo-sams.png", alt="")
+		a(href="#").c-card-partner__label Сайт
+		a(href="#").c-card-partner__name.u-mb-20 Samsung
+		.u-clearfix.u-mb-20
+			.u-fl-l
+				.c-card-partner__rat
+					span.c-card-partner__rat-val 3.9
+					+rating(3)
+			.u-fl-r
+				.c-card-partner__rev.u-mt-3 <span>150</span> отзывов
+		.u-mb-30
+			a(href="#").c-card-partner__link-count 1578 ТОВАРОВ
+		div Южная Корея
+
+		
+		

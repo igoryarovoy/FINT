@@ -1,0 +1,165 @@
+.c-sub-menu {
+	float: left;
+	position: relative;
+
+	&:hover {
+		z-index: 101;
+
+		.c-sub-menu__menu {
+			display: block;
+		}
+
+		.c-sub-menu__btn-menu {
+			background: #fff;
+		}
+	}
+	
+
+	&__btn-menu {
+		position: relative;
+		margin: 0;
+		background: none;
+		border: 0;
+		outline: none;
+		font-size: 14px;
+		color: $text-dark;
+		padding: 0 20px 0 43px;
+		height: 40px;
+		line-height: 40px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 11px;
+			top: 50%;
+			margin-top: -6px;
+			@include bg($i-burg-dark);
+		}
+	}
+
+	&__menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		background: #fff;
+		width: 250px;
+		max-height: 375px;
+		overflow-y: auto;
+		box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .5);
+	}
+
+	&__menu-item {
+		display: block;
+		font-size: 13px;
+		padding: 12px 11px;
+		cursor: pointer;
+
+		&.is-active {
+			font-weight: bold;
+		}
+
+		&:hover,
+		&.is-active {
+			color: $text-dark;
+		}
+
+		&.is-active + .c-sub-menu__menu-sub {
+			display: block;
+		}
+	}
+
+	&__menu-sub {
+		display: none;
+		margin: 0;
+		padding: 0 0 0 22px;
+		list-style: none;
+
+		a {
+			display: block;
+			padding: 3px 0;
+
+			&.is-active {
+				font-weight: bold;
+				color: $text-dark;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: $third-point - 1px) {
+	
+	.c-sub-menu {
+
+		&:hover ~ .c-sub-menu__backdrop {
+			display: block;
+		}
+
+		&__menu {
+			top: 0;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		&__backdrop {
+			display: none;
+			position: fixed;
+			z-index: 100;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			cursor: pointer;
+		}
+	}
+
+}
+
+
+
+// ---- media points
+
+@media (min-width: $one-point) {
+
+
+}
+
+@media (min-width: $second-point) {
+
+}
+
+@media (min-width: $third-point) {
+	
+	.c-sub-menu {
+		&__menu {
+			margin-top: -40px;
+			padding-top: 40px;
+		}
+
+		&__btn-menu {
+			width: 250px;
+			text-align: left;
+			z-index: 2;
+		}
+
+	}
+
+}
+
+@media (min-width: $fourth-point) {
+
+
+}
+
+@media (min-width: $fifth-point) {
+
+
+}
+
+@media (min-width: $sixth-point) {
+
+}
+
+@media (min-width: $seventh-point) {
+
+}

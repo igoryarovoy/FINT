@@ -2,7 +2,6 @@
 	background: $fill-card;
 	@include cf;	
 	position: relative;
-	@include transition(shadow, .1s);
 
 	&__inner {
 		background: inherit;

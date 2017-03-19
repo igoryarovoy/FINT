@@ -5,4 +5,5 @@ mixin rating(dataRat, count)
 		span.c-rating__item.is-3
 		span.c-rating__item.is-4
 		span.c-rating__item.is-5
-		span.c-rating__count (#{count})
+		if (count)
+			span.c-rating__count (#{count})

@@ -1,0 +1,135 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/top-panel/top-panel 
+    include ../components/panel-filter/panel-filter           
+    include ../components/card-partner/card-partner-list
+    include ../components/card-partner/card-partner-list-custom
+    include ../components/card-partner/card-partner-card
+    include ../components/card-partner/card-partner-card-custom
+    include ../components/footer/footer
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .o-wrapper
+            +header(header.defaults)
+            +top-panel('u-hide-xs')                     
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                .head-2 Магазины
+                            .u-dtc.u-text-right.u-fs-16
+                                .u-mt-5 Всего <b>279</b>
+                    +panelFilter('', true)
+                .c-sort-panel
+                    .o-center
+                        .c-sort-panel__row
+                            .c-sort-panel__cell
+                                .c-srch
+                                    input(type="text", placeholder="Название производителя").c-srch__field
+                                    button(type="submit").c-srch__btn
+                            .c-sort-panel__cell.u-text-center
+                                span.c-sort-panel__btn.is-active Рейтинг
+                            .c-sort-panel__cell.u-text-center
+                                span.c-sort-panel__btn Часы работы
+                            .c-sort-panel__cell.u-text-center.u-hide-xs
+                                span.c-sort-panel__btn Оплата
+                            .c-sort-panel__cell.u-text-right.u-hide-xs
+                                |Доставка: <span>Петропавловская Борщаговка</span>
+                .o-center
+                    - for (let i = 0;i < 2;i ++)
+                        +card-partner-list()
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                .head-2 Магазины
+                            .u-dtc.u-text-right.u-fs-16
+                                .u-mt-5 Всего <b>279</b>
+                    +panelFilter('', true)
+                .c-sort-panel
+                    .o-center
+                        .c-sort-panel__row
+                            .c-sort-panel__cell
+                                .c-srch
+                                    input(type="text", placeholder="Название производителя").c-srch__field
+                                    button(type="submit").c-srch__btn
+                            .c-sort-panel__cell.u-text-center
+                                span.c-sort-panel__btn.is-active Рейтинг
+                            .c-sort-panel__cell.u-text-center
+                                span.c-sort-panel__btn Часы работы
+                            .c-sort-panel__cell.u-text-center.u-hide-xs
+                                span.c-sort-panel__btn Оплата
+                            .c-sort-panel__cell.u-text-right.u-hide-xs
+                                |Доставка: <span>Петропавловская Борщаговка</span>
+                .o-center
+                    .o-grid
+                        - for (let i = 0;i < 12;i ++)
+                            .o-grid__xs-12.o-grid__xs-lnd-6.o-grid__sm-3.o-grid__md-2
+                                +card-partner-card()
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                .head-2 Магазины
+                            .u-dtc.u-text-right.u-fs-16
+                                .u-mt-5 Всего <b>279</b>
+                    +panelFilter('', true)
+                .c-sort-panel
+                    .o-center
+                        .c-sort-panel__row
+                            .c-sort-panel__cell
+                                .c-srch
+                                    input(type="text", placeholder="Название производителя").c-srch__field
+                                    button(type="submit").c-srch__btn
+                            .c-sort-panel__cell.u-text-center
+                                span.c-sort-panel__btn.is-active Рейтинг
+                            .c-sort-panel__cell.u-text-center
+                                span.c-sort-panel__btn Количество товаров
+                            .c-sort-panel__cell.u-text-center.u-hide-xs
+                                span.c-sort-panel__btn Страна
+                            .c-sort-panel__cell.u-text-right.u-hide-xs
+                .o-center
+                    .o-grid
+                        .o-grid__sm-9
+                            - for (let i = 0;i < 2;i ++)
+                                +card-partner-list-custom()
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                .head-2 Магазины
+                            .u-dtc.u-text-right.u-fs-16
+                                .u-mt-5 Всего <b>279</b>
+                    +panelFilter('', true)
+                .c-sort-panel
+                    .o-center
+                        .c-sort-panel__row
+                            .c-sort-panel__cell
+                                .c-srch
+                                    input(type="text", placeholder="Название производителя").c-srch__field
+                                    button(type="submit").c-srch__btn
+                            .c-sort-panel__cell.u-text-center
+                                span.c-sort-panel__btn.is-active Рейтинг
+                            .c-sort-panel__cell.u-text-center
+                                span.c-sort-panel__btn Количество товаров
+                            .c-sort-panel__cell.u-text-center.u-hide-xs
+                                span.c-sort-panel__btn Страна
+                            .c-sort-panel__cell.u-text-right.u-hide-xs
+                .o-center
+                    .o-grid
+                        - for (let i = 0;i < 12;i ++)
+                            .o-grid__xs-12.o-grid__xs-lnd-6.o-grid__sm-3.o-grid__md-2
+                                +card-partner-card-custom()
+        +footer()
+        +includeJs()
