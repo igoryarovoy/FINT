@@ -11,6 +11,7 @@
 
 	&__rev {
 		font-size: 10px;
+		color: #8d8d8d;
 
 		span {
 			font-size: 14px;
@@ -59,6 +60,7 @@
 		font-size: 20px;
 		white-space: nowrap;
 		line-height: 1;
+		color: #737373;
 
 		&-val {
 			line-height: 1;
@@ -112,7 +114,17 @@
 			display: table-cell;
 			vertical-align: top;
 			width: 1px;
-			padding: 0 5px;
+			padding: 0 10px;
+
+			&--1 {
+				width: 36%;
+			}
+			&--2 {
+				width: 32%;	
+			}
+			&--3 {
+				width: 32%;
+			}
 		}
 	}
 
@@ -175,6 +187,22 @@
 		&--list {
 			.c-card-partner__cell {
 				width: auto;
+
+				&--1 {
+					width: 25%;
+				}
+				&--2 {
+					width: 15%;	
+				}
+				&--3 {
+					width: 20%;
+				}
+				&--4 {
+					width: 15%;
+				}
+				&--5 {
+					width: 25%;
+				}
 			}
 
 			.c-card-partner__logo {

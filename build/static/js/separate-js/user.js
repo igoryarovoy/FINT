@@ -208,6 +208,8 @@ $(document).ready(function(){
 	});
 
 	createLink('.js-link-span');
+
+	timeOutHover('.js-time-out');
 });
 
 function createLink(selector) {
@@ -255,4 +257,18 @@ function scrollVisible(element) {
 	if ( ( height + offset.top ) > ( scrollTop + windowHeight ) ) {
 		$('body,html').animate({scrollTop: offset.top - windowHeight + height + 20}, 300);
 	}
+}
+
+function timeOutHover(selector, timeOut) {
+	var timeHover;
+	$(selector).hover(function() {
+		var $this = $(this);
+		timeHover = setTimeout(function() {
+            $this.addClass('is-active');
+        }, timeOut || 500);
+	}, function() {
+		var $this = $(this);
+		clearTimeout(timeHover);
+		$this.removeClass('is-active');
+	})
 }

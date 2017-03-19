@@ -1,7 +1,8 @@
 mixin sub-panel(modifeir)
+	include ../rating/rating
 	.c-sub-panel(class=modifeir)
 		.o-center
-			.c-sub-panel__wrap-menu
+			.c-sub-panel__wrap-menu.js-time-out
 				button.c-sub-panel__btn-menu Каталог
 				.c-sub-panel__menu
 					.c-sub-panel__menu-content
@@ -76,4 +77,8 @@ mixin sub-panel(modifeir)
 				.c-sub-panel__search
 					button.c-sub-panel__btn-search(type='submit')
 					input(type="text" placeholder="Искать в этом магазине")
+			.c-sub-panel__rat.u-hide-xs
+				span.c-sub-panel__rat-val 4.3
+				.c-sub-panel__rat-st
+					+rating(4)
 			.c-sub-panel__backdrop

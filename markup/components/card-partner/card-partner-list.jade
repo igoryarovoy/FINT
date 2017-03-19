@@ -2,22 +2,22 @@ mixin card-partner-list(modifeir)
 	include ../rating/rating
 	.c-card-partner.c-card-partner--list(class=modifeir)
 		.c-card-partner__row
-			.c-card-partner__cell
+			.c-card-partner__cell.c-card-partner__cell--1
 				a(href="#").c-card-partner__logo
 					img(src="static/img/content/logo-roz-sm.png", alt="")
 				a(href="#").c-card-partner__name Rozetka.ua
-			.c-card-partner__cell
+			.c-card-partner__cell.c-card-partner__cell--2
 				.c-card-partner__rat
 					span.c-card-partner__rat-val 3.9
 					+rating(3)
 				.c-card-partner__rev <span>150</span> отзывов
-			.c-card-partner__cell
+			.c-card-partner__cell.c-card-partner__cell--3
 				|сегодня: с 8:00 до 22:00
-			.c-card-partner__cell.u-hide-xs
+			.c-card-partner__cell.c-card-partner__cell--4.u-hide-xs
 				div Visa / Mastercard
 				div Наличный расчет
 				div Webmoney
-			.c-card-partner__cell.u-hide-xs
+			.c-card-partner__cell.c-card-partner__cell--5.u-text-right.u-hide-xs
 				|Киев, Одесса, Днепропетровск, Запорожье, Харьков
 		a(href="#").c-card-partner__label Сайт
 		

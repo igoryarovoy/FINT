@@ -3,15 +3,7 @@
 	position: relative;
 
 	&:hover {
-		z-index: 101;
 
-		.c-sub-menu__menu {
-			display: block;
-		}
-
-		.c-sub-menu__btn-menu {
-			background: #fff;
-		}
 	}
 	
 
@@ -80,7 +72,7 @@
 
 			&.is-active {
 				font-weight: bold;
-				color: $text-dark;
+				color: #9c47d6;
 			}
 		}
 	}
@@ -91,6 +83,18 @@
 @media (max-width: $third-point - 1px) {
 	
 	.c-sub-menu {
+
+		&:hover {
+			z-index: 101;
+
+			.c-sub-menu__menu {
+				display: block;
+			}
+
+			.c-sub-menu__btn-menu {
+				background: #fff;
+			}
+		}
 
 		&:hover ~ .c-sub-menu__backdrop {
 			display: block;
@@ -131,6 +135,19 @@
 @media (min-width: $third-point) {
 	
 	.c-sub-menu {
+		
+		&.is-active {
+			z-index: 101;
+
+			.c-sub-menu__menu {
+				display: block;
+			}
+
+			.c-sub-menu__btn-menu {
+				background: #fff;
+			}
+		}
+
 		&__menu {
 			margin-top: -40px;
 			padding-top: 40px;

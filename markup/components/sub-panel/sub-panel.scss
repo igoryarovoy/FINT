@@ -55,7 +55,7 @@
 	}
 
 	&__wrap-search {
-		float: right;
+		float: left;
 		position: relative;
 	}
 
@@ -119,12 +119,6 @@
 		float: left;
 		position: relative;
 		z-index: 50;
-
-		&:hover {
-			.c-sub-panel__menu {
-				display: block;
-			}
-		}
 	}
 
 	&__menu {
@@ -167,9 +161,27 @@
 
 			&.is-active {
 				font-weight: bold;
-				color: $text-dark;
+				color: #9c47d6;
 			}
 		}
+	}
+
+	&__rat {
+		float: right;
+		white-space: nowrap;
+		margin: 10px 0 0 10px;
+	}
+	&__rat-val,
+	&__rat-st {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&__rat-st {
+		margin: 0 0 -6px 0;
+	}
+	&__rat-val {
+		font-size: 24px;
+		color: #686868;
 	}
 }
 
@@ -200,6 +212,7 @@
 		&__wrap-search {
 			cursor: pointer;
 			z-index: 101;
+			float: right;
 
 			&:hover {
 				.c-sub-panel__search {
@@ -245,6 +258,12 @@
 		
 		&__wrap-menu {
 			z-index: 101;
+
+			&:hover {
+				.c-sub-panel__menu {
+					display: block;
+				}
+			}
 
 			&:hover ~ .c-sub-panel__backdrop {
 				display: block;
@@ -294,12 +313,18 @@
 		padding: 0 11px 0 0;
 
 		&__wrap-search {
-			margin: 12px 0 0 0;
+			margin: 12px 0 0 52px;
 			width: 190px;
 		}
 
 		&__wrap-menu {
-			&:hover {
+			&.is-active {
+				.c-sub-panel__menu {
+					display: block;
+				}
+			}
+
+			&.is-active {
 				.c-sub-panel__menu {
 					box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .5);
 				}
