@@ -125,6 +125,10 @@ body {
 	text-transform: uppercase !important;
 }
 
+.u-text-light {
+	color: $text-light;
+}
+
 .u-fl-l {
 	float: left !important;
 }
@@ -625,6 +629,50 @@ ol ol {
 
 
 
+.c-section-row-content {
+	margin: 0 0 25px 0;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.c-row-content {
+	margin: 0 0 15px 0;
+	line-height: 1.5;
+
+	&__cell {
+		min-height: 1px;
+
+		&--label {
+			margin: 0 0 5px 0;
+		}
+
+		&--content {
+			background: #fff;
+		}
+
+	}
+
+	&__text {
+		padding: 10px 15px;
+	}
+
+
+	.c-table-content {
+		th {
+			border-bottom: 1px solid #c8c8c8;
+		}
+		td {
+			border: 0;
+			vertical-align: top;
+			padding: 30px 15px;
+		}
+	}
+
+}
+
+
 // ---- media points
 
 @media (min-width: $one-point) {
@@ -662,6 +710,34 @@ ol ol {
 
 	h2, .head-2 {
 		font-size: 20px;
+	}
+
+	.c-row-content {
+		display: table;
+		width: 100%;
+		margin: 0;
+
+		&__cell {
+			display: table-cell;
+			vertical-align: top;
+
+			&--label {
+				width: 250px;
+				padding: 20px 0;
+			}
+		}
+		&__text {
+			padding: 20px;
+		}
+
+		.c-table-content {
+			td {
+				padding: 30px 20px;
+			}
+			th {
+				padding: 5px 20px;
+			}
+		}
 	}
 
 }
