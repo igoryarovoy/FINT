@@ -95,6 +95,7 @@
 			display: inline-block;
 			margin: 0 0 25px 0;
 			vertical-align: top;
+			max-width: 100px;
 		}
 
 		.c-card-partner__rat {
@@ -179,10 +180,6 @@
 @media (min-width: $third-point) {
 	
 	.c-card-partner {
-
-		&__name {
-			font-size: 20px;
-		}
 		
 		&--list {
 			.c-card-partner__cell {
@@ -206,7 +203,7 @@
 			}
 
 			.c-card-partner__logo {
-				margin: 0 70px 20px 0;
+				margin: 0 55px 20px 0;
 			}
 
 			.c-card-partner__name {
