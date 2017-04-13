@@ -46,13 +46,12 @@
 		padding: 12px 11px;
 		cursor: pointer;
 
+		&:hover {
+			color: $text-dark;
+		}
 		&.is-active {
 			font-weight: bold;
-		}
-
-		&:hover,
-		&.is-active {
-			color: $text-dark;
+			color: #9c47d6;
 		}
 
 		&.is-active + .c-sub-menu__menu-sub {
