@@ -4019,6 +4019,67 @@ ol ol {
   }
 }
 
+.c-card-img {
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  border-radius: 5px;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+.c-card-img__img {
+  display: block;
+}
+
+.c-card-img__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.c-card-img__content {
+  padding: 10px;
+}
+
+.c-card-img__h {
+  display: block;
+  color: #333333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.c-card-img__list {
+  display: none;
+  margin: 13px 0 0 0;
+}
+
+.c-card-img__link {
+  display: block;
+  color: #565656;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 568px) {
+  .c-card-img__h {
+    font-size: 17px;
+  }
+  .c-card-img__list {
+    display: block;
+  }
+}
+
+@media (min-width: 840px) {
+  .c-card-img:hover {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
 .c-card {
   background: #fff;
   position: relative;
@@ -4122,67 +4183,6 @@ ol ol {
   }
   .c-card:hover .c-card__inner {
     padding: 12px 12px 15px 12px;
-  }
-}
-
-.c-card-img {
-  background: #fff;
-  overflow: hidden;
-  text-align: center;
-  line-height: 1.2;
-  margin: 0 0 20px 0;
-  border-radius: 5px;
-  -webkit-transition: all 0.15s;
-  transition: all 0.15s;
-}
-
-.c-card-img__img {
-  display: block;
-}
-
-.c-card-img__img img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.c-card-img__content {
-  padding: 10px;
-}
-
-.c-card-img__h {
-  display: block;
-  color: #333333;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.c-card-img__list {
-  display: none;
-  margin: 13px 0 0 0;
-}
-
-.c-card-img__link {
-  display: block;
-  color: #565656;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-@media (min-width: 568px) {
-  .c-card-img__h {
-    font-size: 17px;
-  }
-  .c-card-img__list {
-    display: block;
-  }
-}
-
-@media (min-width: 840px) {
-  .c-card-img:hover {
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -7134,6 +7134,16 @@ ol ol {
   }
 }
 
+.c-top-panel {
+  margin: 12px 0;
+}
+
+@media (min-width: 960px) {
+  .c-top-panel {
+    margin: 17px 0 22px;
+  }
+}
+
 .c-view-nav {
   font-size: 0;
   display: inline-block;
@@ -7181,14 +7191,4 @@ ol ol {
 
 .c-view-nav__btn:hover, .c-view-nav__btn.is-active {
   background: #ededed;
-}
-
-.c-top-panel {
-  margin: 12px 0;
-}
-
-@media (min-width: 960px) {
-  .c-top-panel {
-    margin: 17px 0 22px;
-  }
 }

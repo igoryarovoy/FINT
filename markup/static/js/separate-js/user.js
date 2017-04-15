@@ -214,7 +214,7 @@ $(document).ready(function(){
 
 function createLink(selector) {
 	$(selector).replaceWith(function(){
-		return'<a href="'+$(this).data('link')+'">'+$(this).text()+'</a>';
+		return'<a href="'+$(this).data('link')+'" class="'+$(this).attr('class')+'">'+$(this).text()+'</a>';
 	});
 }
 
