@@ -30,6 +30,15 @@
 	&--block {
 		display: block;
 		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--two-line {
+		height: auto;
+		line-height: 1.2;
+		padding: 4px 14px;
+		font-size: 12px;
 	}
 
 	
@@ -100,6 +109,28 @@
 
   		&.is-disabled {
 			background: #4caf50;
+			box-shadow: none;
+			opacity: .7;
+			cursor: default;
+  		}
+	}
+
+	&--primary {
+		background: #926aab;
+  		color: #fff;
+
+  		&:hover {
+  			color: #fff;
+  			background: #af81cc;
+  		}
+
+  		&:active {
+  			color: #fff;
+  			background: #7c5b90;
+  		}
+
+  		&.is-disabled {
+			background: #c9c9c9;
 			box-shadow: none;
 			opacity: .7;
 			cursor: default;

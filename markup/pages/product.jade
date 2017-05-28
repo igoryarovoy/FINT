@@ -1,0 +1,489 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/tabnav-mobile/tabnav-mobile
+    include ../components/card/card-feed
+    include ../components/rating/rating
+    include ../components/slick-gallery/slick-gallery
+    include ../components/footer/footer
+    include ../components/includeJs/includeJs
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+        .o-wrapper
+            +header(header.defaults)            
+            .o-section
+                .o-center
+                    .o-hgroup
+                        h1.head-1.u-mb-0.u-mr-15 Стол плетеный красный
+                        +rating(3, 15, 'c-rating--headline')
+                    .o-grid.c-prod
+                        .o-grid__xs-lnd-6.o-grid__md-3.u-mb-15
+                            +slickGallery()
+                        .o-grid__xs-lnd-6.o-grid__md-4.u-mb-15
+                            .c-prod__inner
+                                .c-sum-range.u-mb-5 <span>от</span> 787 - 1415 <span>грн</span>
+                                .u-mb-15.u-fs-14
+                                    div Средняя цена
+                                    div за 1 палету 990 грн ($51)
+                                .u-mb-5.u-fs-16 Проверенные компании
+                                .u-mb-20
+                                    a(href="#").c-link-sum <span>830 грн</span> Ковальская
+                                    a(href="#").c-link-sum <span>850 грн</span> HeidelbergCement Украина
+                                    a(href="#").c-link-sum <span>830 грн</span> Бетон Нова
+                                    a(href="#").c-link-sum <span>830 грн</span> Ковальская
+                                a(href="#").c-btn.c-btn--success.c-btn--block.u-mb-20 Сравнить цены
+                                .u-text-center 
+                                    a(href="#") 10 предложений
+                                    span.u-ml-5.u-mr-5 |
+                                    a(href="#") Акции: 4
+                        .o-grid__md-5.u-fs-14.u-mb-15
+                            .u-mb-20
+                                .o-grid
+                                    .o-grid__xs-1
+                                        .u-mt-15 Цвет:
+                                    .o-grid__xs-3
+                                        .c-color.c-color--border
+                                            .c-color__box
+                                                .c-color__box-inner(style="background-color:#c94949;")
+                                            div D-Matt 1085
+                                    .o-grid__xs-3
+                                        .c-color.c-color--border.c-color--not
+                                            .c-color__box
+                                                .c-color__box-inner(style="background-color:#605656;")
+                                            div D-Matt 1585
+                                    .o-grid__xs-3
+                                        .c-color
+                                            .c-color__box
+                                                .c-color__box-inner(style="background-color:#527e53;")
+                                            div X-Matt 1075
+                            .u-mb-20
+                                span Возможная тара:
+                                span.u-ml-30 1л
+                                span.u-ml-30 2.5л
+                                span.u-ml-30 5л
+                                span.u-ml-30 10л
+                                span.u-ml-30.c-text-not 20л
+                            .u-mb-10
+                                |Производитель:
+                                |<a href="#">Ковальская, Украина <span class="u-flag"><img src="static/img/general/i-UA.png" alt=""></span></a>
+                            .u-mb-10
+                                div Морозостойкость: F200; удобоукладываемость: П1;
+                                div водонепроницаемость: W6.
+                                div Используется в строительстве производственных, жилых и других помещений.
+                                div Механизм трансформации: «еврокнижка».
+                                div Ниша для белья: есть.
+                                div Мягкая основа: пружинный блок «Bonnel», пенополиуретан.
+                            a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Все характеристики
+            .o-section.u-hide-xs
+                .o-center
+                    .c-line-link
+                        .c-line-link__item.c-line-link__item-h Стол плетеный красный
+                        a(href="#").c-line-link__item.is-active Цены (17)
+                        a(href="#").c-line-link__item Карта (9)
+                        a(href="#").c-line-link__item Характеристики
+                        a(href="#").c-line-link__item Отзывы (115)
+                        a(href="#").c-line-link__item Аксессуары и услуги
+            .o-section
+                .o-center
+                    table.c-tb-info
+                        tr.u-hide-xs
+                            th Компания (3)
+                            th Детали
+                            th Режим работы (все)
+                            th Доставка: Петропавловская...
+                            th Наличие (все)
+                            th.u-text-right
+                                .c-cur-btn
+                                    a(href="#").c-cur-btn__item.is-active грн
+                                    a(href="#").c-cur-btn__item € <span>23.7</span>
+                                    a(href="#").c-cur-btn__item $ <span>21.1</span>
+                        tr
+                            td
+                                .u-mb-10 Ковальская
+                                +rating(2, 15, 'c-rating--check')
+                            td.u-hide-xs Бетон с паспортом
+                            td.u-hide-xs
+                                .u-mb-10
+                                    div <b>Магазин:</b>
+                                    div Пн-Пт: 8:00 - 20:00
+                                    div Сб, Вс: выходные
+                                .u-mb-10
+                                    div <b>Пункты выдачи:</b>
+                                    div Пн-Пт: 10:00 - 18:00
+                                    div Сб, Вс: выходные
+                                .u-mb-10
+                                    div <b>Колл-центр:</b>
+                                    div Пн-Пт: 8:00 - 21:00
+                                    div Вс: выходной
+                            td.u-hide-xs
+                                .u-mb-25
+                                    .c-tb-info__ico
+                                        span.c-ico.c-ico--delivery
+                                        |от <b>120</b> грн/км
+                                div
+                                    span.c-ico.c-ico--location.u-mt-invert-5
+                                    |(5) Самовывоз от 7 км
+                            td Нет в наличии
+                            td
+                                .u-mb-10
+                                    a(href="#").c-btn.c-btn--info.c-btn--block.c-btn--two-line Сообщите, когда появится
+                                span.c-ico.c-ico--pay.u-mr-10
+                                |Способы оплаты (7)
+                        - for(let i = 0;i < 3;i ++)
+                            tr
+                                td
+                                    .u-mb-10 Ковальская
+                                    +rating(2, 15, 'c-rating--check')
+                                td.u-hide-xs
+                                    .u-mb-20
+                                        span.c-ico.c-ico--gift.u-mr-5
+                                        |- 50% до конца лета!
+                                    div Минимальный заказ 100м3
+                                td.u-hide-xs
+                                    .u-mb-10
+                                        div <b>Магазин (10):</b> <a href="#">выбрать</a>
+                                    .u-mb-10
+                                        div <b>Пункты выдачи (15):</b> <a href="#">выбрать</a>
+                                    .u-mb-10
+                                        div <b>Колл-центр:</b> 24/7
+                                td.u-hide-xs
+                                    .u-mb-25
+                                        .c-tb-info__ico
+                                            span.c-ico.c-ico--delivery
+                                            div Курьером: <b>бесплатно</b>
+                                            div Службы доставки: <b>беспланто</b>
+                                    div
+                                        span.c-ico.c-ico--location.u-mt-invert-5
+                                        |(5) Самовывоз от 7 км
+                                td
+                                    .u-mb-5 Под заказ
+                                    .c-sum.u-mb-10 1000 <span>грн</span>
+                                    div 200 грн / мз
+                                td
+                                    .u-mb-10
+                                        a(href="#").c-btn.c-btn--success.c-btn--block В магазин
+                                    span.c-ico.c-ico--pay.u-mr-10
+                                    |Способы оплаты (7)
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                h2.head-2 Похожие товары
+                            .u-dtc
+                                .u-fl-r
+                                    +tabnavMobile({
+                                        list: [
+                                            {
+                                                text: 'В этой линейке',
+                                                active: 'active',
+                                                tabId: 'tab-1'
+                                            },
+                                            {
+                                                text: 'Все товары',
+                                                active: '',
+                                                tabId: 'tab-2'
+                                            }
+                                        ]
+                                    })
+                    .o-tab-content
+                        .o-tab-content__item.active(role="tabpanel", id="tab-1")                            
+                            .o-slider-common.slick-slider.js-card-slider
+                                - for (i = 0;i < 7;i ++)
+                                    .o-slider-common__item
+                                        +cardFeed()
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--primary Сравнить
+                        .o-tab-content__item(role="tabpanel", id="tab-2")
+                            .o-slider-common.slick-slider.js-card-slider
+                                - for (i = 0;i < 7;i ++)
+                                    .o-slider-common__item
+                                        +cardFeed()
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--primary Сравнить
+            .o-section.u-hide-xs
+                .o-center
+                    .c-map
+                        .c-map__box
+                            .c-map__box-inner
+                                - for(let i = 0;i < 6;i ++)
+                                    .c-location-item
+                                        .c-location-item__head
+                                            .c-location-item__content
+                                                .c-location-item__h HeidelbergCement Украина
+                                                .u-clearfix
+                                                    .u-fl-l
+                                                        +rating(2, 15, 'c-rating--check')
+                                                    .u-fl-r
+                                                        span.c-ico.c-ico--delivery
+                                                        span.c-ico.c-ico--pay
+                                                        span.c-ico.c-ico--gift
+                                            .c-location-item__loc
+                                                .c-location-item__loc-val 2
+                                                .c-location-item__loc-text 25 <span>км</span>
+                                        .c-location-item__old 2000 грн
+                                        .o-grid
+                                            .o-grid__xs-6
+                                                .c-location-item__sum.c-sum 1115 <span>грн</span>
+                                                div 200 грн / мз
+                                            .o-grid__xs-6
+                                                a(href="#").c-btn.c-btn--success.c-btn--block.u-mt-10 В магазин
+                                .c-location-item
+                                    .c-location-item__head
+                                        .c-location-item__content
+                                            .c-location-item__h HeidelbergCement Украина
+                                            .u-clearfix
+                                                .u-fl-l
+                                                    +rating(2, 15, 'c-rating--check')
+                                                .u-fl-r
+                                                    span.c-ico.c-ico--delivery
+                                                    span.c-ico.c-ico--pay
+                                                    span.c-ico.c-ico--gift
+                                        .c-location-item__loc
+                                            .c-location-item__loc-val 2
+                                            .c-location-item__loc-text 25 <span>км</span>
+                                    .c-location-item__old 2000 грн
+                                    .o-grid
+                                        .o-grid__xs-6
+                                            .u-mt-10 Нет в наличии
+                                        .o-grid__xs-6
+                                            a(href="#").c-btn.c-btn--info.c-btn--block.c-btn--two-line Сообщите, когда появится
+                                .c-location-item
+                                    .c-location-item__head
+                                        .c-location-item__content
+                                            .c-location-item__h HeidelbergCement Украина
+                                            .u-clearfix
+                                                .u-fl-l
+                                                    +rating(2, 15, 'c-rating--check')
+                                                .u-fl-r
+                                                    span.c-ico.c-ico--delivery
+                                                    span.c-ico.c-ico--pay
+                                                    span.c-ico.c-ico--gift
+                                        .c-location-item__loc
+                                            .c-location-item__loc-val 2
+                                            .c-location-item__loc-text 25 <span>км</span>
+                                    .c-location-item__old 2000 грн
+                                    .o-grid
+                                        .o-grid__xs-6
+                                            .c-location-item__sum.c-sum 999503 <span>$</span>
+                                            div 500000 $ / мз
+                                        .o-grid__xs-6.u-text-center
+                                            div Под заказ
+                                            a(href="#").c-btn.c-btn--success.c-btn--block.u-mt-10 заказать
+                        .c-map__map
+                            |<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10162.66988283149!2d30.524950899999997!3d50.44729425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1495889619777" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                h2.head-2 Характеристики
+                            .u-dtc
+                                .u-fl-r
+                                    +tabnavMobile({
+                                        list: [
+                                            {
+                                                text: 'Основные',
+                                                active: 'active',
+                                                tabId: 'tab-ch-1'
+                                            },
+                                            {
+                                                text: 'Все характеристики',
+                                                active: '',
+                                                tabId: 'tab-ch-2'
+                                            }
+                                        ]
+                                    })
+                    .o-grid
+                        .o-grid__md-9
+                            .o-tab-content
+                                .o-tab-content__item.active(role="tabpanel", id="tab-ch-1")
+                                    
+                                            .u-mb-15
+                                                .head-4 Общие характеристики
+                                                table.c-df-tb
+                                                    tr
+                                                        td Производитель
+                                                        td Decker
+                                                    tr
+                                                        td Страна
+                                                        td Китай
+                                                    tr
+                                                        td Артикул
+                                                        td 125039
+                                                    tr
+                                                        td Штрих код
+                                                        td 5035048339060
+                                            .u-mb-15
+                                                .head-4 Технические характеристики
+                                                table.c-df-tb
+                                                    tr
+                                                        td Вес
+                                                        td 1500 г
+                                                    tr
+                                                        td Шаг цепи
+                                                        td 3/8 дюйма
+                                                    tr
+                                                        td Мощность
+                                                        td 1800 г
+                                                    tr
+                                                        td Количество скоростей
+                                                        td 3
+                                            .u-mb-15
+                                                .head-4 Дополнительно
+                                                table.c-df-tb
+                                                    tr
+                                                        td Комплектация
+                                                        td 2 отверточные насадки, зарядное устройство
+                                                    tr
+                                                        td Описание
+                                                        td
+                                                            |Инструмент работает с крепежными элементами прекрасно, эффективно заворачивает шурупы, а также может вытягивать их.Отвертка Black&Decker KC36LN оснащена надежным зажимным комплектующим -патроном в виде шестигранника, что позволяет легко устанавливать/менятьнасадки, тем самым быстро приспосабливать модель к поставденным задачам.
+                                            p
+                                                |* Характеристики и комплектация товара могут изменятсья производителем без уведомления
+                                .o-tab-content__item(role="tabpanel", id="tab-ch-2")
+                                    div Все характеристики
+                        .o-grid__md-3
+                            .u-text-center.u-fs-0
+                                .o-ad
+                                    img(src="static/img/content/img-bun-sm.jpg", alt="")
+                                .o-ad
+                                    img(src="static/img/content/img-bun-sm.jpg", alt="")
+            .o-section
+                .o-center
+                    .o-hgroup
+                        h2.head-2 Отзывы
+                    .o-section
+                        .o-grid
+                            .o-grid__xs-lnd-8.o-grid__sm-9
+                                .o-grid
+                                    .o-grid__sm-2.u-mb-15
+                                        .c-lg-rat
+                                            .c-lg-rat__val 4.4
+                                            +rating(4)
+                                            .c-lg-rat__count 7864 всего
+                                    .o-grid__sm-6.u-mb-15
+                                        .c-range-rat
+                                            .c-range-rat__line.c-range-rat__line--five
+                                                .c-range-rat__range(style="width:100%;")
+                                                .c-range-rat__num 5
+                                                .c-range-rat__count 5,429
+                                            .c-range-rat__line.c-range-rat__line--four
+                                                .c-range-rat__range(style="width:80%;")
+                                                .c-range-rat__num 4
+                                                .c-range-rat__count 5,429
+                                            .c-range-rat__line.c-range-rat__line--three
+                                                .c-range-rat__range(style="width:70%;")
+                                                .c-range-rat__num 3
+                                                .c-range-rat__count 5,429
+                                            .c-range-rat__line.c-range-rat__line--two
+                                                .c-range-rat__range(style="width:55%;")
+                                                .c-range-rat__num 2
+                                                .c-range-rat__count 5,429
+                                            .c-range-rat__line.c-range-rat__line--one
+                                                .c-range-rat__range(style="width:15%;")
+                                                .c-range-rat__num 1
+                                                .c-range-rat__count 5,429
+                            .o-grid__xs-lnd-4.o-grid__sm-3
+                                a(href="#").c-btn.c-btn--primary.c-btn--block Написать отзыв
+                    .o-section
+                        .o-grid
+                            - for(let i = 0;i < 6;i ++)
+                                .o-grid__xs-lnd-6.o-grid__sm-3
+                                    .c-review
+                                        .u-mb-10
+                                            .c-review__h Света
+                                            +rating(4, '15.12.15')
+                                        .u-mb-10
+                                            div
+                                                span.c-review__mark Статус:
+                                                |уже купила
+                                            div
+                                                span.c-review__mark Достоинства:
+                                                |очень удобная
+                                            div
+                                                span.c-review__mark Недостатки:
+                                                |немного шумная
+                                        .u-mb-10
+                                            .c-review__text
+                                                |Купила ее в прошлом году. Переодически пользуюсь, пожаловаться не могу. Все работает идеально, собрана руками, что ...
+            .o-section
+                .o-center
+                    .o-hgroup
+                        .u-dt
+                            .u-dtc
+                                h2.head-2 Сопутствующие товары
+                            .u-dtc
+                                .u-fl-r
+                                    +tabnavMobile({
+                                        list: [
+                                            {
+                                                text: 'Бетон, ЖБИ',
+                                                active: 'active',
+                                                tabId: 'tab-1-1'
+                                            },
+                                            {
+                                                text: 'Стеновые материалы',
+                                                active: '',
+                                                tabId: 'tab-2-1'
+                                            },
+                                            {
+                                                text: 'Строительная химия',
+                                                active: '',
+                                                tabId: 'tab-3-1'
+                                            },
+                                            {
+                                                text: 'идроизоляция',
+                                                active: '',
+                                                tabId: 'tab-4-1'
+                                            },
+                                            {
+                                                text: 'Теплоизоляция',
+                                                active: '',
+                                                tabId: 'tab-5-1'
+                                            }
+                                        ]
+                                    })
+                    .o-tab-content
+                        .o-tab-content__item.active(role="tabpanel", id="tab-1-1")                            
+                            .o-slider-common.slick-slider.js-card-slider
+                                - for (i = 0;i < 7;i ++)
+                                    .o-slider-common__item
+                                        +cardFeed()
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
+                        .o-tab-content__item(role="tabpanel", id="tab-2-1")
+                            .o-slider-common.slick-slider.js-card-slider
+                                - for (i = 0;i < 7;i ++)
+                                    .o-slider-common__item
+                                        +cardFeed()
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
+                        .o-tab-content__item(role="tabpanel", id="tab-3-1")
+                            .o-slider-common.slick-slider.js-card-slider
+                                - for (i = 0;i < 7;i ++)
+                                    .o-slider-common__item
+                                        +cardFeed()
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
+                        .o-tab-content__item(role="tabpanel", id="tab-4-1")
+                            .o-slider-common.slick-slider.js-card-slider
+                                - for (i = 0;i < 7;i ++)
+                                    .o-slider-common__item
+                                        +cardFeed()
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
+                        .o-tab-content__item(role="tabpanel", id="tab-5-1")
+                            .o-slider-common.slick-slider.js-card-slider
+                                - for (i = 0;i < 7;i ++)
+                                    .o-slider-common__item
+                                        +cardFeed()
+                            .u-text-center
+                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
+        +footer()
+        +includeJs()

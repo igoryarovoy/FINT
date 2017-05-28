@@ -1,12 +1,13 @@
 .c-rating {
 	font-size: 0;
 	white-space: nowrap;
+	position: relative;
 
 
 	&__count,
 	&__item {
 		display: inline-block;
-		vertical-align: text-top;
+		vertical-align: middle;
 	}
 
 	&__count {
@@ -58,6 +59,25 @@
 		.is-5 {
 			@include bg($i-star-active);
 		}
+	}
+
+
+	&--check {
+		padding: 0 0 0 18px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			@include bg($i-check);
+		}
+	}
+
+	&--headline {
+		display: inline-block;
+		vertical-align: super;
 	}
 
 }
