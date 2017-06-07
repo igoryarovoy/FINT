@@ -168,12 +168,12 @@ html(class="no-js", lang="ru")
                                         a(href="#").c-btn.c-btn--success.c-btn--block В магазин
                                     span.c-ico.c-ico--pay.u-mr-10
                                     |Способы оплаты (7)
-            .o-section(id="related")
+            .o-section
                 .o-center
                     .o-hgroup
                         .u-dt
                             .u-dtc
-                                h2.head-2 Похожие товары
+                                h2.head-2 Общий заголовок
                             .u-dtc
                                 .u-fl-r
                                     +tabnavMobile({
@@ -181,24 +181,28 @@ html(class="no-js", lang="ru")
                                             {
                                                 text: 'В этой линейке',
                                                 active: 'active',
-                                                tabId: 'tab-1'
+                                                tabId: 'related-tab'
                                             },
                                             {
                                                 text: 'Все товары',
                                                 active: '',
-                                                tabId: 'tab-2'
+                                                tabId: 'other-goods-tab'
                                             }
                                         ]
                                     })
                     .o-tab-content
-                        .o-tab-content__item.active(role="tabpanel", id="tab-1")                            
+                        .o-tab-content__item.active(role="tabpanel", id="related-tab")
+                            .o-hgroup(id="related")
+                                h2.head-3 Похожие товары
                             .o-slider-common.slick-slider.js-card-slider
                                 - for (i = 0;i < 7;i ++)
                                     .o-slider-common__item
                                         +cardFeed()
                             .u-text-center
                                 a(href="#").c-btn.c-btn--primary Сравнить
-                        .o-tab-content__item(role="tabpanel", id="tab-2")
+                        .o-tab-content__item(role="tabpanel", id="other-goods-tab")
+                            .o-hgroup(id="other-goods")
+                                h2.head-3 Другие товары
                             .o-slider-common.slick-slider.js-card-slider
                                 - for (i = 0;i < 7;i ++)
                                     .o-slider-common__item
@@ -411,78 +415,5 @@ html(class="no-js", lang="ru")
                                         .u-mb-10
                                             .c-review__text
                                                 |Купила ее в прошлом году. Переодически пользуюсь, пожаловаться не могу. Все работает идеально, собрана руками, что ...
-            .o-section(id="other-goods")
-                .o-center
-                    .o-hgroup
-                        .u-dt
-                            .u-dtc
-                                h2.head-2 Другие товары
-                            .u-dtc
-                                .u-fl-r
-                                    +tabnavMobile({
-                                        list: [
-                                            {
-                                                text: 'Бетон, ЖБИ',
-                                                active: 'active',
-                                                tabId: 'tab-1-1'
-                                            },
-                                            {
-                                                text: 'Стеновые материалы',
-                                                active: '',
-                                                tabId: 'tab-2-1'
-                                            },
-                                            {
-                                                text: 'Строительная химия',
-                                                active: '',
-                                                tabId: 'tab-3-1'
-                                            },
-                                            {
-                                                text: 'идроизоляция',
-                                                active: '',
-                                                tabId: 'tab-4-1'
-                                            },
-                                            {
-                                                text: 'Теплоизоляция',
-                                                active: '',
-                                                tabId: 'tab-5-1'
-                                            }
-                                        ]
-                                    })
-                    .o-tab-content
-                        .o-tab-content__item.active(role="tabpanel", id="tab-1-1")                            
-                            .o-slider-common.slick-slider.js-card-slider
-                                - for (i = 0;i < 7;i ++)
-                                    .o-slider-common__item
-                                        +cardFeed()
-                            .u-text-center
-                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
-                        .o-tab-content__item(role="tabpanel", id="tab-2-1")
-                            .o-slider-common.slick-slider.js-card-slider
-                                - for (i = 0;i < 7;i ++)
-                                    .o-slider-common__item
-                                        +cardFeed()
-                            .u-text-center
-                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
-                        .o-tab-content__item(role="tabpanel", id="tab-3-1")
-                            .o-slider-common.slick-slider.js-card-slider
-                                - for (i = 0;i < 7;i ++)
-                                    .o-slider-common__item
-                                        +cardFeed()
-                            .u-text-center
-                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
-                        .o-tab-content__item(role="tabpanel", id="tab-4-1")
-                            .o-slider-common.slick-slider.js-card-slider
-                                - for (i = 0;i < 7;i ++)
-                                    .o-slider-common__item
-                                        +cardFeed()
-                            .u-text-center
-                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
-                        .o-tab-content__item(role="tabpanel", id="tab-5-1")
-                            .o-slider-common.slick-slider.js-card-slider
-                                - for (i = 0;i < 7;i ++)
-                                    .o-slider-common__item
-                                        +cardFeed()
-                            .u-text-center
-                                a(href="#").c-btn.c-btn--primary подобрать в одном магазине
         +footer()
         +includeJs()

@@ -1037,6 +1037,10 @@ ol ol {
 	td {
 		vertical-align: top;
 		padding: 20px 10px;
+
+		&:nth-child(2) {
+			width: 17%;
+		}
 	}
 
 	th, td {
