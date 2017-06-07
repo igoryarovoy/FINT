@@ -36,7 +36,7 @@ html(class="no-js", lang="ru")
                                     a(href="#").c-link-sum <span>850 грн</span> HeidelbergCement Украина
                                     a(href="#").c-link-sum <span>830 грн</span> Бетон Нова
                                     a(href="#").c-link-sum <span>830 грн</span> Ковальская
-                                a(href="#").c-btn.c-btn--success.c-btn--block.u-mb-20 Сравнить цены
+                                a(href="#", data-anch="#compare-prices").c-btn.c-btn--success.c-btn--block.u-mb-20.js-anchor Сравнить цены
                                 .u-text-center 
                                     a(href="#") 10 предложений
                                     span.u-ml-5.u-mr-5 |
@@ -78,17 +78,16 @@ html(class="no-js", lang="ru")
                                 div Механизм трансформации: «еврокнижка».
                                 div Ниша для белья: есть.
                                 div Мягкая основа: пружинный блок «Bonnel», пенополиуретан.
-                            a(href="#").c-btn.c-btn--flat-info.c-btn--lbl Все характеристики
+                            a(href="#", data-anch="#all-features").c-btn.c-btn--flat-info.c-btn--lbl.js-anchor Все характеристики
             .o-section.u-hide-xs
                 .o-center
                     .c-line-link
                         .c-line-link__item.c-line-link__item-h Стол плетеный красный
-                        a(href="#").c-line-link__item.is-active Цены (17)
-                        a(href="#").c-line-link__item Карта (9)
-                        a(href="#").c-line-link__item Характеристики
-                        a(href="#").c-line-link__item Отзывы (115)
-                        a(href="#").c-line-link__item Аксессуары и услуги
-            .o-section
+                        a(href="#", data-anch="#compare-prices").c-line-link__item.js-anchor Цены (17)
+                        a(href="#", data-anch="#features").c-line-link__item.js-anchor Характеристики
+                        a(href="#", data-anch="#related").c-line-link__item.js-anchor Похожие товары
+                        a(href="#", data-anch="#other-goods").c-line-link__item.js-anchor Другие товары
+            .o-section(id="compare-prices")
                 .o-center
                     table.c-tb-info
                         tr.u-hide-xs
@@ -169,7 +168,7 @@ html(class="no-js", lang="ru")
                                         a(href="#").c-btn.c-btn--success.c-btn--block В магазин
                                     span.c-ico.c-ico--pay.u-mr-10
                                     |Способы оплаты (7)
-            .o-section
+            .o-section(id="related")
                 .o-center
                     .o-hgroup
                         .u-dt
@@ -277,8 +276,8 @@ html(class="no-js", lang="ru")
                                             a(href="#").c-btn.c-btn--success.c-btn--block.u-mt-10 заказать
                         .c-map__map
                             |<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10162.66988283149!2d30.524950899999997!3d50.44729425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1495889619777" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-            .o-section
-                .o-center
+            .o-section(id="all-features")
+                .o-center(id="features")
                     .o-hgroup
                         .u-dt
                             .u-dtc
@@ -290,19 +289,19 @@ html(class="no-js", lang="ru")
                                             {
                                                 text: 'Основные',
                                                 active: 'active',
-                                                tabId: 'tab-ch-1'
+                                                tabId: 'features-tab'
                                             },
                                             {
                                                 text: 'Все характеристики',
                                                 active: '',
-                                                tabId: 'tab-ch-2'
+                                                tabId: 'all-features-tab'
                                             }
                                         ]
                                     })
                     .o-grid
                         .o-grid__md-9
                             .o-tab-content
-                                .o-tab-content__item.active(role="tabpanel", id="tab-ch-1")
+                                .o-tab-content__item.active(role="tabpanel", id="features-tab")
                                     
                                             .u-mb-15
                                                 .head-4 Общие характеристики
@@ -346,7 +345,7 @@ html(class="no-js", lang="ru")
                                                             |Инструмент работает с крепежными элементами прекрасно, эффективно заворачивает шурупы, а также может вытягивать их.Отвертка Black&Decker KC36LN оснащена надежным зажимным комплектующим -патроном в виде шестигранника, что позволяет легко устанавливать/менятьнасадки, тем самым быстро приспосабливать модель к поставденным задачам.
                                             p
                                                 |* Характеристики и комплектация товара могут изменятсья производителем без уведомления
-                                .o-tab-content__item(role="tabpanel", id="tab-ch-2")
+                                .o-tab-content__item(role="tabpanel", id="all-features-tab")
                                     div Все характеристики
                         .o-grid__md-3
                             .u-text-center.u-fs-0
@@ -412,12 +411,12 @@ html(class="no-js", lang="ru")
                                         .u-mb-10
                                             .c-review__text
                                                 |Купила ее в прошлом году. Переодически пользуюсь, пожаловаться не могу. Все работает идеально, собрана руками, что ...
-            .o-section
+            .o-section(id="other-goods")
                 .o-center
                     .o-hgroup
                         .u-dt
                             .u-dtc
-                                h2.head-2 Сопутствующие товары
+                                h2.head-2 Другие товары
                             .u-dtc
                                 .u-fl-r
                                     +tabnavMobile({

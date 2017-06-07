@@ -1,20 +1,30 @@
 .c-slick-gallery {
+	max-width: 304px;
+	margin: 0 auto;
 
 	img {
-		display: block;
-		width: 100%;
-		height: auto;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 100%;
+		width: auto;
+		transform: translate(-50%, -50%);
 	}
 
 
 	.c-nav {
 		
 		&__item {
+			position: relative;
 			padding: 2px;
-			border: 1px solid transparent;
+			border: 2px solid transparent;
+			height: 51.16px;
+			overflow: hidden;
+			margin: 1px 0;
 
 			&.slick-current {
-				border-color: #787878;
+				box-shadow: 0 0 0 1px #787878;
+				z-index: 1;
 			}
 		}
 
@@ -60,10 +70,16 @@
 			}
 		}
 
-		.c-screen {
-			margin: 0 0 8px 0;
-		}
+	}
 
+	.c-screen {
+		margin: 0 0 6px 0;
+
+		&__item {
+			position: relative;
+			height: 213px;
+			overflow: hidden;
+		}
 	}
 }
 

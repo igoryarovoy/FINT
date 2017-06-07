@@ -210,6 +210,22 @@ $(document).ready(function(){
 	createLink('.js-link-span');
 
 	timeOutHover('.js-time-out');
+
+	$(".fancybox-media").fancybox({
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
+        helpers: {
+            media: {}
+        }
+    });
+
+	$("body").on('click', '.js-anchor', function () {
+	    var elementClick = $(this).attr("data-anch");
+	    var destination = $(elementClick).offset().top - $('.c-header').outerHeight() - 10;
+	    $('a[href="'+ elementClick +'-tab"]').tab('show');
+	    $('html, body').animate({ scrollTop: destination }, 500);
+	    return false;
+	});
 });
 
 function createLink(selector) {

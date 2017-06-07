@@ -206,6 +206,11 @@
                                     <div class="c-screen__item">
                                         <img src="static/img/content/img-gallery.jpg" alt="">
                                     </div>
+                                    <div class="c-screen__item">
+                                        <a href="https://youtu.be/Ag98mgI4bXA" class="fancybox-media ico-play">
+                                            <img src="static/img/content/img-gallery.jpg" alt="">
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="c-nav slick-slider js-gallery-nav">
                                     <div class="c-nav__item">
@@ -223,6 +228,9 @@
                                     <div class="c-nav__item">
                                         <img src="static/img/content/img-gallery-small.jpg" alt="">
                                     </div>
+                                    <div class="c-nav__item ico-play">
+                                        <img src="static/img/content/img-gallery-small.jpg" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +245,7 @@
                                 <div class="u-mb-5 u-fs-16">Проверенные компании</div>
                                 <div class="u-mb-20"><a href="#" class="c-link-sum"><span>830 грн</span> Ковальская</a><a href="#" class="c-link-sum"><span>850 грн</span> HeidelbergCement Украина</a><a href="#" class="c-link-sum"><span>830 грн</span> Бетон Нова</a><a href="#"
                                     class="c-link-sum"><span>830 грн</span> Ковальская</a>
-                                </div><a href="#" class="c-btn c-btn--success c-btn--block u-mb-20">Сравнить цены</a>
+                                </div><a href="#" data-anch="#compare-prices" class="c-btn c-btn--success c-btn--block u-mb-20 js-anchor">Сравнить цены</a>
                                 <div class="u-text-center"> <a href="#">10 предложений</a><span class="u-ml-5 u-mr-5">|</span><a href="#">Акции: 4</a>
                                 </div>
                             </div>
@@ -287,7 +295,7 @@
                                 <div>Механизм трансформации: «еврокнижка».</div>
                                 <div>Ниша для белья: есть.</div>
                                 <div>Мягкая основа: пружинный блок «Bonnel», пенополиуретан.</div>
-                            </div><a href="#" class="c-btn c-btn--flat-info c-btn--lbl">Все характеристики</a>
+                            </div><a href="#" data-anch="#all-features" class="c-btn c-btn--flat-info c-btn--lbl js-anchor">Все характеристики</a>
                         </div>
                     </div>
                 </div>
@@ -295,13 +303,12 @@
             <div class="o-section u-hide-xs">
                 <div class="o-center">
                     <div class="c-line-link">
-                        <div class="c-line-link__item c-line-link__item-h">Стол плетеный красный</div><a href="#" class="c-line-link__item is-active">Цены (17)</a><a href="#" class="c-line-link__item">Карта (9)</a><a href="#" class="c-line-link__item">Характеристики</a><a href="#" class="c-line-link__item">Отзывы (115)</a>
-                        <a
-                        href="#" class="c-line-link__item">Аксессуары и услуги</a>
+                        <div class="c-line-link__item c-line-link__item-h">Стол плетеный красный</div><a href="#" data-anch="#compare-prices" class="c-line-link__item js-anchor">Цены (17)</a><a href="#" data-anch="#features" class="c-line-link__item js-anchor">Характеристики</a><a href="#" data-anch="#related"
+                        class="c-line-link__item js-anchor">Похожие товары</a><a href="#" data-anch="#other-goods" class="c-line-link__item js-anchor">Другие товары</a>
                     </div>
                 </div>
             </div>
-            <div class="o-section">
+            <div id="compare-prices" class="o-section">
                 <div class="o-center">
                     <table class="c-tb-info">
                         <tr class="u-hide-xs">
@@ -492,7 +499,7 @@
                     </table>
                 </div>
             </div>
-            <div class="o-section">
+            <div id="related" class="o-section">
                 <div class="o-center">
                     <div class="o-hgroup">
                         <div class="u-dt">
@@ -1036,8 +1043,8 @@
                     </div>
                 </div>
             </div>
-            <div class="o-section">
-                <div class="o-center">
+            <div id="all-features" class="o-section">
+                <div id="features" class="o-center">
                     <div class="o-hgroup">
                         <div class="u-dt">
                             <div class="u-dtc">
@@ -1047,9 +1054,9 @@
                                 <div class="u-fl-r">
                                     <div class="c-tabnav-mobile"><span data-toggle="dropdown" class="c-tabnav-mobile__toggler"></span>
                                         <ul role="tablist" class="c-tabnav-mobile__list">
-                                            <li role="presentation" class="c-tabnav-mobile__item active"><a href="#tab-ch-1" role="tab" data-toggle="tab" class="c-tabnav-mobile__btn">Основные</a>
+                                            <li role="presentation" class="c-tabnav-mobile__item active"><a href="#features-tab" role="tab" data-toggle="tab" class="c-tabnav-mobile__btn">Основные</a>
                                             </li>
-                                            <li role="presentation" class="c-tabnav-mobile__item"><a href="#tab-ch-2" role="tab" data-toggle="tab" class="c-tabnav-mobile__btn">Все характеристики</a>
+                                            <li role="presentation" class="c-tabnav-mobile__item"><a href="#all-features-tab" role="tab" data-toggle="tab" class="c-tabnav-mobile__btn">Все характеристики</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -1060,7 +1067,7 @@
                     <div class="o-grid">
                         <div class="o-grid__md-9">
                             <div class="o-tab-content">
-                                <div role="tabpanel" id="tab-ch-1" class="o-tab-content__item active">
+                                <div role="tabpanel" id="features-tab" class="o-tab-content__item active">
                                     <div class="u-mb-15">
                                         <div class="head-4">Общие характеристики</div>
                                         <table class="c-df-tb">
@@ -1119,7 +1126,7 @@
                                     </div>
                                     <p>* Характеристики и комплектация товара могут изменятсья производителем без уведомления</p>
                                 </div>
-                                <div role="tabpanel" id="tab-ch-2" class="o-tab-content__item">
+                                <div role="tabpanel" id="all-features-tab" class="o-tab-content__item">
                                     <div>Все характеристики</div>
                                 </div>
                             </div>
@@ -1309,12 +1316,12 @@
                     </div>
                 </div>
             </div>
-            <div class="o-section">
+            <div id="other-goods" class="o-section">
                 <div class="o-center">
                     <div class="o-hgroup">
                         <div class="u-dt">
                             <div class="u-dtc">
-                                <h2 class="head-2">Сопутствующие товары</h2>
+                                <h2 class="head-2">Другие товары</h2>
                             </div>
                             <div class="u-dtc">
                                 <div class="u-fl-r">
@@ -1988,6 +1995,8 @@
         <script src="static/js/separate-js/menuJS.js"></script>
         <script src="static/js/separate-js/jquery.mCustomScrollbar.js"></script>
         <script src="static/js/separate-js/jquery.menu-aim.js"></script>
+        <script src="static/js/separate-js/jquery.fancybox.pack.js"></script>
+        <script src="static/js/separate-js/jquery.fancybox-media.js"></script>
         <script src="static/js/separate-js/user.js"></script>
     </body>
 

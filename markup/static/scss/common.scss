@@ -25,6 +25,8 @@ body {
 
 @import '_jquery.mCustomScrollbar.scss';
 
+@import '_jquery.fancybox.scss';
+
 @import '_grid.scss';
 
 
@@ -102,6 +104,28 @@ body {
 
 }
 
+.ico-play {
+	display: block;
+	position: relative;
+	height: 100%;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		@include bg($i-play);
+		opacity: .6;
+	}
+
+	&:hover {
+		&:before {
+			opacity: .8;
+		}
+	}
+}
 
 
 .u-text-left {

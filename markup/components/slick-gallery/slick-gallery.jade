@@ -4,7 +4,12 @@ mixin slickGallery()
 			- for (i = 0;i < 5;i ++)
 				.c-screen__item
 					img(src="static/img/content/img-gallery.jpg", alt="")
+			.c-screen__item
+				a(href="https://youtu.be/Ag98mgI4bXA").fancybox-media.ico-play
+					img(src="static/img/content/img-gallery.jpg", alt="")
 		.c-nav.slick-slider.js-gallery-nav
 			- for (i = 0;i < 5;i ++)
 				.c-nav__item
 					img(src="static/img/content/img-gallery-small.jpg", alt="")
+			.c-nav__item.ico-play
+				img(src="static/img/content/img-gallery-small.jpg", alt="")
